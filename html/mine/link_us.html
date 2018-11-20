@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css" />
+    <link rel="stylesheet" href="../../css/base.css"/>
+    <link rel="stylesheet" href="../../css/mine/about_us.css"/>
+    <title>联系我们</title>
+</head>
+<body>
+<div class="layer">
+    <div class="header"></div>
+    <div class="main ">
+        <div class="p_center">
+            <div class="now_location">
+                当前位置：首页>联系我们
+            </div>
+            <div class="content">
+                <div class="left">
+                    <ul>
+                        <li class="active">
+                            <a href="./about_us.html" >
+                                关于我们
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./link_us.html">
+                                联系我们
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./about_us.html">
+                                服务协议
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./about_us.html">
+                                帮助中心
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./about_us.html">
+                                友情链接
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <h3>联系我们</h3>
+                    <div id="container"></div>
+                    <div class="main_info">
+                        <p>地 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：郑州市金水区商都路与通泰路交叉口 </p>                           <p>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;编：450000  </p>
+                        <div class="tel">免费咨询：0371-55659675<br/>
+                           <p> 0371-55659675</p>
+                        </div>
+                    <div class="phone">
+                        手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机： 15895007595（丁老师）
+                        <p>18236745629（于老师）</p>
+                    </div>
+                    <div class="email">
+                        邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：1109614522@qq.com
+                    </div>
+                    <div class="address">
+                        乘车路线：B12、B18、2路快线、7路、K9路、地铁一号线等
+                    </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer"></div>
+</div>
+
+</body>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/base.js"></script>
+<!-- 加载地图JSAPI脚本 -->
+<script src="https://webapi.amap.com/maps?v=1.4.10&key=bd54e4be514aab4910f8afc68209d057"></script>
+<script>
+    $(document).ready(function () {
+        $(".header").load("../common/header_logo.html");
+        $(".footer").load("../common/footer.html");
+
+            $(".content>.left>ul>li:nth-of-type(2)").addClass("active").siblings().removeClass("active");
+
+    })
+    var map = new AMap.Map('container', {
+        resizeEnable: true, //是否监控地图容器尺寸变化
+        zoom:11, //初始化地图层级
+        center: [116.397428, 39.90923] //初始化地图中心点
+    });
+</script>
+
+
+</html>

@@ -1,0 +1,120 @@
+.layer header {
+  z-index: 1111111111;
+}
+.main {
+  width: 100%;
+  background-color: #efeff4;
+}
+.main > .p_center > .now_location {
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px;
+}
+.main > .p_center > .content {
+  height: 980px;
+  width: 100%;
+  position: relative;
+}
+.main > .p_center > .content > .left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  width: 25%;
+  height: 288px;
+  background-color: #fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+.main > .p_center > .content > .left > ul {
+  width: 100%;
+}
+.main > .p_center > .content > .left > ul > li {
+  height: 55px;
+  line-height: 55px;
+  width: 100%;
+}
+.main > .p_center > .content > .left > ul > li.active a {
+  color: #f01414;
+}
+.main > .p_center > .content > .left > ul > li a {
+  font-size: 16px;
+  display: block;
+  color: #333;
+  text-align: center;
+}
+.main > .p_center > .content > .right {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 27%;
+  width: 73%;
+  top: 0;
+  display: inline-block;
+  height: 950px;
+  background-color: #fff;
+  padding: 45px;
+}
+.main > .p_center > .content > .right #container {
+  width: 100%;
+  height: 430px;
+}
+.main > .p_center > .content > .right .fright_top {
+  height: 40px;
+  line-height: 20px;
+  font-size: 18px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.main > .p_center > .content > .right .fright_top > li {
+  width: 20%;
+  text-align: right;
+  float: left;
+  cursor: pointer;
+}
+.main > .p_center > .content > .right .fright_top > li.active {
+  color: #f01414;
+}
+.main > .p_center > .content > .right .fright_idea > ul {
+  padding-top: 20px;
+  width: 100%;
+}
+.main > .p_center > .content > .right .fright_idea > ul li {
+  height: 45px;
+  line-height: 45px;
+  font-size: 14px;
+}
+.main > .p_center > .content > .right .fright_idea:last-of-type {
+  display: none;
+}
+.main > .p_center > .content > .right > h3 {
+  font-size: 24px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+}
+.main > .p_center > .content > .right > .info {
+  line-height: 25px;
+  font-size: 14px;
+  text-indent: 2em;
+}
+.main > .p_center > .content > .right > .info > a {
+  color: #999;
+  font-size: 14px;
+  margin-right: 10px;
+}
+.main > .p_center > .content > .right > .main_info {
+  margin-top: 25px;
+}
+.main > .p_center > .content > .right > .main_info > p,
+.main > .p_center > .content > .right > .main_info .email,
+.main > .p_center > .content > .right > .main_info .address {
+  height: 30px;
+  line-height: 30px;
+}
+.main > .p_center > .content > .right > .main_info > .tel,
+.main > .p_center > .content > .right > .main_info > .phone {
+  height: 60px;
+  line-height: 30px;
+}
+.main > .p_center > .content > .right > .main_info > .tel > p,
+.main > .p_center > .content > .right > .main_info > .phone > p {
+  margin-left: 11%;
+}

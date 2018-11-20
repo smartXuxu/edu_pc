@@ -1,0 +1,454 @@
+.baseColor {
+  color: #f01414;
+}
+.main {
+  width: 100%;
+  padding-bottom: 20px;
+  background-color: #efeff4;
+  /*�꼶����������*/
+}
+.main > .swiper {
+  width: 100%;
+  height: 460px;
+  overflow: hidden;
+}
+.main > .swiper .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+.main > .swiper .swiper-slide > img {
+  height: 100%;
+}
+.main .swiper-pagination-bullet-active {
+  background: #fff;
+}
+.main .swiper-container-horizontal > .swiper-pagination-bullets,
+.main .swiper-pagination-custom,
+.main .swiper-pagination-fraction {
+  bottom: 100px;
+}
+.main > .nav {
+  background-color: #fff;
+  height: 80px;
+  line-height: 80px;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+  border-left: 0;
+  border-right: 0;
+  text-align: center;
+}
+.main > .nav > ul {
+  width: 100%;
+  height: 100%;
+}
+.main > .nav > ul > li {
+  width: 8%;
+  height: 100%;
+  float: left;
+  font-size: 14px;
+  cursor: pointer;
+}
+.main > .nav > ul > li.active {
+  color: #f01414;
+}
+.main > .content {
+  padding-top: 50px;
+  /*ѧУ*/
+  /*��ʦ*/
+}
+.main > .content > .school,
+.main > .content .teacher {
+  position: relative;
+  height: 230px;
+  overflow: hidden;
+}
+.main > .content > .school.teacher,
+.main > .content .teacher.teacher {
+  margin-top: 15px ;
+}
+.main > .content > .school > .school_more,
+.main > .content .teacher > .school_more,
+.main > .content > .school > .teacher_more,
+.main > .content .teacher > .teacher_more {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  width: 15%;
+  height: 230px;
+  overflow: hidden;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: url("../../img/school.png") no-repeat center;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+.main > .content > .school > .school_more.teacher_more,
+.main > .content .teacher > .school_more.teacher_more,
+.main > .content > .school > .teacher_more.teacher_more,
+.main > .content .teacher > .teacher_more.teacher_more {
+  background-image: url("../../img/teacher.png");
+}
+.main > .content > .school > .school_more > h3,
+.main > .content .teacher > .school_more > h3,
+.main > .content > .school > .teacher_more > h3,
+.main > .content .teacher > .teacher_more > h3 {
+  text-align: center;
+  height: 150px;
+  line-height: 150px;
+  font-size: 24px;
+  color: #fff;
+}
+.main > .content > .school > .school_more > a,
+.main > .content .teacher > .school_more > a,
+.main > .content > .school > .teacher_more > a,
+.main > .content .teacher > .teacher_more > a {
+  display: block;
+  text-align: center;
+  color: #fff;
+}
+.main > .content > .school > ul,
+.main > .content .teacher > ul {
+  width: 80%;
+  height: 100%;
+  left: 18%;
+  position: absolute;
+  top: 0;
+}
+.main > .content > .school > ul > li,
+.main > .content .teacher > ul > li {
+  float: left;
+  width: 24%;
+  height: 100%;
+  margin-right: 10px ;
+}
+.main > .content > .school > ul > li:last-of-type,
+.main > .content .teacher > ul > li:last-of-type {
+  margin-right: 0;
+}
+.main > .content > .school > ul > li > a,
+.main > .content .teacher > ul > li > a {
+  height: 100%;
+  width: 100%;
+  display: block;
+  color: #333;
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.1);
+}
+.main > .content > .school > ul > li > a > img,
+.main > .content .teacher > ul > li > a > img {
+  width: 100%;
+  height: 130px;
+  overflow: hidden;
+}
+.main > .content > .school > ul > li > a .text,
+.main > .content .teacher > ul > li > a .text {
+  padding: 10px;
+}
+.main > .content > .school > ul > li > a .text > h3,
+.main > .content .teacher > ul > li > a .text > h3,
+.main > .content > .school > ul > li > a .text > p,
+.main > .content .teacher > ul > li > a .text > p,
+.main > .content > .school > ul > li > a .text > .grade,
+.main > .content .teacher > ul > li > a .text > .grade {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+.main > .content > .school > ul > li > a .text > h3,
+.main > .content .teacher > ul > li > a .text > h3 {
+  font-size: 14px;
+}
+.main > .content > .school > ul > li > a .text > .grade,
+.main > .content .teacher > ul > li > a .text > .grade {
+  margin-top: 10px;
+}
+.main > .content > .school > ul > li > a .text > .grade span,
+.main > .content .teacher > ul > li > a .text > .grade span {
+  padding: 2px;
+  background: #eeeeee;
+  color: #f01414;
+  margin-right: 5px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.main > .content > .school > ul > li > a .text > p,
+.main > .content .teacher > ul > li > a .text > p {
+  font-size: 12px ;
+  color: #666;
+  margin-top: 10px;
+}
+.main > .content .teacher .text {
+  text-align: center;
+}
+.main > .content .famous > h3 {
+  height: 88px;
+  line-height: 115px;
+}
+.main > .content .famous > ul {
+  width: 100%;
+}
+.main > .content .famous > ul > li {
+  float: left;
+  height: 300px;
+  width: 22%;
+  margin-left: 3%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #fff;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.main > .content .famous > ul > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #333;
+}
+.main > .content .famous > ul > li > a > .img_box {
+  position: relative;
+  width: 100%;
+  height: 145px;
+  overflow: hidden;
+}
+.main > .content .famous > ul > li > a > .img_box > img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+.main > .content .famous > ul > li > a > .bottom {
+  padding: 0 10px;
+}
+.main > .content .famous > ul > li > a > .bottom > p {
+  font-weight: 600;
+  font-size: 16px;
+  height: 60px;
+  line-height: 60px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+.main > .content .famous > ul > li > a > .bottom > h5 {
+  height: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+.main > .content .famous > ul > li > a > .bottom > .new {
+  font-size: 12px;
+  color: #666;
+  height: 25px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+.main > .content .famous > ul > li > a > .bottom > .b_footer {
+  height: 30px;
+  line-height: 30px;
+  position: relative;
+}
+.main > .content .famous > ul > li > a > .bottom > .b_footer > ul {
+  width: 40%;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  display: inline-block;
+}
+.main > .content .famous > ul > li > a > .bottom > .b_footer > ul > li {
+  float: left;
+  color: #f01414;
+  margin-right: 3px;
+}
+.main > .content .famous > ul > li > a > .bottom > .b_footer > span {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  width: 40%;
+  position: absolute;
+  left: 45%;
+  top: 0%;
+  color: #666666;
+}
+.main > .content > .show_img {
+  height: 145px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0);
+}
+.main > .content > .show_img > img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.main > .content > .find {
+  width: 100%;
+}
+.main > .content > .find > h3 {
+  height: 85px;
+  line-height: 85px;
+}
+.main > .content > .find > .dynamic,
+.main > .content > .find > .request {
+  width: 48%;
+  display: inline-block;
+  background-color: #fff;
+  padding: 0 30px;
+  height: 650px;
+  overflow: hidden;
+}
+.main > .content > .find > .dynamic > h5,
+.main > .content > .find > .request > h5 {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  font-size: 16px;
+  color: #666;
+  border-bottom: 1px solid #eee;
+}
+.main > .content > .find > .dynamic > h5 > em,
+.main > .content > .find > .request > h5 > em {
+  margin-right: 15px;
+  font-size: 20px;
+}
+.main > .content > .find > .dynamic > h5 > i,
+.main > .content > .find > .request > h5 > i {
+  font-size: 14px;
+}
+.main > .content > .find > .dynamic > ul,
+.main > .content > .find > .request > ul {
+  width: 100%;
+}
+.main > .content > .find > .dynamic > ul > li,
+.main > .content > .find > .request > ul > li {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+.main > .content > .find > .dynamic > ul > li > .dy_top,
+.main > .content > .find > .request > ul > li > .dy_top {
+  margin-top: 5px;
+  position: relative;
+}
+.main > .content > .find > .dynamic > ul > li > .dy_top > img,
+.main > .content > .find > .request > ul > li > .dy_top > img {
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.main > .content > .find > .dynamic > ul > li > .dy_top > .top_center,
+.main > .content > .find > .request > ul > li > .dy_top > .top_center {
+  position: absolute;
+  left: 60px;
+  top: 10%;
+}
+.main > .content > .find > .dynamic > ul > li > .dy_top > .top_center > .top_center em,
+.main > .content > .find > .request > ul > li > .dy_top > .top_center > .top_center em {
+  display: block;
+  font-size: 14px;
+}
+.main > .content > .find > .dynamic > ul > li > .dy_top > .top_center > .top_center > .time,
+.main > .content > .find > .request > ul > li > .dy_top > .top_center > .top_center > .time {
+  margin-top: 5px;
+  font-size: 12px;
+}
+.main > .content > .find > .dynamic > ul > li > .middle,
+.main > .content > .find > .request > ul > li > .middle {
+  width: 100%;
+  position: relative;
+  height: 120px;
+  overflow: hidden;
+  padding: 10px 0;
+}
+.main > .content > .find > .dynamic > ul > li > .middle > img,
+.main > .content > .find > .request > ul > li > .middle > img {
+  width: 30%;
+}
+.main > .content > .find > .dynamic > ul > li > .middle > .middle_text,
+.main > .content > .find > .request > ul > li > .middle > .middle_text {
+  position: absolute;
+  left: 32%;
+  top: 15%;
+  width: 65%;
+  display: inline-block;
+}
+.main > .content > .find > .dynamic > ul > li > .middle > .middle_text > p,
+.main > .content > .find > .request > ul > li > .middle > .middle_text > p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+.main > .content > .find > .dynamic > ul > li > .middle > .middle_text > .md_bottom,
+.main > .content > .find > .request > ul > li > .middle > .middle_text > .md_bottom {
+  height: 40px;
+  line-height: 40px;
+  color: #999;
+  font-size: 12px;
+}
+.main > .content > .find > .dynamic > ul > li > .middle > .middle_text > .md_bottom > span,
+.main > .content > .find > .request > ul > li > .middle > .middle_text > .md_bottom > span {
+  padding-right: 20px;
+}
+.main > .content > .find > .dynamic > ul > li > .middle > .middle_text > .md_bottom > em,
+.main > .content > .find > .request > ul > li > .middle > .middle_text > .md_bottom > em {
+  font-size: 14px;
+}
+.main > .content > .find .request {
+  margin-left: 2%;
+}
+.main > .content > .find .request > h5 em {
+  font-size: 35px;
+  vertical-align: middle;
+}
+.main > .content > .find .request > ul > li p {
+  font-size: 14px;
+  margin: 10px 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+.main > .content > .find .request > ul > li > div em {
+  font-size: 14px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.main > .content > .find .request > ul > li > div > span {
+  border: 1px solid #666;
+  height: 20px;
+  padding: 0 2px;
+  line-height: 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.main > .content > .find .request > ul > li > div > span > i {
+  font-size: 14px ;
+  vertical-align: middle;
+}

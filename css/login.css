@@ -1,0 +1,167 @@
+.main {
+  width: 100%;
+  height: 750px;
+  background: url("../img/login.png") no-repeat center;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+.main .login_box {
+  padding: 0 30px;
+  width: 360px;
+  height: 300px;
+  position: relative;
+  top: 45%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+}
+.main .login_box > h3 {
+  font-size: 16px;
+  height: 70px;
+  line-height: 70px;
+}
+.main .login_box > div {
+  height: 45px;
+  line-height: 45px;
+  width: 100%;
+  position: relative;
+  border: 2px solid #ddd;
+  border-left: 0;
+}
+.main .login_box > div.user_name {
+  margin-bottom: 10px;
+}
+.main .login_box > div.pwd_input.password span {
+  top: -1%;
+}
+.main .login_box > div.pwd_input .eye {
+  position: absolute;
+  width: 27px;
+  height: 30px;
+  right: 3%;
+  top: 10%;
+  cursor: pointer;
+  background: url("../img/eye.png") no-repeat center;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+.main .login_box > div > span {
+  width: 14%;
+  height: 43px;
+  background-color: #ddd;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  position: absolute;
+  top: 0%;
+  left: 0;
+}
+.main .login_box > div > input {
+  height: 30px;
+  line-height: 30px;
+  width: 84%;
+  position: absolute;
+  margin-left: 15%;
+  top: 18%;
+  font-size: 14px;
+}
+.main .login_box > .sign {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #f01414;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  height: 45px;
+  line-height: 45px;
+  border: none;
+  cursor: pointer;
+}
+.main .login_box > .third_login {
+  width: 100%;
+  margin-top: 10px;
+}
+.main .login_box > .third_login > span {
+  cursor: pointer;
+  width: 32%;
+  text-align: center;
+}
+.main .login_box > .third_login > span:first-of-type em {
+  color: #3eb135;
+}
+.main .login_box > .third_login > span:nth-of-type(2) em {
+  color: #4dafea;
+}
+.main .login_box > .third_login > span:nth-of-type(3) em {
+  color: #df4d69;
+}
+.main .login_box > .third_login > span em {
+  font-size: 20px;
+  vertical-align: middle;
+}
+.main .login_box > .third_login > span i {
+  font-size: 12px;
+}
+.main .login_box > h4 {
+  position: relative;
+  width: 50%;
+  left: 65%;
+  height: 30%;
+  margin-top: 5px;
+  font-weight: 400;
+}
+.main .login_box > h4 > span {
+  display: inline-block;
+  width: 48%;
+  font-size: 14px;
+  cursor: pointer;
+}
+footer {
+  position: relative;
+  margin-top: -100px;
+}
+/*rejister*/
+.main .register_box {
+  height: 350px;
+  top: 47%;
+}
+.main .register_box > h3 {
+  height: 60px;
+  line-height: 60px;
+}
+.main .register_box .code {
+  margin-bottom: 10px;
+}
+.main .register_box .code > span {
+  top: -1%;
+}
+.main .register_box .code > del {
+  position: absolute;
+  right: 3%;
+  top: 8%;
+  color: #f01414;
+  cursor: pointer;
+}
+.main .register_box > h4 {
+  margin-top: 8px;
+}
+/*�һ� ����*/
+.main .find > h3 {
+  height: 60px;
+  line-height: 60px;
+}
+.main .find > div {
+  height: 40px;
+  line-height: 40px;
+}
+.main .find > div.pwd_input {
+  margin-bottom: 10px;
+}
+.main .find > div > span {
+  height: 38px;
+}
+.main .find > .sign {
+  height: 40px;
+  line-height: 40px;
+  margin-top: 0;
+}

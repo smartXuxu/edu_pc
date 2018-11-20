@@ -1,0 +1,94 @@
+.p_center{
+    width: 80%;
+    margin: 0 auto;
+}
+/*公共样式*/
+
+/*1.样式重置*/
+a, address, b, big, blockquote, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, label, legend, li, ol, p, pre, small, span, strong, u, ul, var {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-line-through: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block
+}
+
+html,body,ul,li,img,a,p,div,form,input{
+    padding: 0;
+    margin: 0;
+    /*设置盒模型*/
+    box-sizing: border-box;
+    /*去除移动端特有的点击高亮效果*/
+    -webkit-tap-highlight-color: transparent;
+}
+body{
+    font-family: "微软雅黑",Microsoft Yahei ,sans-serif;
+    font-size: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+a,
+a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+input{
+    /*1.清除文本框获取焦点时默认的边框阴影*/
+    outline: none;
+    /*2.去除边框*/
+    border: none;
+    /*3.添加边框*/
+    /* border: 1px solid #ccc;*/
+}
+
+/*2.添加新的样式*/
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0px;
+    clear: both;
+    visibility: hidden;
+}
+em,i,s{
+    font-style: normal;
+    text-decoration: none;
+
+}
+span{
+    display: inline-block;
+}
+
+/*改变placeholder的字体颜色*/
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #fff; opacity:1;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #fff;opacity:1;
+}
+
+input:-ms-input-placeholder{
+    color: #fff;opacity:1;
+}
+
+input::-webkit-input-placeholder{
+    color: #fff;opacity:1;
+}
+.main{
+    padding-top: 200px;
+}
