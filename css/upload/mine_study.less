@@ -1,0 +1,515 @@
+.left{
+  position: relative;
+
+}
+  .study_right {
+    top: 220px;
+    width: 75%;
+    min-height: 820px;
+    background-color: #fff;
+    left: 28%;
+    padding: 60px;
+    box-shadow: 0 0px 2px rgba(0, 0, 0, .2);
+    >.integra{
+      height: 50px;
+      line-height: 50px;
+      font-size: 16px;
+      border-bottom: 1px solid #eee;
+    }
+    > .near_study {
+      width: 100%;
+      border-bottom: 10px solid #eeeeee;
+      > p {
+        margin-top: 30px;
+        text-align: center;
+        font-size:15px;
+        height: 40px;
+        > em {
+          color: #f01414;
+          font-size:30px;
+          vertical-align: middle;
+        }
+      }
+      ul {
+        width: 100%;
+        margin-top: 30px;
+
+        li {
+          float: left;
+          width: 25%;
+          font-size: 14px;
+          position: relative;
+          text-align: center;
+          > p {
+            font-size: 14px;
+            color: #333;
+          }
+          > em {
+            font-size: 14px;
+            i {
+              font-size: 16px;
+            }
+          }
+          &:after {
+            position: absolute;
+            content: "";
+            height: 30px;
+            width: 1px;
+            color: #999;
+            background-color: #999;
+            top: 23%;
+            display: block;
+            right: 5%;
+          }
+          &:last-of-type {
+            &:after {
+              width: 0;
+              height: 0;
+            }
+          }
+        }
+      }
+    }
+    >.content_time{
+      width: 100%;
+      border-bottom: 5px solid #eee;
+      padding-bottom: 10px;
+      >.content_left{
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           width: 49%;
+        position: relative;
+       &:before{
+         position: absolute;
+         right: -5%;
+         top: 10px;
+         height: 90%;
+         width: 1px;
+         background-color: #eeeeee;
+         color:#eee;
+         content:"";
+
+       }
+        > .learn {
+          padding: 10px;
+          > h3 {
+            font-size: 16px;
+            > i {
+              font-size: 18px;
+              color: #f01414;
+            }
+          }
+        }
+      }
+      >.content_right{
+        width: 49%;
+        padding:0 35px;
+        >h3{
+          padding-top: 10px;
+          font-size: 16px;
+          height: 60px;
+          line-height: 60px;
+        }
+        >ul{
+          width: 100%;
+          >li{
+            width: 100%;
+            border-bottom: 1px solid #eee;
+          &:last-of-type{
+            border-bottom: none;
+          }
+            >a{
+              display: block;
+              padding-bottom: 10px ;
+              position: relative;
+              color:#333;
+              >img{
+                width: 150px;
+                height:95px;
+              }
+              >.center{
+                position: absolute;
+                width: 60%;
+                left: 160px;
+                top: 5%;
+                >h5{
+                  height: 40px;
+                  line-height: 40px;
+                  >em{
+                    color:#f01414;
+                  }
+
+                }
+                >p{
+                       height: 25px;
+                       line-height: 25px;
+                       overflow: hidden;
+                       display: -webkit-box;
+                       -webkit-line-clamp: 1;
+                       -webkit-box-orient: vertical;
+                       word-break: break-all;
+                     }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+/*进度条*/
+/*进度条*/
+.loader-container {
+  height: 100%;
+  width: 100%;
+  background: -webkit-linear-gradient(left,#f8dc4b,#d95a3d);
+  background: -moz-linear-gradient(left,#f8dc4b,#d95a3d);
+  background: -o-linear-gradient(left,#f8dc4b,#d95a3d);
+  background: -ms-linear-gradient(left,#f8dc4b,#d95a3d);
+  background: linear-gradient(left,#f8dc4b,#d95a3d);
+  border-radius:7px;
+  box-shadow: inset 0 -2px 2px rgba(0, 0, 0, 0.2);
+  animation: loader 1s linear;
+
+}
+.progress{
+  width: 90%;
+  height: 10px;
+  border-radius:7px;
+  margin-left: 5%;
+  margin-top: 30px;
+  background: -webkit-linear-gradient(left,#e4e3e4,#e4e5e4);
+  background: -moz-linear-gradient(left,#e4e3e4,#e4e5e4);
+  background: -o-linear-gradient(left,#e4e3e4,#e4e5e4);
+  background: -ms-linear-gradient(left,#e4e3e4,#e4e5e4);
+  background: linear-gradient(left,#e4e3e4,#e4e5e4);
+
+}
+.text_progress{
+  >em,>i{
+    margin-top: 5px;
+    font-size: 16px;
+    color:#666666;
+  }
+}
+@keyframes loader {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width:100%;
+  }
+}
+.btn-group-lg>.btn, .btn-lg{
+  margin-top: 30px;
+  width: 100%;
+  height: 35px;
+  font-size: 14px ;
+  padding:0;
+  cursor:pointer;
+}
+/* 最近的收藏*/
+.apply{
+  width: 100%;
+  >nav{
+    width: 100%;
+    >a{
+      width: 20%;
+      text-align: center;
+      color:#333;
+      height: 60px;
+      line-height: 60px;
+      padding-right: 20px;
+      display: inline-block;
+      &.active{
+        color:#f01414;
+      }
+    }
+  }
+  /*课程*/
+  >.recommend{
+      >ul{
+        width: 100%;
+        >li{
+          float: left;
+          width: 30%;
+          margin-left: 3%;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
+          background-color: #fff;
+          padding-bottom: 15px;
+          margin-bottom: 15px;
+          overflow: hidden;
+          >a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            color:#333;
+            >.img_box{
+              position: relative;
+              width: 100%;
+              height: 145px;
+              overflow: hidden;
+              >img{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 100%;
+                transform:translate(-50%,-50%);
+              }
+            }
+            >.bottom{
+              padding:0 10px;
+              >p{
+                font-weight: 600;
+                font-size: 16px;
+                height: 60px;
+                line-height: 60px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                word-break: break-all;
+              }
+              >h5{
+                height: 30px;
+                font-weight:400;
+                font-size: 14px;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                word-break: break-all;
+              }
+              >.new{
+                font-size: 12px;
+                color:#666;
+                height: 25px;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                word-break: break-all;
+              }
+              >.b_footer{
+                height: 30px;
+                line-height: 30px;
+                position: relative;
+                >ul{
+                  width: 40%;
+                  position: absolute;
+                  left: 0%;
+                  top: 0%;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 1;
+                  -webkit-box-orient: vertical;
+                  word-break: break-all;
+                  display: inline-block;
+                  >li{
+
+                    float: left;
+                    color: #f01414;
+                    margin-right: 3px;
+
+                  }
+                }
+                >span{
+                  display: -webkit-box;
+                  -webkit-line-clamp: 1;
+                  -webkit-box-orient: vertical;
+                  word-break: break-all;
+                  width: 40%;
+                  position: absolute;
+                  left:45%;
+                  top: 0%;
+                  color:#666666;
+                }
+              }
+            }
+          }
+
+        }
+
+    }
+  }
+  /*名校*/
+  .recommend_school{
+    display: none;
+      >ul{
+        width: 100%;
+        >li{
+          float: left;
+          width: 30%;
+          height: auto;
+          margin-left:3% ;
+          &:last-of-type{
+            margin-right: 0;
+          }
+          >a{
+            height: 100%;
+            width: 100%;
+            display: block;
+            color:#333;
+            background-color: #fff;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            box-shadow: 0 1px 0 1px rgba(0,0,0,.1);
+            >img{
+              width: 100%;
+              height: 130px;
+              overflow: hidden;
+            }
+            .text{
+              padding:10px;
+              >h3,>p,>.grade{
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                word-break: break-all;
+              }
+              >h3{
+                font-size:14px;
+              }
+              >.grade{
+                margin-top: 10px;
+                span{
+                  padding:2px;
+                  background: #eeeeee;
+                  color:#f01414;
+                  margin-right: 5px;
+                  -webkit-border-radius: 2px;
+                  -moz-border-radius: 2px;
+                  border-radius: 2px;
+                }
+              }
+              >p{
+                font-size:12px ;
+                color:#666;
+                margin-top: 10px;
+              }
+            }
+
+          }
+        }
+      }
+  }
+  /*名师*/
+  .recommend_teacher{
+    display: none;
+      >ul{
+        width: 100%;
+        >li{
+          float: left;
+          width: 30%;
+          margin-left: 3%;
+          margin-bottom: 1%;
+          height: auto;
+          padding:0 15px;
+          background-color: #fff;
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          border-radius: 3px;
+          box-shadow: 0 0px 2px rgba(0,0,0,0.2);
+          >a{
+            display: block;
+            padding-top: 40px;
+            color:#333;
+
+            >img{
+              display: block;
+              width: 100px;
+              height: 100px;
+              -webkit-border-radius: 50%;
+              -moz-border-radius: 50%;
+              border-radius: 50%;
+              margin:0 auto;
+            }
+            >p{
+              height: 40px;
+              line-height: 40px;
+              text-align: center;
+              font-size: 16px;
+              >em{
+                color:#f01414;
+              }
+
+            }
+            >.tec{
+              font-size: 14px;
+              text-align: center;
+              height: 30px;
+              line-height: 30px;
+            }
+            >.lesson{
+              height: 30px;
+              line-height: 30px;
+              text-align: center;
+              >i{
+                padding:3px;
+                color:#f01414;
+                margin-right: 3px;
+                background-color: #eeeeee;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                border-radius: 3px;
+
+              }
+            }
+            >.line{
+              position: relative;
+              width: 100%;
+              height: 25px;
+              border-bottom: 1px solid #eee;
+              >em{
+                position: absolute;
+                bottom: -36%;
+                left: 50%;
+                background-color: #fff;
+                transform: translateX(-50%);
+              }
+            }
+            >.bottom{
+              position: relative;
+              padding-top: 30px;
+              padding-bottom: 30px;
+              border-bottom: 1px solid #eee;
+              >img{
+                width: 30%;
+                height: 74px;
+              }
+              >.b_r{
+                width: 70%;
+                position: absolute;
+                top: 30%;
+                left: 33% ;
+                >p{
+                  line-height: 20px;
+                  font-size: 14px;
+                  overflow: hidden;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 1;
+                  -webkit-box-orient: vertical;
+                  word-break: break-all;
+                }
+                >.info{
+                  color:#999;
+                  margin-top: 5%;
+                  >i{
+                    padding-left: 5%;
+                    font-size: 14px;
+                    vertical-align: middle;
+                  }
+                }
+
+              }
+            }
+            >.more{
+              height: 30px;
+              line-height: 30px;
+              text-align: center;
+            }
+          }
+        }
+      }
+
+  }
+}

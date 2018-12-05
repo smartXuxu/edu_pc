@@ -1,0 +1,243 @@
+.course_edit_content > h2 {
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}
+.course_edit_content > p {
+  text-align: center;
+  font-size: 16px;
+  height: 50px;
+  line-height: 50px;
+}
+.course_edit_content > .end_class {
+  margin: 0 auto;
+  width: 100px;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #c5c5c5;
+  margin-bottom: 10px;
+  color: #666666;
+  cursor: pointer;
+}
+.course_edit_content .tit {
+  border-top: 1px solid #eee;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 20px;
+  border-bottom: 10px solid #eeeeee;
+}
+.course_edit_content > .info,
+.course_edit_content .no_putway {
+  border-bottom: 10px solid #eeeeee;
+  padding: 0 30px;
+}
+.course_edit_content > .info > p,
+.course_edit_content .no_putway > p {
+  height: 60px;
+  line-height: 60px;
+  font-size: 20px;
+  color: #666666;
+  position: relative;
+}
+.course_edit_content > .info > p.status > em,
+.course_edit_content .no_putway > p.status > em {
+  left: 30%;
+  width: 40%;
+}
+.course_edit_content > .info > p.course_status,
+.course_edit_content .no_putway > p.course_status {
+  position: relative;
+}
+.course_edit_content > .info > p.course_status em,
+.course_edit_content .no_putway > p.course_status em {
+  position: absolute;
+  left: 20%;
+  top: 0%;
+  width: 55%;
+}
+.course_edit_content > .info > p.course_status i,
+.course_edit_content .no_putway > p.course_status i {
+  position: absolute;
+  right: 0%;
+  top: 3%;
+}
+.course_edit_content > .info > p > span,
+.course_edit_content .no_putway > p > span {
+  /* width: 1.8rem;*/
+}
+.course_edit_content > .info > p > span.put_way,
+.course_edit_content .no_putway > p > span.put_way {
+  width: 200px;
+}
+.course_edit_content > .info > p > em,
+.course_edit_content .no_putway > p > em {
+  position: absolute;
+  font-size: 16px;
+  left: 20%;
+  top: 0%;
+  width: 55%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+.course_edit_content > .info > p > em.blue,
+.course_edit_content .no_putway > p > em.blue {
+  color: #008aff;
+}
+.course_edit_content > .info > p > i,
+.course_edit_content .no_putway > p > i {
+  position: absolute;
+  right: 0%;
+  top: 3%;
+  height: 45px;
+  line-height: 45px;
+  font-size: 14px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #c5c5c5;
+  text-align: center;
+  width: 160px;
+}
+.course_edit_content > .info > p > i.gray,
+.course_edit_content .no_putway > p > i.gray {
+  background-color: #eeeeee;
+  border: none;
+}
+.course_edit_content > .info > p > i.red,
+.course_edit_content .no_putway > p > i.red {
+  color: #f01414;
+}
+.course_edit_content .has_put_way .operation {
+  /* position: fixed;
+      bottom: 0;*/
+  height: 80px;
+  line-height: 80px;
+  width: 100%;
+  background-color: #fff;
+  color: #fff;
+  border-top: 1px solid #eee;
+}
+.course_edit_content .has_put_way .operation > .all_choose {
+  width: 20%;
+  height: 80px;
+  line-height: 80px;
+  background-color: #f01414;
+  border: none;
+  border-radius: 0%;
+  outline: none;
+}
+.course_edit_content .has_put_way .operation > .sold_out {
+  height: 80px;
+  outline: none;
+  line-height: 80px;
+  width: 78%;
+  border: none;
+  border-radius: 0%;
+  background-color: #fff;
+  text-align: center;
+  color: #f01414;
+}
+.course_edit_content .has_put_way > h3 {
+  padding: 0 30px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 22px;
+}
+.course_edit_content .has_put_way > h3 > s {
+  color: #0082df;
+}
+.course_edit_content .has_put_way > h3 > em {
+  font-size: 16px;
+  color: #666666;
+}
+.course_edit_content .has_put_way > p {
+  padding: 0 0.3rem;
+  height: 80px;
+  line-height: 80px;
+  font-size: 16px;
+  color: #666;
+  position: relative;
+}
+.course_edit_content .has_put_way > p > del {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  padding-left: 1.5%;
+  margin: 0 30px;
+  vertical-align: middle;
+  border: 1px solid #cccccc;
+}
+.course_edit_content .has_put_way > p span {
+  position: absolute;
+  margin-left: 80px;
+  top: 0%;
+  width: 50%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+.course_edit_content .has_put_way > p > i {
+  font-size: 14px;
+  margin-right: 30px;
+}
+.main #mask {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  display: none;
+}
+#session {
+  display: none;
+  position: absolute;
+  left: 57%;
+  width: 50%;
+  height: auto;
+  background-color: #fff;
+  top: 50%;
+  z-index: 4;
+  transform: translate(-50%, -50%);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+#session > h3 {
+  height: 70PX;
+  line-height: 70PX;
+  text-align: center;
+  font-size: 20PX;
+  border-bottom: 1px solid #eeeeee;
+}
+#session .radio_button {
+  height: 60px;
+  line-height: 60px;
+}
+#session .radio_button > button {
+  width: 49%;
+  height: 60px;
+  line-height: 60px;
+  display: inline-block;
+  color: #008aff;
+  background-color: #fff;
+}
+#session .radio_button > button.quit {
+  border-right: 1px solid #eeeeee;
+}

@@ -176,11 +176,11 @@
             dataType: 'json',
             success: function (data) {
                 console.log(data);
-                if (data.status == "200") {
+                if (data.status == 200) {
                     /* localStorage.setItem('userId',data.userId);
                      localStorage.setItem('user', data.code);*/
                     //用户登录成功之后 存储用户输入的值
-                    if($('#check').is(':checked')){
+
                         // 获取设置的本地存储的用户名的值
                         var loUser = localStorage.setItem('uName',uName);
                         // 获取设置的本地存储的密码的值 base64加密
@@ -188,8 +188,7 @@
                         var loPass = localStorage.setItem('pwd',pwd);
                         //console.log(data.data);
                         localStorage.setItem("token",data.data);
-                        window.location.href = "./index/index.html";
-                    };
+                        window.location.href = "../index/index.html";
                 }else{
                     sweetAlert(
                             '登录失败',

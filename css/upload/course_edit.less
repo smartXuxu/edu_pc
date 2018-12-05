@@ -1,0 +1,243 @@
+.course_edit_content{
+  >h2{
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+  }
+  >p{
+    text-align: center;
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+  }
+  >.end_class{
+   margin:0 auto;
+    width: 100px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border:1px solid #c5c5c5;
+    margin-bottom: 10px;
+    color:#666666;
+    cursor: pointer;
+
+  }
+  .tit{
+    border-top:1px solid #eee;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    border-bottom: 10px solid #eeeeee;
+  }
+  >.info,.no_putway{
+    border-bottom: 10px solid #eeeeee;
+    padding:0 30px;
+
+    >p{
+      height: 60px;
+      line-height: 60px;
+      font-size: 20px;
+      color:#666666;
+      position: relative;
+      &.status{
+        >em{
+          left: 30%;
+          width: 40%;
+        }
+      }
+      &.course_status{
+        position: relative;
+        em{
+          position: absolute;
+          left: 20%;
+          top: 0%;
+          width: 55%;
+        }
+        i{
+          position: absolute;
+          right: 0%;
+          top: 3%;
+        }
+      }
+      >span{
+        /* width: 1.8rem;*/
+        &.put_way{
+          width: 200px;
+        }
+      }
+      >em{
+        position: absolute;
+        font-size: 16px;
+        left: 20%;
+        top: 0%;
+        width: 55%;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        word-break: break-all;
+        &.blue{
+          color:#008aff;
+        }
+      }
+      >i{
+        position: absolute;
+        right: 0%;
+        top: 3%;
+        height:45px;
+        line-height:45px;
+        font-size: 14px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        border:1px solid #c5c5c5;
+        text-align: center;
+        width: 160px;
+        &.gray{
+          background-color: #eeeeee;
+          border:none;
+        }
+        &.red{
+          color:#f01414;
+        }
+      }
+    }
+  }
+  .has_put_way{
+    .operation{
+     /* position: fixed;
+      bottom: 0;*/
+      height: 80px;
+      line-height: 80px;
+      width: 100%;
+      background-color: #fff;
+      color:#fff;
+      border-top: 1px solid #eee;
+      >.all_choose{
+        width: 20%;
+        height: 80px;
+        line-height:80px;
+        background-color: #f01414;
+        border:none;
+        border-radius: 0%;
+        outline:none;
+
+      }
+      >.sold_out{
+        height: 80px;
+        outline:none;
+        line-height: 80px;
+        width: 78%;
+        border:none;
+        border-radius: 0%;
+        background-color: #fff;
+        text-align: center;
+        color:#f01414;
+      }
+    }
+
+    >h3{
+      padding: 0 30px;
+      height: 80px;
+      line-height: 80px;
+      font-size: 22px;
+      >s{
+        color:#0082df;
+      }
+      >em{
+        font-size: 16px;
+        color:#666666;
+      }
+    }
+    >p{
+      padding: 0 0.3rem;
+      height: 80px;
+      line-height: 80px;
+      font-size: 16px;
+      color:#666;
+      position: relative;
+      >del{
+        display: inline-block;
+        width:40px;
+        height: 40px;
+        line-height: 40px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        padding-left: 1.5%;
+        margin:0 30px;
+        vertical-align: middle;
+        border:1px solid #cccccc;
+      }
+      span{
+        position: absolute;
+        margin-left: 80px;
+        top: 0%;
+        width: 50%;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        word-break: break-all;
+      }
+      >i{
+        font-size: 14px;
+        margin-right: 30px;
+      }
+    }
+  }
+
+}
+.main #mask{
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  display: none;
+}
+ #session {
+  display: none;
+  position: absolute;
+  left: 57%;
+  width:50%;
+  height: auto;
+  background-color: #fff;
+  top: 50%;
+  z-index: 4;
+  transform: translate(-50%, -50%);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+   >h3{
+     height: 70PX;
+     line-height: 70PX;
+     text-align: center;
+     font-size: 20PX;
+     border-bottom: 1px solid #eeeeee;
+   }
+   .radio_button {
+     height: 60px;
+     line-height: 60px;
+     > button {
+       width: 49%;
+       height: 60px;
+       line-height:60px;
+       display: inline-block;
+       color: #008aff;
+       background-color: #fff;
+    &.quit {
+         border-right: 1px solid #eeeeee;
+       }
+     }
+
+
+   }
+}

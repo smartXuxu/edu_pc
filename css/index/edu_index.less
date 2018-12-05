@@ -1,0 +1,355 @@
+.main{
+  background:url("../../img/mine_bag.jpg") no-repeat center;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  .content{
+    >h5{
+      height: 60px;
+      line-height: 60px;
+      font-size: 14px;
+    }
+    .mine_left{
+      width: 20%;
+      display: inline-block;
+      margin-right: 2%;
+      margin-bottom: 20px;
+      >.left_top{
+        height: 230px;
+        background-color: #fff;
+        box-shadow: 0 0 2px rgba(0,0,0,0.2);
+        position: relative;
+        >.box_img{
+          height: 95px;
+          width: 100%;
+          background:url("../../img/mine_bg.jpg") no-repeat center;
+          -webkit-background-size: 100%;
+          background-size: 100%;
+        }
+        >.left_top_center{
+          position: absolute;
+          top: 30%;
+          left: 50%;
+          transform: translateX(-50%);
+          >img{
+            height: 70px;
+            width: 70px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            margin-left: 10px ;
+          }
+          .reply{
+            >button{
+              background-color: #f01414;
+              color:#fff;
+              height: 30px;
+              font-size: 14px;
+              line-height: 30px;
+              width: 100px;
+              margin-top: 10px;
+              -webkit-border-radius: 2px;
+              -moz-border-radius: 2px;
+              border-radius: 2px;
+
+            }
+          }
+          >h3{
+            text-align: center;
+            font-size: 16px;
+            height: 40px;
+            line-height: 40px;
+          }
+          >a{
+            text-align: center;
+            display: block;
+            margin:0 auto;
+            color:#f01414;
+            height: 30px;
+            line-height: 30px;
+          }
+        }
+      }
+      >.left_middle{
+        margin-top: 15px;
+        background-color: #fff;
+        padding:10px 0;
+        box-shadow: 0 0 2px rgba(0,00,0,.2);
+        >p{
+          cursor: pointer;
+          display: block;
+          text-align: center;
+          color:#333;
+          height: 50px;
+          line-height: 50px;
+          font-size: 16px;
+          &.active{
+            color:#f01414;
+          }
+        }
+      }
+      >.left_bottom{
+        margin-top: 20px;
+        padding-bottom: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 2px rgba(0,00,0,.2);
+        >span{
+          text-align: center;
+          display: block;
+          width: 100%;
+          height: 60px;
+          margin-top: 20px;
+          line-height: 60px;
+        }
+        >img{
+          width: 60%;
+          margin-left: 20%;
+        }
+        >h3{
+          height: 60px;
+          line-height: 60px;
+          font-size: 16px;
+        }
+        >textarea{
+          width: 100%;
+          padding:5px;
+          height: 105px;
+          border:1px solid #999;
+
+        }
+        >button{
+          margin-top: 30px;
+          width: 100%;
+          color:#fff;
+          height: 40px;
+          font-size: 16px;
+          background-color: #f01414;
+        }
+      }
+    }
+    .mine_right{
+      width: 75%;
+      margin-left: 3%;
+      >.mine_info{
+        width: 100%;
+        .in_left{
+          width: 50%;
+          >h5{
+            height: 50px;
+            font-size: 16px;
+          }
+          >.school{
+            height: 30px;
+            i{
+              padding-right: 5px; ;
+            }
+          }
+        }
+        .in_right{
+          width: 50%;
+          >p{
+            width: 30%;
+            display: inline-block;
+            >span{
+              font-size: 18px;
+              display: block;
+              margin-bottom: 10px;
+            }
+            >em{
+              font-size: 16px;
+            }
+          }
+        }
+      }
+
+      >.all_teacher{
+        &.teacher_content{
+          display: none;
+        }
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+        margin: 30px 0;
+        background-color: #fff;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        >.sub{
+          padding-top: 30px;
+          height: 80px;
+          line-height: 50px;
+          font-size: 16px;
+          padding-left: 30px;
+          border-bottom: 1px solid #eeeeee;
+          >span{
+            cursor: pointer;
+            padding-left: 10px;
+            &.active{
+              color:#f01414;
+            }
+          }
+        }
+        >.teacher_content{
+          width: 100%;
+          padding-bottom: 30px;
+          >ul{
+            width: 100%;
+            padding:0 30px;
+            >li{
+              box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+              width: 32%;
+              margin-top: 20px;
+              margin-right: 1%;
+              background-color: #f2f2f5;
+              -webkit-border-radius: 5px;
+              -moz-border-radius: 5px;
+              border-radius: 5px;
+              display: inline-block;
+              padding: 10px;
+              >.head{
+                position: relative;
+                >img{
+                  width: 80px;
+                  height: 80px;
+                  -webkit-border-radius: 50%;
+                  -moz-border-radius: 50%;
+                  border-radius: 50%;
+                }
+                >.head_center{
+                  position: absolute;
+                  left: 95px;
+                  top: 15%;
+                  >h3{
+                    font-size: 18px;
+                    height: 40px;
+                    line-height: 40px;
+                  }
+                }
+                >em{
+                  position: absolute;
+                  right: 1%;
+                  top: 0%;
+                  cursor: pointer;
+                  width: 70px;
+                  text-align: center;
+                  height: 30px;
+                  line-height: 30px;
+                  font-size: 14px;
+                  -webkit-border-radius: 5px;
+                  -moz-border-radius: 5px;
+                  border-radius: 5px;
+                  &.has_att{
+                    border:1px solid #999;
+                    background-color: #fff;
+                  }
+                  &.no_att{
+                    color:#fff;
+                    background-color: #f01414;
+                  }
+                }
+              }
+              >.bot{
+                height: 40px;
+                line-height: 40px;
+                >em{
+                  color:#f01414;
+                  font-size: 18px;
+                }
+                i{
+                  padding-right: 5px;
+                  border-right: 1px solid #999999;
+                }
+                >i,s{
+                   color:#666;
+                  font-size: 14px;
+
+                }
+              }
+            }
+          }
+        }
+        &.course_content{
+          >ul{
+            width: 100%;
+            padding: 30px;
+            >li{
+              width: 100%;
+              border-bottom: 1px solid #eee;
+              padding: 20px 0;
+              >a{
+                display: block;
+                color:#666;
+                height: 100%;
+                width: 100%;
+                position: relative;
+                >img{
+                  height: 120px;
+                  width: 30%;
+                }
+                >.center{
+                  position: absolute;
+                  width: 50%;
+                  left: 32%;
+                  top: 5%;
+                  >.top,>h5,>p,>.c_b{
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    word-break: break-all;
+                  }
+                  >.top{
+                    font-size: 16px;
+                    font-weight: 600;
+                    height: 50px;
+                    line-height: 50px;
+                    >span{
+                      font-size: 12px;
+                      background-color: #f01414;
+                      -webkit-border-radius: 3px;
+                      -moz-border-radius: 3px;
+                      border-radius: 3px;
+                      color:#fff;
+                      height: 30px;
+                      padding: 5px;
+                      line-height: 20px;
+                    }
+                  }
+                  >h5,>p{
+                    height: 25px;
+                    line-height: 25px;
+                    font-size: 14px;
+                  }
+                  >.c_b{
+                    em{
+                      font-size: 16px;
+                      color:#f01414;
+                    }
+                  }
+                }
+                >.cr_right{
+                  position: absolute;
+                  right: 1%;
+                  top: 3%;
+                  >button{
+                    width: 80px;
+                    text-align: center;
+                    height: 30px;
+                    line-height: 30px;
+                    border-radius: 10px;
+                    background-color: #fff;
+                    border:1px solid #999;
+                  }
+                  >.share{
+                    margin-top: 60px;
+                    i{
+                      font-size: 16px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

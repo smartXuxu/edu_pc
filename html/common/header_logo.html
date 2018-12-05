@@ -16,8 +16,8 @@
             height: 200px;
             background-color: #fff;
             font-size: 18px;
-            color:#f01414;
-            z-index:2;
+            color:#c9171d;
+            z-index:3;
             overflow: hidden;
         }
         header>.header_top{
@@ -31,7 +31,7 @@
             cursor: pointer;
         }
         header>.header_top>.top>.f_left>em{
-            color:#f01414;
+            color:#c9171d;
         }
         .header_top>.top>.f_left>em>s{
             color:#666;
@@ -44,11 +44,18 @@
         .header_top>.top>.f_right>img{
             width: 30px;
             height: 28px;
-
             vertical-align: middle;
         }
         .header_top>.top>.f_right>span{
             font-size: 12px;
+        }
+        .header_top>.top>.f_right>a{
+            font-size: 12px;
+            color:#00528c;
+        }
+        .header_top>.top>.f_right>del{
+            font-size: 12px;
+            color:#00528c;
         }
         header>.p_center{
             height: 90px;
@@ -73,11 +80,12 @@
             height: 90px;
             line-height: 90px;
         }
+
         header>nav{
             width: 100%;
             height: 80px;
             line-height: 80px;
-            background-color: #f01414;
+            background-color: #c9171d;
             position: absolute;
             left: 0;
 
@@ -85,12 +93,13 @@
         }
         header>nav>ul{
             width: 70%;
+            padding-left: 5%;
         }
         header>nav>ul>li{
             float: left;
             width: 10%;
             height: 80px;
-            text-align: right;
+            text-align: center;
         }
         header>nav li>a{
             display: block;
@@ -106,7 +115,7 @@
         header>nav li.active span{
             border-bottom: 2px solid #fff;
         }
-        header>nav>.search{
+        header>nav .search{
             position: absolute;
             top: 10%;
             right: 3%;
@@ -114,15 +123,17 @@
             line-height: 60px;
             width: 30%;
         }
-        header>nav>.search>input{
+        header>nav .search>input{
             width: 80%;
             height: 35px;
             line-height: 35px;
             text-indent: 1em;
+            font-size: 14px;
+            color:#fff;
             border:1px solid #dcdcdc;
             background: rgba(0, 0, 0, 0);
         }
-        header>nav>.search>em{
+        header>nav .search>em{
             position: absolute;
             right: 25%;
             top: 3%;
@@ -147,6 +158,18 @@
         input::-webkit-input-placeholder{
             color: #fff;opacity:1;
         }
+
+        .search_result{
+           position:fixed;
+            z-index: 5;
+            width: 24%;
+            right: 9%;
+            top: 193px;
+            padding:30px;
+            display: none;
+            background-color: #fff;
+        }
+
         /*结束*/
     </style>
 </head>
@@ -160,6 +183,7 @@
             </div>
             <div class="f_right">
                 <img src="../../img/logo%20(2).png" alt=""/>
+                <a href="./login.html">登录</a><del>/</del><a href="./register.html">注册</a>
                 <span>猴姆宝宝</span>
             </div>
         </div>
@@ -176,45 +200,52 @@
     <nav class="clearfix">
         <ul class="p_center clearfix">
             <li class="active">
-                <a href="javascript:;">
+                <a href="../index/index.html">
                     <span>首页</span>
                 </a>
             </li>
             <li>
-                <a href="javascript:;">
+                <a href="../lesson/lesson.html">
                     <span>课堂</span>
                 </a>
             </li>
             <li>
-                <a href="javascript:;">
+                <a href="../school/school.html">
                     <span>名校</span>
                 </a>
             </li>
             <li>
-                <a href="javascript:;">
+                <a href="../famous_teacher/famous_tacher.html">
                     <span>名师</span>
                 </a>
             </li>
             <li>
-                <a href="javascript:;">
+                <a href="../request/request.html">
                     <span>问答</span>
                 </a>
             </li>
             <li>
-                <a href="javascript:;">
+                <a href="../upload/upload_video.html">
                     <span>上传好课</span>
                 </a>
             </li>
         </ul>
-        <div class="search">
-            <input type="text" placeholder="请输入您搜索的内容"/>
-            <em class="iconfont icon-fangdajing"></em>
-        </div>
+            <div class="search">
+                <input type="text" placeholder="请输入您搜索的内容"/>
+                <em class="iconfont icon-fangdajing"></em>
+            </div>
+            <div class="search_result">
+                <!--教师 课程 学校-->
+                <div>13224</div>
+                <div>1355566</div>
+                <div>789</div>
+            </div>
 
     </nav>
 </header>
 </body>
 <script src="../../js/jquery.min.js"></script>
+<script src="../../js/template-web.js"></script>
 <script>
     /*本地城市信息展示*/
     setTimeout(function () {
@@ -223,5 +254,8 @@
             $(".header_top>.top>.f_left>em>s").text(city)
         }
     },100);
+    $(".search>input").keyup(function () {
+        $(".search_result").show();
+    })
 </script>
 </html>

@@ -1,0 +1,263 @@
+.left{
+  position: relative;
+
+}
+.content{
+  background-color: #f0eff5;
+
+  >.account_right{
+    position: absolute;
+    top: 220px;
+    width: 65%;
+    background-color: #fff;
+    left: 28%;
+    box-shadow: 0 0px 2px rgba(0,0,0,.2);
+    >.account_top{
+      height: 70px;
+      line-height: 70px;
+      width: 100%;
+      nav{
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #eee;
+        >a{
+          font-size: 16px;
+          text-align: center;
+          display: inline-block;
+          width: 15%;
+          color:#333;
+          &.active{
+            color:#f01414;
+          }
+        }
+      }
+
+    }
+    >.content_middle{
+      padding: 30px 30px 30px 46px;
+      >.head{
+        >h5{
+          height: 20px;
+          line-height: 20px;
+          font-size: 14px;
+        }
+        >img{
+          width: 90px;
+          height: 90px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          vertical-align: bottom;
+        }
+      }
+      >.nick_name,>.sex,>.birthday,.city{
+        margin-top: 20px;
+        >em{
+          font-size: 14px;
+        }
+        >input{
+          width: 250px;
+          border:1px solid #eee;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
+          height: 30px;
+          text-indent: 2em;
+          &:-ms-input-placeholder{
+            color: #999;opacity:1;
+          }
+
+          &::-webkit-input-placeholder{
+            color: #999;opacity:1;
+          }
+        }
+        >i{
+          margin-left: 10px;
+          color:#f01414;
+        }
+      }
+      >.save{
+        margin-top: 30px;
+        width: 200px;
+        color:#fff;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background-color: #85c226;
+      }
+      &.id_menu{
+        >div{
+          span{
+            height: 60px;
+
+          }
+        }
+      }
+      &.id_menu{
+        display: none;
+        >div{
+          position: relative;
+          margin-bottom: 20px;
+          >span{
+            text-align: center;
+            width: 120px;
+            height: 60px;
+            line-height: 60px;
+            font-size: 16px;
+            background-color: #eeeeee;
+          }
+          >em,>select,>input{
+            display: inline-block;
+            width: 40%;
+            height: 60px;
+            font-size: 16px;
+            text-indent: 1em;
+            line-height:60px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            position: absolute;
+            left: 120px;
+            top: 0;
+            border:1px solid #dcdcdc;
+            background: transparent;
+            outline: none;
+            &:-ms-input-placeholder{
+              color: #999;opacity:1;
+            }
+
+            &::-webkit-input-placeholder{
+              color: #999;opacity:1;
+            }
+            >option,input{
+            outline: none;
+
+            }
+          }
+        }
+      }
+      &.account_info{
+        display: none;
+        >#link_share{
+          position: fixed;
+          width: 30%;
+          height: 280px;
+          top: 50%;
+          left: 50%;
+          display: none;
+          transform: translateY(-50%);
+          background-color: #fff;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
+          z-index:6;
+        >button{
+          margin:0 10px;
+          width:95%;
+          display: block;
+          font-size: 12px;
+          background-color: #f01414;
+        }
+          >p{
+            color:#333;
+            font-size: 16px;
+            padding:0 10px;
+          }
+          >div{
+            padding:0 10px;
+            background-color: #fff;
+            height: 70px;
+            line-height: 70px;
+            >span{
+              font-size: 16px;
+              &.email_code{
+                color:#fff;
+                background-color: #f01414;
+                font-size: 12px;
+                padding: 3px;
+                height: 30px;
+                line-height: 30px;
+                border-radius: 5px;
+              }
+            }
+            >input{
+              text-indent: 1em;
+              height: 40px;
+              width:50%;
+              /*background-color: pink;*/
+              line-height: 40px;
+              font-size: 16px;
+              &:-ms-input-placeholder{
+                color: #999;opacity:1;
+              }
+              &::-webkit-input-placeholder{
+                color: #999;opacity:1;
+              }
+            }
+          }
+        }
+        >div{
+          height: 70px;
+          line-height: 70px;
+          >em{
+            color:#333;
+            display: inline-block;
+            width: 30%;
+            font-size: 16px;
+
+          }
+          >span{
+            width: 60%;
+            font-size: 16px;
+            &.no_link{
+              color:#f01414;
+              width: 30%;
+
+              cursor: pointer;
+            }
+          }
+          &.change_password{
+            height: 210px;
+
+            >p{
+              font-size: 16px;
+            }
+            >input{
+              display:block;
+              font-size: 16px;
+              height: 60px;
+              width: 60%;
+              text-indent: 2em;
+              line-height: 60px;
+              margin-bottom: 20px;
+              border:1px solid #eee;
+              &:-ms-input-placeholder{
+                color: #999;opacity:1;
+              }
+
+              &::-webkit-input-placeholder{
+                color: #999;opacity:1;
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
+
+a{ color:#006600; text-decoration:none;}
+
+a:hover{color:#990000;}
+
+.top{ margin:5px; color:#990000; text-align:center;}
+
+.info select{ border:1px #993300 solid; background:#FFFFFF;}
+
+.info{ margin:5px; text-align:center;}
+
+.info #show{ color:#3399FF; }
+
+.bottom{ text-align:right; font-size:12px; color:#CCCCCC; width:1000px;}
+

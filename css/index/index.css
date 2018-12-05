@@ -196,13 +196,13 @@
 }
 .main > .content .famous > ul > li {
   float: left;
-  height: 300px;
   width: 22%;
   margin-left: 3%;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   background-color: #fff;
+  padding-bottom: 15px;
   margin-bottom: 15px;
   overflow: hidden;
 }

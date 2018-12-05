@@ -1,0 +1,412 @@
+.main{
+  >.modal-content{
+    width: 100%;
+    background-color: #efeff4;
+    >.choose{
+      width: 100%;
+      background-color: #fff;
+      >div{
+        height: 50px;
+        line-height: 50px;
+        font-size: 14px;
+        >em{
+          margin-right: 8px;
+          cursor:pointer;
+          &.active{
+            color:#f01414;
+          }
+        }
+        >span{
+          font-weight: 600;
+        }
+        &.academic_year{
+          >button{
+            height: 30px;
+            background-color: #f01414;
+            color:#fff;
+            border:none;
+            margin-left: 10px;
+            line-height: 30px;
+            font-size: 12px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+          }
+          >input{
+            height: 30px;
+            font-size: 12px;
+            text-indent: 2em;
+            margin-left: 10px;
+            border:1px solid #d2d2d2;
+            &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+              color: #999999; opacity:1;
+            }
+
+            &::-moz-placeholder { /* Mozilla Firefox 19+ */
+              color: #999999;opacity:1;
+            }
+            &:-ms-input-placeholder{
+              color: #999;opacity:1;
+            }
+
+            &::-webkit-input-placeholder{
+              color: #999;opacity:1;
+            }
+          }
+        }
+      }
+    }
+    /*课程*/
+    >.recommend{
+      >h3{
+        font-size: 18px;
+        height: 70px;
+        line-height: 70px;
+        >a{
+          background-color: #f01414;
+          height: 25px;
+          margin-top: 25px;
+          width: 100px;
+          text-align: center;
+          line-height: 25px;
+          font-size: 12px;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          border-radius: 10px;
+        }
+      }
+      >.lists{
+        >ul{
+          width: 100%;
+          >li{
+            float: left;
+            width: 22%;
+            margin-left: 3%;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            background-color: #fff;
+           padding-bottom: 15px;
+           margin-bottom: 15px;
+            overflow: hidden;
+            >a{
+              display: block;
+              width: 100%;
+              height: 100%;
+              color:#333;
+              >.img_box{
+                position: relative;
+                width: 100%;
+                height: 145px;
+                overflow: hidden;
+                >img{
+                  position: absolute;
+                  left: 50%;
+                  top: 50%;
+                  width: 100%;
+                  transform:translate(-50%,-50%);
+                }
+              }
+              >.bottom{
+                padding:0 10px;
+                >p{
+                  font-weight: 600;
+                  font-size: 16px;
+                  height: 60px;
+                  line-height: 60px;
+                  overflow: hidden;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 1;
+                  -webkit-box-orient: vertical;
+                  word-break: break-all;
+                }
+                >h5{
+                  height: 30px;
+                  font-weight:400;
+                  font-size: 14px;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 1;
+                  -webkit-box-orient: vertical;
+                  word-break: break-all;
+                }
+                >.new{
+                  font-size: 12px;
+                  color:#666;
+                  height: 25px;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 1;
+                  -webkit-box-orient: vertical;
+                  word-break: break-all;
+                }
+                >.b_footer{
+                  height: 30px;
+                  line-height: 30px;
+                  position: relative;
+                  >ul{
+                    width: 40%;
+                    position: absolute;
+                    left: 0%;
+                    top: 0%;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    word-break: break-all;
+                    display: inline-block;
+                    >li{
+
+                      float: left;
+                      color: #f01414;
+                      margin-right: 3px;
+
+                    }
+                  }
+                  >span{
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    word-break: break-all;
+                    width: 40%;
+                    position: absolute;
+                    left:45%;
+                    top: 0%;
+                    color:#666666;
+                  }
+                }
+              }
+            }
+
+          }
+        }
+        >.Page{
+          text-align: right;
+        }
+      }
+    }
+    /*名校*/
+    .recommend_school{
+      >h3{
+        font-size: 18px;
+        height: 70px;
+        line-height: 70px;
+        >a{
+          background-color: #f01414;
+          height: 25px;
+          margin-top: 25px;
+          width: 100px;
+          text-align: center;
+          line-height: 25px;
+          font-size: 12px;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          border-radius: 10px;
+        }
+      }
+      >.lists{
+        >ul{
+          width: 100%;
+          >li{
+            float: left;
+            width: 24%;
+            height: auto;
+            margin-right: 1% ;
+            &:last-of-type{
+              margin-right: 0;
+            }
+            >a{
+              height: 100%;
+              width: 100%;
+              display: block;
+              color:#333;
+              background-color: #fff;
+              -webkit-border-radius: 5px;
+              -moz-border-radius: 5px;
+              border-radius: 5px;
+              box-shadow: 0 1px 0 1px rgba(0,0,0,.1);
+              >img{
+                width: 100%;
+                height: 130px;
+                overflow: hidden;
+              }
+              .text{
+                padding:10px;
+                >h3,>p,>.grade{
+                  overflow: hidden;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 1;
+                  -webkit-box-orient: vertical;
+                  word-break: break-all;
+                }
+                >h3{
+                  font-size:14px;
+                }
+                >.grade{
+                  margin-top: 10px;
+                  span{
+                    padding:2px;
+                    background: #eeeeee;
+                    color:#f01414;
+                    margin-right: 5px;
+                    -webkit-border-radius: 2px;
+                    -moz-border-radius: 2px;
+                    border-radius: 2px;
+                  }
+                }
+                >p{
+                  font-size:12px ;
+                  color:#666;
+                  margin-top: 10px;
+                }
+              }
+
+            }
+          }
+        }
+        >.Page{
+          text-align: right;
+        }
+      }
+    }
+    /*名师*/
+    .recommend_teacher{
+      >h3{
+        font-size: 18px;
+        height: 70px;
+        line-height: 70px;
+        >a{
+          background-color: #f01414;
+          height: 25px;
+          margin-top: 25px;
+          width: 100px;
+          text-align: center;
+          line-height: 25px;
+          font-size: 12px;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          border-radius: 10px;
+        }
+      }
+      >.lists{
+        >ul{
+          width: 100%;
+          >li{
+            float: left;
+            width: 24%;
+            margin-right: 1%;
+            margin-bottom: 1%;
+            height: auto;
+            padding:0 15px;
+            background-color: #fff;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            box-shadow: 0 0px 2px rgba(0,0,0,0.2);
+            >a{
+              display: block;
+              padding-top: 40px;
+              color:#333;
+
+              >img{
+                display: block;
+                width: 100px;
+                height: 100px;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                border-radius: 50%;
+                margin:0 auto;
+              }
+              >p{
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                font-size: 16px;
+                >em{
+                  color:#f01414;
+                }
+
+              }
+              >.tec{
+                font-size: 14px;
+                text-align: center;
+                height: 30px;
+                line-height: 30px;
+              }
+              >.lesson{
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                >i{
+                  padding:3px;
+                  color:#f01414;
+                  margin-right: 3px;
+                  background-color: #eeeeee;
+                  -webkit-border-radius: 3px;
+                  -moz-border-radius: 3px;
+                  border-radius: 3px;
+
+                }
+              }
+              >.line{
+                position: relative;
+                width: 100%;
+                height: 25px;
+                border-bottom: 1px solid #eee;
+                >em{
+                  position: absolute;
+                  bottom: -36%;
+                  left: 50%;
+                  background-color: #fff;
+                  transform: translateX(-50%);
+                }
+              }
+              >.bottom{
+                position: relative;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                border-bottom: 1px solid #eee;
+                >img{
+                  width: 30%;
+                  height: 74px;
+                }
+                >.b_r{
+                  width: 70%;
+                  position: absolute;
+                  top: 30%;
+                  left: 33% ;
+                  >p{
+                    line-height: 20px;
+                    font-size: 14px;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    word-break: break-all;
+                  }
+                  >.info{
+                   color:#999;
+                    margin-top: 5%;
+                    >i{
+                      padding-left: 5%;
+                      font-size: 14px;
+                      vertical-align: middle;
+                    }
+                  }
+
+                }
+              }
+              >.more{
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+              }
+            }
+          }
+        }
+        >.Page{
+          text-align: right;
+
+        }
+      }
+    }
+  }
+
+}

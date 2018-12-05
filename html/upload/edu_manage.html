@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>教务 管理</title>
+    <!-- Bootstrap -->
+    <link href="../../css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link href="../../css/upload/edu_manage.css" rel="stylesheet">
+</head>
+<body>
+<div class="layer">
+    <div class="header"></div>
+    <div class="main">
+        <div class="p_center clearfix">
+            <div class="mine_left f_left">
+                <div class="left_top">
+                    <div class="box_img">
+                    </div>
+                    <div class="left_top_center">
+                        <img src="../../img/focus-img1.png" alt=""/>
+                        <h3>魏雨</h3>
+                        <a href="javascript:;">个人中心</a>
+                    </div>
+                </div>
+                <div class="left_middle">
+                    <a href="../upload/mine_study.html" > 学习中心</a>
+                    <a href="../upload/edu_manage.html"> 教务管理</a>
+                    <a href="../upload/message_manage.html"> 消息管理</a>
+                    <a href="../upload/mine_authentication.html"> 认证管理</a>
+                    <a href="../upload/account_manage.html"> 账号管理</a>
+
+                </div>
+                <div class="left_bottom">
+                    <h3>意见反馈</h3>
+                    <textarea placeholder="有话您说，我们在倾听..."></textarea>
+                    <button>提交</button>
+                </div>
+            </div>
+            <div class="mine_right f_left">
+                <div class="process">
+                   流程：
+                 <a href="./upload.html">上传视频</a>→
+                 <a href="./created_lesson.html">创建课时</a>→
+                    <a href="./edu_manage.html" class="active">纳入（创建）课程</a>→
+                 <a href="course_edit.html">课程编辑</a>→
+                 <a href="javascript:;">发布课程</a>→
+                 <a href="javascript:;">结课，停止更新</a>
+                </div>
+                <div class="content_process">
+                    <div class="school">
+                        <span>所属学校</span>
+                        <input type="text" disabled value="洛浦学校"/>
+                    </div>
+                    <p>课程创建后此项无法修改，如现在需修改，请重新进行教师认证，修改任教学校</p>
+                    <div class="year">
+                        <span>所属学年</span>
+                        <select name="" id="">
+                            <option value="year">2018年</option>
+                            <option value="year">2017年</option>
+                            <option value="year">2016年</option>
+                        </select>
+                    </div>
+                    <div class="grade">
+                        <span>所属年级</span>
+                        <select name="grader" id="grade">
+                            <option value="grade" name="grade" >高三</option>
+                            <option value="grade" name="grade">高二</option>
+                            <option value="grade" name="grade">高一</option>
+                            <option value="grade" name="grade">初三</option>
+                            <option value="grade" name="grade">初二</option>
+                            <option value="grade" name="grade" selected>初一</option>
+                            <option value="grade" name="grade">六年级</option>
+                            <option value="grade" name="grade">五年级</option>
+                            <option value="grade" name="grade">四年级</option>
+                            <option value="grade" name="grade">三年级</option>
+                            <option value="grade" name="grade">二年级</option>
+                            <option value="grade" name="grade">一年级</option>
+                            <option value="grade" name="grade">学前班</option>
+                        </select>
+                    </div>
+                    <div class="subject">
+                        <span>所属学科</span>
+                        <select name="" id="subject">
+                            <option value="">语文</option>
+                            <option value="">数学</option>
+                            <option value="">英文</option>
+                            <option value="">政治</option>
+                            <option value="">历史</option>
+                            <option value="">地理</option>
+                            <option value="">物理</option>
+                            <option value="">化学</option>
+                            <option value="">生物</option>
+                            <option value="">科学</option>
+                            <option value="">品德</option>
+                            <option value="">美术</option>
+                            <option value="">音乐</option>
+                            <option value="">体育</option>
+                        </select>
+                    </div>
+                    <div class="term">
+                        <span>所属学期</span>
+                        <select name="" id="term">
+                            <option value="">上期</option>
+                            <option value="">下期</option>
+                        </select>
+                    </div>
+                    <div class="name">
+                        <span>课程名称</span>
+                        <input type="text" placeholder="请输入课程名称 可不填，最多10字"/>
+                    </div>
+                    <div class="version">
+                        <span>课程版本</span>
+                        <input type="text" placeholder="如人教版 可不填，最多10字"/>
+                    </div>
+                    <div class="course_img">
+                       <h3>课程封面</h3>
+                        <div class="img_box">
+                            <input type="file" id="just" accept="image/*" capture="camera">
+                        </div>
+                    </div>
+                    <div class="sub_info">
+                        <h3>课程简介</h3>
+                        <textarea placeholder="请简单的介绍一下课程，可不填写内容"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-danger btn-lg confirm" >确认创建</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+</div>
+</body>
+<!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+<!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+<!--[if lt IE 9]>
+<script src="../../js/bootstrap/html5shiv.main.js"></script>
+<script src="../../js/bootstrap/respond.min.js"></script>
+<![endif]-->
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="../../js/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="../../js/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/base.js"></script>
+<script src="../../js/sweetalert2.js"></script>
+<script>
+    $(function () {
+        $(".header").load("../common/header_logo.html");
+        $(".footer").load("../common/footer.html");
+        setTimeout(function () {
+            $(".left_middle>a:nth-of-type(2)").addClass("active");
+        },100);
+
+        console.log($('.grade option:selected').text());
+        $(".confirm").click(function () {
+            location.href='./created_lesson.html'
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>举报某人的问答</title>
+    <link rel="stylesheet" href="../../css/base.css"/>
+    <link rel="stylesheet" href="../../css/request/report.css"/>
+</head>
+<body>
+<div class="layer">
+    <div class="box">
+        <h3>我要举报的是“<em>张大大</em>”发的问答：</h3>
+        <div class="content">
+            <img src="../../img/focus-img1.png" alt=""/>
+            <div class="tit">
+                <em>张大大</em>我是问答标题最多64字我是问答标题最多6 4字我是问答标题最多64字我是问答标题最多64字
+            </div>
+        </div>
+        <h5>请选择举报类型：</h5>
+        <div class="infos">
+            <span>
+                <i>√</i><em>垃圾营销</em>
+            </span>
+            <span>
+                <i></i><em>淫秽色情</em>
+            </span>
+            <span>
+                <i></i><em>不实信息</em>
+            </span>
+            <span>
+                <i></i><em>人身攻击我</em>
+            </span>
+            <span>
+                <i></i><em>有害信息</em>
+            </span>
+            <span>
+                <i></i><em>抄袭我的内容</em>
+            </span>
+            <span>
+                <i></i><em>违法信息</em>
+            </span>
+            <span>
+                <i></i><em>其它</em>
+            </span>
+            <button>提交</button>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/base.js"></script>
+<script>
+    $(function () {
+        $(".infos>span").click(function () {
+            $(this).children("i").text("√");
+            $(this).siblings().children("i").html("");
+            //console.log($(this).siblings().children("i"));
+            console.log($(this).children("em").text());
+        })
+    })
+</script>
+</html>
