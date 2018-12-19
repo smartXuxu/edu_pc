@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>教师主页</title>
+    <!-- Bootstrap -->
+    <link href="../../css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/mui.min.css" rel="stylesheet">
+    <link href="../../css/mui_img.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link href="../../css/sweetalert2.css" rel="stylesheet">
+    <link href="../../css/iconfont.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/index/teacher_comment.css"/>
+</head>
+<body>
+<div class="layer">
+    <div class="header"></div>
+    <div class="main">
+        <div class="content p_center clearfix">
+            <h5>当前位置：首页>名师>学生评价</h5>
+        </div>
+        <!-- <!-- <em class="iconfont icon-star"></em>
+                   <em class="iconfont icon-star"></em>
+                   <em class="iconfont icon-star"></em>
+                   <em class="iconfont icon-star"></em>
+                   <em class="iconfont icon-star"></em>
+                   <s>9.3分</s>-->
+        <div class="comment p_center">
+               <h3 class="clearfix"><!--共 <i>912</i>评价
+                   <span class="f_right" onclick="location.href='./eva.html'">我要评价</span>-->
+               </h3>
+             <div class="eva_lists">
+                  <!-- <div class="eva_list">
+                           <div class="list_top clearfix">
+                               <img src="../../img/focus-img1.png" alt=""/>
+                               <span>张大大</span>
+                               <em class="iconfont icon-star"></em>
+                               <em class="iconfont icon-star"></em>
+                               <em class="iconfont icon-star"></em>
+                               <em class="iconfont icon-star"></em>
+                               <em class="iconfont icon-star"></em>
+                               <i>9.3分</i>
+                               <s class="f_right">2018-07-13 18:20</s>
+                           </div>
+                       <div class="list_middle">
+                           我是一条评论内容我是一条评论内容我是一条评论内容我是一条评论内容我是一条评论内容我是一条评论内容我是一条评论内容我是 我是一条
+                       </div>
+
+                   </div>
+                   <div class="eva_list">
+                           <div class="list_top clearfix">
+                               <img src="../../img/focus-img1.png" alt=""/>
+                               <span>张大大</span>
+                               <em class="iconfont icon-star"></em>
+                               <em class="iconfont icon-star"></em>
+                               <em class="iconfont icon-star"></em>
+                               <em class="iconfont icon-star"></em>
+                               <em class="iconfont icon-star"></em>
+                               <i>9.3分</i>
+                               <s class="f_right">2018-07-13 18:20</s>
+                           </div>
+                       <div class="list_middle">
+                           我是一条评论内容我是一条评论内容我是一条评论内容我是一条评论内容我是一条评论内容我是一条评论内容我是一条评论内容我是 我是一条
+                       </div>
+             </div>-->
+            </div>
+            <nav aria-label="Page navigation" class="Page">
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+    </div>
+</div>
+<div class="footer"></div>
+</div>
+</body>
+<!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+<!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+<!--[if lt IE 9]>
+<script src="../../js/bootstrap/html5shiv.main.js"></script>
+<script src="../../js/bootstrap/respond.min.js"></script>
+<![endif]-->
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="../../js/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="../../js/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/base.js"></script>
+<script src="../../js/mui.min.js"></script>
+<script src="../../js/mui.zoom.js"></script>
+<script src="../../js/mui.preview.js"></script>
+<script src="../../js/sweetalert2.js"></script>
+<script src="../../js/template-web.js"></script>
+<script src="../../js/template.js"></script>
+<script>
+    template.helper("spl",function(str){
+        return str.split(",");
+    });
+    template.helper("time",function(date){
+        var time=new Date(date).toLocaleString().replace(/:\d{1,2}$/,' ').substr(5,20).replace(/\//g,"-");
+        return time;
+    });
+    template.helper("str",function(str){
+        return parseInt(str);
+    });
+
+</script>
+<!--评价-->
+<script type="text/html" id="eva">
+    {{if data == null||data.length==0}}
+    <div class="no_in">对不起，暂时没有评价</div>
+    {{else}}
+    <h3 class="clearfix">共 <i>{{data==null?0:data.evaluateTeacherNum}}</i>评价
+        <span class="f_right" onclick="location.href='./eva.html?teacherID={{data.evaluateTeacherList[0].teacherid}}'">我要评价</span>
+    </h3>
+    <div class="eva_lists">
+        {{each data.evaluateTeacherList as value i}}
+        <div class="eva_list">
+            <div class="list_top clearfix">
+                <img src="{{value.user.portrait==null?'../../img/logo%20(2).png':value.user.portrait}}" alt=""/>
+                <span>{{value.user.nickname==null?value.user.realName==null?"猴姆教学":value.user.realName:value.user.nickname}}</span>
+                {{if str(value.evaluateTeacher.score) ==1}}
+                <em class="iconfont icon-star"></em>
+                {{else if str(value.evaluateTeacher.score) ==2}}
+                <em class="iconfont icon-star"></em>
+                <em class="iconfont icon-star"></em>
+                {{else if str(value.evaluateTeacher.score) ==3}}
+                <em class="iconfont icon-star"></em>
+                <em class="iconfont icon-star"></em>
+                <em class="iconfont icon-star"></em>
+                {{else if str(value.evaluateTeacher.score) ==4}}
+                <em class="iconfont icon-star"></em>
+                <em class="iconfont icon-star"></em>
+                <em class="iconfont icon-star"></em>
+                <em class="iconfont icon-star"></em>
+                {{else}}
+                <em class="iconfont icon-star"></em>
+                <em class="iconfont icon-star"></em>
+                <em class="iconfont icon-star"></em>
+                <em class="iconfont icon-star"></em>
+                <em class="iconfont icon-star"></em>
+                {{/if}}
+                <i>{{value.evaluateTeacher.score}}分</i>
+                <s class="f_right">{{value.evaluateTeacher.updateTime==null?"时间不详":time(value.evaluateTeacher.updateTime)}}</s>
+            </div>
+            <div class="list_middle">
+                {{value.evaluateTeacher.body}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{if data!==null||data.length==5}}
+    <div class="see_more">查看更多>>></div>
+    {{/if}}
+    {{/if}}
+</script>
+<!--课堂问答-->
+<script>
+    $(function () {
+        mui.previewImage();
+        mui('body').on('tap','a',function(){document.location.href=this.href;});
+        setTimeout(function () {
+            $(".header").load("../common/header_logo.html");
+            $(".footer").load("../common/footer.html");
+        },100);
+        var str=function(str){
+            return parseInt(str);
+        }
+        var time=function(time){
+            var timestamp=new Date().getTime();//当前时间戳
+            var kk=timestamp-time;//发表时的时间戳
+            var timea="";
+            var sec=parseInt(kk/1000);//秒
+            var min=parseInt(sec/60);//分
+            var hour=parseInt(min/60);//时
+            var day=parseInt(hour/24);//天
+            if(sec<60){
+                timea=sec+"秒前";
+            }else if(min<60){
+                timea=min+"分钟前";
+            }else if(hour<24){
+                timea=hour+"小时前";
+            }else if(day<7){
+                timea=day+"天前";
+            }else{
+                timea=new Date(time).toLocaleString().replace(/:\d{1,2}$/,' ').replace(/\//g,"-");
+            }
+            return timea;
+        };
+
+        var teacherid=location.href.split("=")[1]
+        render(1);
+      function render(page){
+          myAjax({url:"/teacher/related/get/Teacher/Evaluate/List",
+              data:{teacherid:teacherid,page:page,size:10},
+              type:"post"}, function (msg) {
+              console.log(msg);
+             // console.log(msg.data);
+
+              if(msg.status==200){
+
+                  if(msg.data==null||msg.data==''||msg.data.length==0){
+                      $(".eva_lists").html(`<div class='no_in'>对不起，暂时没有更多评价了</div`);
+                  }else{
+                   var data=msg.data.evaluateTeacherList;
+                      var html=``;
+                      $(".comment>h3").html(`共 <i>${msg.data.evaluateTeacherNum
+}</i>评价<span class="f_right" onclick="location.href='./eva.html?id=${data[0].evaluateTeacher.userid}'">我要评价</span>`);
+                      for(var i=0;i<data.length;i++){
+                          var score=str(data[i].evaluateTeacher.score);
+                          if(score=5){
+                              var star=`<em class="iconfont icon-star "></em><em class="iconfont icon-star"></em><em class="iconfont icon-star "></em><em class="iconfont icon-star"></em><em class="iconfont icon-star "></em>`
+                          }else if(score==4){
+                              var star=`<em class="iconfont icon-star "></em><em class="iconfont icon-star "></em><em class="iconfont icon-star "></em><em class="iconfont icon-star "></em>`
+                          }else if(score==3){
+                              var star=`<em class="iconfont icon-star"></em><em class="iconfont icon-star "></em><em class="iconfont icon-star "></em>`
+                          }else if(score==2){
+                              var star=`<em class="iconfont icon-star"></em><em class="iconfont icon-star "></em>`
+
+                          }else if(score==1){
+                              var star=`<em class="iconfont icon-star>`
+                          }
+                          //头像
+                          if(data[i].user.portrait==null){
+                              data[i].user.portrait='./../img/logo%20(2).png';
+                          }
+                          // 昵称
+                          if(data[i].user.nickname==null){
+                              if(data[i].user.realName==null){
+                                  data[i].user.nickname="猴姆教学"
+                              }else{
+                                  data[i].user.nickname=data[i].user.realName
+                              }
+                          }
+                          //发布时间
+                          if(data[i].evaluateTeacher.updateTime==null){
+                              var timea="时间不详";
+                          }else{
+                              var timea=time(data[i].evaluateTeacher.updateTime)
+                          }
+
+                          html+=`<div class="eva_list">
+                                  <div class="list_top clearfix">
+                                  <img src="${data[i].user.portrait}" alt=""/>
+                                  <span>${data[i].user.nickname}</span>
+                                      ${star}
+                                  <i>${data[i].evaluateTeacher.score}分</i>
+                                  <s class="f_right">${timea}</s>
+                                  </div>
+                                  <div class="list_middle">
+                                      ${data[i].evaluateTeacher.body}
+                                  </div>
+                                  </div>`;
+                      }
+                      $(".eva_lists").html(html);
+                  }
+              }
+          })
+      }
+        //分页的调用
+        // 分页的调用
+        var page=1;
+        var pro=1;
+        $(".Page>ul>li").click(function () {
+            //console.log($(this));
+            page=$(this)[0].innerText;
+            // 判断page 的类型
+            //console.log(page);//5
+            if(typeof(parseInt(page)) =="number"&& !isNaN(parseInt(page))){
+                /*是数字*/
+                pro=page;
+            }else{
+                /*是分页*/
+                if(page=="»"){
+                    /*分页+*/
+                    pro=parseInt(pro-0+1);
+                    page=pro;
+
+                }else {
+                    /*分页-*/
+                    pro=parseInt(pro-1);
+                    page=pro;
+                }
+            }
+            if(parseInt(page)<=0){
+                page=1;
+                pro=1;
+            }
+            console.log(page);
+           render(page);
+
+        })
+    })
+</script>
+</html>

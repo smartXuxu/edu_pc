@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
+    <link rel="shortcut icon " type="images/x-icon" href="../../ico.ico">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,11 +16,26 @@
     <link href="../../css/upload/auth.css" rel="stylesheet">
     <link href="../../css/sweetalert2.css" rel="stylesheet">
     <link href="../../css/upload/account_manage.css" rel="stylesheet">
+    <style>
+        .quit_login{
+            width: 200px;
+            display: block;
+            height: 31px;
+            line-height: 31px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            text-align: center;
+            color:#fff;
+            font-size: 14px;
+            margin-top: 10px;
+            background-color:#f01414;
+        }
+    </style>
 </head>
 <body>
 <div class="layer">
     <div class="header"></div>
-
     <div class="left"></div>
     <div class="content">
         <div class="account_right">
@@ -124,6 +141,7 @@
                     <input type="password" placeholder="请输入新密码"/>
                 </div>
                 <button class="save">保存</button>
+                <button class="quit_login">退出登录</button>
             </div>
         </div>
     </div>
@@ -149,39 +167,72 @@
 
 <script>
     $(function () {
-        $(".header").load("../common/header_logo.html");
-        $(".left").load("../common/mine_index.html");
-        $(".footer").load("../common/footer.html");
+       setTimeout(function () {
+           $(".header").load("../common/header_logo.html");
+           $(".left").load("../common/mine_index.html");
+           $(".footer").load("../common/footer.html");
+       },100)
         setTimeout(function () {
           $(".left_middle>a:nth-of-type(5)").addClass("active");
-        },100)
-    })
-    //table 栏的切换
-    $(".menu").click(function () {
-        //jQuery index的属性
-        var index=$(this).index();
-        console.log(index);
-        $(this).addClass("active").siblings().removeClass("active");
-        $('.content_middle').eq(index).show().siblings(".content_middle").hide();
-    })
-    /*绑定邮箱 */
-    $(".no_link").click(function (e) {
-        $("#mask").show();
-        $("#link_share").show();
-        console.log(e);
-        $(".confirm").click(function () {
-            $("#mask").hide();
-            $("#link_share").hide();
+        },300)
+
+        //点击退出登录
+        $(".quit_login").click(function () {
+            console.log(123);
+            var token=localStorage.getItem("token");
+            render(token);
+        })
+
+        function render(token){
+            $.ajax({
+                //处理session每次不唯一问题
+                xhrFields: {
+                    withCredentials: true
+                },
+                type: "post",
+                url: baseUrl+"/user/logout",
+                data:{token:token},
+                dataType: 'json',
+                success:function(data) {
+                    console.log(data);
+                    if(data.status==200){
+                        localStorage.removeItem("pwd");
+                        location.href='../common/login.html';
+                    }
+                }
+
+            })
+        }
+        //table 栏的切换
+        $(".menu").click(function () {
+            //jQuery index的属性
+            var index=$(this).index();
+            console.log(index);
+            $(this).addClass("active").siblings().removeClass("active");
+            $('.content_middle').eq(index).show().siblings(".content_middle").hide();
+        })
+        /*绑定邮箱 */
+        $(".no_link").click(function (e) {
+            $("#mask").show();
+            $("#link_share").show();
+            console.log(e);
+            $(".confirm").click(function () {
+                $("#mask").hide();
+                $("#link_share").hide();
 //            /*同时发送请求*/
 
+            })
         })
+        $("#mask").click(function (e) {
+            if(e.target!=$("#link_share")){
+                $("#mask").hide();
+                $("#link_share").hide();
+            }
+        })
+
+
     })
-    $("#mask").click(function (e) {
-        if(e.target!=$("#link_share")){
-            $("#mask").hide();
-            $("#link_share").hide();
-        }
-    })
+
     //三级联动的城市调用
     _init_area();
     var Gid  = document.getElementById ;
@@ -211,6 +262,7 @@
 
         var checkText=$("#select_id").find("option:selected").text();
         console.log(checkText);
+
 
 </script>
 </html>

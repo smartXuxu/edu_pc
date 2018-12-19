@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+    <link rel="shortcut icon " type="images/x-icon" href="../../ico.ico">
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>名校</title>
     <!-- Bootstrap -->
     <link href="../../css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="../../css/base.css" rel="stylesheet">
     <link href="../../css/lesson/lesson.css" rel="stylesheet">
-
+    <link href="../../css/sweetalert2.css" rel="stylesheet">
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/template-web.js"></script>
+    <script src="../../js/template.js"></script>
+    <script src="../../js/base.js"></script>
+    <script src="../../js/sweetalert2.js"></script>
+    <script src="../../js/bootstrap/bootstrap.min.js"></script>
+    <script src="../../js/bootstrap/html5shiv.main.js"></script>
+    <script src="../../js/bootstrap/respond.min.js"></script>
 </head>
 <body>
 <div class="layer">
@@ -18,7 +28,7 @@
     <div class="main">
         <div class="modal-content">
             <div class="choose ">
-                <div class="city p_center ">
+                <!--<div class="city p_center ">
                     <span>城市：</span>
                     <em class="active" data-city="0">不限</em>
                     <em data-city="1">北京</em>
@@ -32,22 +42,13 @@
                     <em data-city="9">郑州</em>
                     <em data-city="10">石家庄</em>
                     <em data-city="11">更多>></em>
-                </div>
+                </div>-->
                 <div class="grade p_center">
                     <span>年级：</span>
                     <em class="active" data-grade="0">全部</em>
-                    <em data-grade="1">一年级</em>
-                    <em data-grade="2">二年级</em>
-                    <em data-grade="3">三年级</em>
-                    <em data-grade="4">四年级</em>
-                    <em data-grade="5">五年级</em>
-                    <em data-grade="6">六年级</em>
-                    <em data-grade="7">初一</em>
-                    <em data-grade="8">初二</em>
-                    <em data-grade="9">初三</em>
-                    <em >高一</em>
-                    <em >高二</em>
-                    <em >高三</em>
+                    <em data-grade="1">小学</em>
+                    <em data-grade="2">初中</em>
+                    <em data-grade="3">高中</em>
                 </div>
             </div>
             <div class="recommend_school p_center">
@@ -55,8 +56,9 @@
                 </h3>
                 <div class="lists">
                         <ul class="clearfix">
-                            <li>
-                                <a href="javascript:;">
+
+                       <!--     <li>
+                                <a href="./edu_index.html">
                                     <img src="../../img/index_school.png" alt="">
                                     <div class="text">
                                         <h3>华南师范大学附属中学华南师范大学附属中学华南师范大学附属中学</h3>
@@ -69,7 +71,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:;">
+                                <a href="./edu_index.html">
                                     <img src="../../img/index_school.png" alt="">
                                     <div class="text">
                                         <h3>华南师范大学附属中学华南师范大学附属中学华南师范大学附属中学</h3>
@@ -82,7 +84,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:;">
+                                <a href="./edu_index.html">
                                     <img src="../../img/index_school.png" alt="">
                                     <div class="text">
                                         <h3>华南师范大学附属中学华南师范大学附属中学华南师范大学附属中学</h3>
@@ -95,7 +97,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:;">
+                                <a href="./edu_index.html">
                                     <img src="../../img/index_school.png" alt="">
                                     <div class="text">
                                         <h3>华南师范大学附属中学华南师范大学附属中学华南师范大学附属中学</h3>
@@ -106,22 +108,23 @@
                                         <p>. 广州市天河区中山大道西1号</p>
                                     </div>
                                 </a>
-                            </li>
+                            </li>-->
+
                         </ul>
                     <nav aria-label="Page navigation" class="Page">
                         <ul class="pagination">
                             <li>
-                                <a href="#" aria-label="Previous">
+                                <a href="javascript:;" aria-label="Previous">
                                     <span aria-hidden="true">&laquo;</span>
                                 </a>
                             </li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
+                            <li><a href="javascript:;">1</a></li>
+                            <li><a href="javascript:;">2</a></li>
+                            <li><a href="javascript:;">3</a></li>
+                            <li><a href="javascript:;">4</a></li>
+                            <li><a href="javascript:;">5</a></li>
                             <li>
-                                <a href="#" aria-label="Next">
+                                <a href="javascript:;" aria-label="Next">
                                     <span aria-hidden="true">&raquo;</span>
                                 </a>
                             </li>
@@ -136,35 +139,156 @@
     <div class="footer"></div>
 </div>
 </body>
-<!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
-<!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
-<!--[if lt IE 9]>
-<script src="../../js/bootstrap/html5shiv.main.js"></script>
-<script src="../../js/bootstrap/respond.min.js"></script>
-<![endif]-->
-<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
-<script src="../../js/jquery.min.js"></script>
-<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
-<script src="../../js/bootstrap/bootstrap.min.js"></script>
-<script src="../../js/base.js"></script>
+<script type="text/html" id="school">
+    {{if data==null||data.length==0}}
+    <div class="no_in">对不起，暂时没有合适的名师推荐</div>
+    {{else}}
+    {{each data as value i}}
+    <li>
+        <a href="./edu_index.html?id={{value.school.schoolId}}">
+            <img src="{{value.school.portrait==null?'../../img/index_school.png':value.school.portrait}}" alt="">
+            <div class="text">
+                <h3>{{value.school.name}}</h3>
+                <div class="grade">
+                    <span>{{value.school.containClasses}}</span>
+                </div>
+                <p>. {{value.school.address}}</p>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+    {{/if}}
+</script>
 <script>
+    template.helper("str",function(str){
+        return str.split(",");
+    });
     $(function () {
-        $(".header").load("../common/header_logo.html");
-        $(".footer").load("../common/footer.html");
+        setTimeout(function () {
+            $(".header").load("../common/header_logo.html");
+            $(".footer").load("../common/footer.html");
+        },100);
         setTimeout(function () {
             $("header>nav>ul>li:nth-of-type(3)").addClass("active").siblings().removeClass("active");
-        })
-
+        },300)
+        var classes;
+        var city=localStorage.getItem("pc_city");
+        if(!city){
+            city="郑州市";
+        }
+        console.log(city);
+        var grades=0;
         $(".choose>div>em").click(function () {
-            console.log($(this).data());
+           grades=$(this).data("grade");
+            console.log(grades);
             $(this).addClass("active").siblings("em").removeClass("active");
             //获取全部的active 的值
+            if(grades==0){
+                /*传一个ajax*/
+               render(1)
+            }else{
+                if(grades==1){
+                    classes="小学"
+                }else if(grades==2){
+                    classes="初中"
+                }else{
+                    classes="高中"
+                }
+                myAjax({url:"/pc/other/get/school",
+                    data:{city:city,limit:8,page:1,classes:classes},
+                    type:"post"},
+                        function (data) {
+                    console.log(data);
+                    if(data.status==200){
+                        $(".lists>ul").html(template("school",data));
+                    }else{
+                        sweetAlert(
+                                "sorry",
+                                data.msg,
+                                "error"
+                        )
+                    }
+                })
+
+            }
         })
         var str=[];
         $(".choose>div>.active").each(function(){
             str.push($(this).text());
         })
         console.log(str);
+        str=str.join("");
+        console.log(str);
+    /*默认先渲染一个全部的*/
+        render(1)
+        function render(page){
+            myAjax({url:"/pc/other/get/school",data:{city:city,limit:8,page:page},type:"post"}, function (data) {
+                console.log(data);
+                if(data.status==200){
+                    $(".lists>ul").html(template("school",data));
+                }else{
+                    sweetAlert(
+                            "sorry",
+                            data.msg,
+                            "error"
+                    )
+                }
+            })
+        }
+
+        // 分页的调用
+        var page=1;
+        var pro=1;
+        $(".Page>ul>li").click(function () {
+            console.log($(this));
+            page=$(this)[0].innerText;
+            // 判断page 的类型
+           //console.log(page);//5
+            if(typeof(parseInt(page)) =="number"&& !isNaN(parseInt(page))){
+                /*是数字*/
+                pro=page;
+            }else{
+                /*是分页*/
+                if(page=="»"){
+                    /*分页+*/
+                    pro=parseInt(pro-0+1);
+                    page=pro;
+
+                }else {
+                    /*分页-*/
+                    pro=parseInt(pro-1);
+                    page=pro;
+                }
+            }
+            if(parseInt(page)<=0){
+                page=1;
+                pro=1;
+            }
+            console.log(page);
+            if(grades==0){
+                render(page);
+            }else{
+                myAjax({url:"/pc/other/get/school",
+                            data:{city:city,limit:8,page:page,classes:classes},
+                            type:"post"},
+                        function (data) {
+                            console.log(data);
+                            if(data.status==200){
+                                $(".lists>ul").html(template("school",data));
+                            }else{
+                                sweetAlert(
+                                        "sorry",
+                                        data.msg,
+                                        "error"
+                                )
+                            }
+                        })
+            }
+
+        })
+
+
+
     })
 </script>
 </html>

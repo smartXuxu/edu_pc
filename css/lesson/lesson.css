@@ -15,7 +15,7 @@
   font-size: 14px;
 }
 .main > .modal-content > .choose > div > em {
-  margin-right: 8px;
+  margin-left: 2%;
   cursor: pointer;
 }
 .main > .modal-content > .choose > div > em.active {
@@ -24,12 +24,18 @@
 .main > .modal-content > .choose > div > span {
   font-weight: 600;
 }
+.main > .modal-content > .choose > div.academic_year {
+  position: relative;
+}
 .main > .modal-content > .choose > div.academic_year > button {
   height: 30px;
   background-color: #f01414;
   color: #fff;
   border: none;
-  margin-left: 10px;
+  width: 10%;
+  position: absolute;
+  right: 8%;
+  bottom: 20%;
   line-height: 30px;
   font-size: 12px;
   -webkit-border-radius: 3px;
@@ -150,10 +156,11 @@
   position: relative;
 }
 .main > .modal-content > .recommend > .lists > ul > li > a > .bottom > .b_footer > ul {
-  width: 40%;
+  width: 45%;
   position: absolute;
   left: 0%;
   top: 0%;
+  overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
@@ -163,7 +170,10 @@
 .main > .modal-content > .recommend > .lists > ul > li > a > .bottom > .b_footer > ul > li {
   float: left;
   color: #f01414;
-  margin-right: 3px;
+  margin-right: 5%;
+}
+.main > .modal-content > .recommend > .lists > ul > li > a > .bottom > .b_footer > ul > li:first-of-type em {
+  font-size: 17px;
 }
 .main > .modal-content > .recommend > .lists > ul > li > a > .bottom > .b_footer > span {
   display: -webkit-box;

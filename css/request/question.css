@@ -1,0 +1,171 @@
+.encircle{
+	padding: 12px 0 47px;
+	background-color: #efeff4;
+}
+
+.question{
+	background: #FFFFFF;
+}
+
+.ask{
+	padding: 28px;
+	border-bottom: solid 1px #eeeeee;
+}
+
+.question-p{
+	padding: 0 22px 0 31px;
+}
+
+.askTitle{
+	height: 100px;
+	width: 100%;
+	font-size: 14px;
+	padding-left: 10px;
+	border-bottom: solid 1px #eeeeee;
+}
+
+.askcontent{
+	width: 100%;
+	height: 170px;
+	padding: 10px;
+	font-weight: normal;
+}
+
+.upload-pictures{
+	width: 170px;
+    height: 170px;
+}
+.integral{
+	padding: 55px 0 105px;
+}
+.tc{
+	text-align: center;
+}
+
+.integral-title{
+	font-size: 16px;
+	padding-bottom: 15px;
+	color: #333333;
+}
+.integral-list{
+	width: 60%;
+	line-height: 27px;
+	padding-bottom:78px ;
+}
+
+
+.integral-button{
+	width: 220px;
+	height: 50px;
+	font-size: 16px;
+	color: #ffffff;
+	background-color: #85c226;
+}
+
+.source,.integral-input{
+	border:solid 1px #f01414;
+    height: 55px;
+    width: 80%;
+    padding: 8px;
+}
+
+.integral-input{
+	margin: 50px 0;
+}
+
+.source-button{
+    padding: 19px;
+    background:#f01414;
+}
+
+.source-option{
+	position: fixed;
+	 left: 0;
+	 bottom: 0;
+	 top: 0;
+	 right: 0;
+	 font-size: 14px;
+	background: rgba(0,0,0,0.3);
+}
+
+.source-option ul{
+	    position: absolute;
+	    padding: 10px 10px;
+	    width: 300px;
+	    top: 59%;
+	    left: 41%;
+	    text-align: center;
+	     
+	    background: #FFFFFF;
+}
+
+.source-option li{
+	padding: 10px 0;
+	border-bottom: 1px solid #eeeeee;
+}
+
+
+.d-n{
+	display: none;
+}
+
+.upload-file{
+	position: absolute;
+    left: 12%;
+    width: 170px;
+    height: 170px;
+    opacity: 0;
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+/*改变placeholder的字体颜色*/
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #999999; opacity:1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #999999;opacity:1;
+}
+
+.askTitle:-ms-input-placeholder,
+.askcontent:-ms-input-placeholder,
+.integral-input:-ms-input-placeholder,
+.source:-ms-input-placeholder{
+    color: #999999;opacity:1;
+}
+
+.askTitle::-webkit-input-placeholder,
+.askcontent::-webkit-input-placeholder,
+.integral-input::-webkit-input-placeholder,
+.source::-webkit-input-placeholder{
+    color: #999999;opacity:1;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

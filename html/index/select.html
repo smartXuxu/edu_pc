@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <link rel="shortcut icon " type="images/x-icon" href="../../ico.ico">
+    <meta charset="UTF-8">
+    <title>搜索页</title>
+    <link rel="stylesheet" href="../../css/base.css"/>
+    <link rel="stylesheet" href="../../css/sweetalert2.css"/>
+    <link rel="stylesheet" href="../../css/index/select.css"/>
+</head>
+<body>
+<div class="layer">
+    <div class="header"></div>
+    <div class="main">
+        <div class="input">
+            <input type="text" placeholder="请输入您要搜索的内容"/>
+            <button class="result">点击搜索</button>
+        </div>
+    </div>
+    <div class="footer"></div>
+</div>
+</body>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/base.js"></script>
+<script src="../../js/sweetalert2.js"></script>
+<script>
+    $(function () {
+        setTimeout(function () {
+            $(".header").load("../common/header_logo.html");
+            $(".footer").load("../common/footer.html");
+
+        },100)
+        setTimeout(function () {
+            $("header>nav>.search").hide();
+        },500)
+    })
+</script>
+</html>

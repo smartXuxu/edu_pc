@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <link rel="shortcut icon " type="images/x-icon" href="../../ico.ico">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>名师</title>
+    <!-- Bootstrap -->
+    <link href="../../css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/mui.min.css" rel="stylesheet">
+    <link href="../../css/mui_img.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <!--名字有误-->
+    <link href="../../css/request/dynamic_detail.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/publish/publish_activity.css"/>
+  <!--  <link rel="stylesheet" href="../../css/publish/publish_less.css"/>
+-->
+</head>
+<body>
+<div class="layer">
+    <div class="header"></div>
+    <div class="main">
+         <div class="p_center">
+             <h3>当前位置：首页>问答>动态</h3>
+             <div class="title">
+                 <span></span><s>动态</s>
+                 <nav >
+                     <em class="active">全部</em>
+                     <em>关注</em>
+                 </nav>
+             </div>
+             <div class="inputs">
+                 <input type="text" placeholder="想说点啥，就说吧..."/>
+                 <div class="imageBox">
+                     <!--<a href="javascript:;" class="image">
+                           <img src="../img/publish_common.png" alt="" class="userImg"/>
+                           <span class="add_pic">点击添加图片</span>
+                       </a>-->
+                     <!--<a href="javascript:;">
+                       <img src="../img/publish_common.png" alt="" class="userImg"/>
+                       <span class="add_pic">点击添加图片</span>
+                   </a>
+                       <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput" multiple>-->
+                     <div class="z_photo">
+                         <div class="z_file">
+                             <!--   <img src="../img/publish_common.png" alt="" class="userImg"/>-->
+                             <!--<span class="add_pic">点击添加图片</span>-->
+                             <input type="file" capture="camera" name="file" id="file" value=""  accept="image/*" multiple onchange="imgChange('z_photo','z_file');" />
+                         </div>
+                     </div>
+
+                     <div class="z_mask">
+
+                         <div class="z_alert">
+                             <p>确定要删除这张图片吗？</p>
+                             <p>
+                                 <span class="z_cancel">取消</span>
+                                 <span class="z_sure">确定</span>
+                             </p>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="publish">发表</div>
+             </div>
+             <div class="content_lists">
+                 <div class="content_list">
+                     <div class="list_top clearfix" onclick="location.href='./dynamic_detail.html'">
+                         <img src="../../img/focus-img1.png" alt=""/>
+                            <span>小鸟</span>
+                            <em>1天前 </em>
+                         <!--判断有没有关注-->
+                         <i class="f_right">+关注</i>
+                     </div>
+                     <div class="list_content" onclick="location.href='./dynamic_detail.html'">
+                         今天学习了初二数学上期的内容，感觉有点难，但我会努力加油学习的！今天学习了初二数学上期的内容，感觉有点难，但努力加油学习的！今
+                     </div>
+                     <div class="img_cover">
+                         <div class="img_box">
+                             <img src="../../img/focus-img1.png" alt=""/>
+                         </div>
+                         <div class="img_box">
+                             <img data-preview-src="" data-preview-group="1" src="../../img/focus-img1.png" alt=""/>
+                         </div><div class="img_box">
+                             <img data-preview-src="" data-preview-group="1" src="../../img/focus-img1.png" alt=""/>
+                         </div><div class="img_box">
+                             <img data-preview-src="" data-preview-group="1" src="../../img/focus-img1.png" alt=""/>
+                         </div>
+                     </div>
+                     <div class="list_footer">
+                         <ul class="clearfix">
+                             <li ><em class="hand iconfont icon-like "> 1516</em></li>
+                             <li><em class="comment iconfont icon-xiaoxi1"> 1516</em></li>
+                            <!-- <li><em class="comment iconfont icon-zhuyi"> 举报</em></li>-->
+                         </ul>
+                     </div>
+                 </div>
+                 <div class="content_list">
+                     <div class="list_top clearfix">
+                         <img src="../../img/focus-img1.png" alt=""/>
+                            <span>小鸟</span>
+                            <em>1天前 </em>
+                         <!--判断有没有关注-->
+                         <i class="f_right">取消关注</i>
+                     </div>
+                     <div class="list_content">
+                         今天学习了初二数学上期的内容，感觉有点难，但我会努力加油学习的！今天学习了初二数学上期的内容，感觉有点难，但努力加油学习的！今
+                     </div>
+                     <div class="img_cover">
+                         <div class="img_box">
+                             <img src="../../img/focus-img1.png" alt=""/>
+                         </div>
+                         <div class="img_box">
+                             <img data-preview-src="" data-preview-group="1" src="../../img/focus-img1.png" alt=""/>
+                         </div><div class="img_box">
+                             <img data-preview-src="" data-preview-group="1" src="../../img/focus-img1.png" alt=""/>
+                         </div><div class="img_box">
+                             <img data-preview-src="" data-preview-group="1" src="../../img/focus-img1.png" alt=""/>
+                         </div>
+                     </div>
+                     <div class="list_footer">
+                         <ul class="clearfix">
+                             <li><em class="hand iconfont icon-like "> 1516</em></li>
+                             <li><em class="comment iconfont icon-xiaoxi1"> 1516</em></li>
+                            <!-- <li><em class="comment iconfont icon-zhuyi"> 举报</em></li>-->
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+         </div>
+    </div>
+    <div class="footer"></div>
+</div>
+</body>
+<!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+<!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+<!--[if lt IE 9]>
+
+<script src="../../js/bootstrap/html5shiv.main.js"></script>
+<script src="../../js/bootstrap/respond.min.js"></script>
+<![endif]-->
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="../../js/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="../../js/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/mui.min.js"></script>
+<script src="../../js/mui.zoom.js"></script>
+<script src="../../js/mui.preview.js"></script>
+<script src="../../js/base.js"></script>
+<script>
+    mui.init();
+    mui.previewImage();
+    mui('body').on('tap','a',function(){document.location.href=this.href;});
+
+    /*上传图片
+     * */
+    function imgChange(obj1, obj2) {
+        // $(".sure").show(); 上传 图片按钮显示
+        //获取点击的文本框
+        var file = document.getElementById("file");
+        //存放图片的父级元素
+        var imgContainer = document.getElementsByClassName(obj1)[0];
+        //获取的图片文件
+        var fileList = file.files;
+        //文本框的父级元素
+        var input = document.getElementsByClassName(obj2)[0];
+        var imgArr = [];
+        //遍历获取到得图片文件
+        for (var i = 0; i < fileList.length; i++) {
+            //判断上传的图片大小
+            if(file.files && file.files[i]){
+                var fileData = file.files[i];
+                var size = fileData.size;   //注意，这里读到的是字节数
+                var isAllow = false;
+                if(!size) isAllow = false;
+                var maxSize = 2048;
+                maxSize = maxSize * 1024;   //转化为字节
+                isAllow = size <= maxSize;
+                if(!isAllow){
+                    alert("大小超过2 M，请重新上传");
+                    return false;
+                }
+            }
+            //结束
+            var imgUrl = window.URL.createObjectURL(file.files[i]);
+            imgArr.push(imgUrl);
+            var img = document.createElement("img");
+            img.setAttribute("src", imgArr[i]);
+            var imgAdd = document.createElement("div");
+            imgAdd.setAttribute("class", "z_addImg");
+            imgAdd.appendChild(img);
+            imgContainer.appendChild(imgAdd);
+            //getBase64Image(img,imgArr[i]);
+        };
+        //'console.log(imgArr);这个是图片的本地地址
+        for(let i=0;i<imgArr.length;i++){
+            (function(image, x, y,index){
+                drawing(image, x, y,index)
+            })(imgArr[i],0,0,i)
+        }
+        imgRemove();
+    };
+    function imgRemove() {
+        var imgList = document.getElementsByClassName("z_addImg");
+        var mask = document.getElementsByClassName("z_mask")[0];
+        var cancel = document.getElementsByClassName("z_cancel")[0];
+        var sure = document.getElementsByClassName("z_sure")[0];
+        for (var j = 0; j < imgList.length; j++) {
+            imgList[j].index = j;
+            imgList[j].onclick = function() {
+                var t = this;
+                mask.style.display = "block";
+                cancel.onclick = function() {
+                    mask.style.display = "none";
+                };
+                sure.onclick = function() {
+                    mask.style.display = "none";
+                    t.style.display = "none";
+                };
+            }
+        };
+    };
+    var container=document.querySelector(".z_photo");
+    var images=[];
+    function drawing(image, x, y,index) {
+        var img = new Image();
+        img.crossOrigin = 'anonymous';
+        img.src = image;
+        img.onload = function () {
+            let id='canvas'+index;
+            createCanvas(id,img.width,img.height);
+            var cs = document.getElementById(id);
+            var ctx = cs.getContext("2d");
+            ctx.drawImage(img, x, y);
+            var imageUrl=cs.toDataURL('', 1);
+            images.push(imageUrl);
+            //转换成功
+            // console.log(images);
+            removeDom(id);
+        } ;
+    }
+    function createCanvas(id,width,height){
+        var canvas=document.createElement("canvas");
+        canvas.setAttribute('id',id);
+        canvas.setAttribute('width',width);
+        canvas.setAttribute('height',height);
+        canvas.style.display="none";
+        container.appendChild(canvas);
+    }
+    function removeDom(id){
+        document.getElementById(id).outerHTML='';
+    }
+    $(function () {
+        $(".header").load("../common/header_logo.html");
+        $(".footer").load("../common/footer.html");
+        setTimeout(function () {
+            $("header>nav>ul>li:nth-of-type(5)").addClass("active").siblings().removeClass("active");
+        },100)
+        var obj={};
+     /*   $(".finish").click(function(){
+            var base64s=images.join("。").replace(/"/g,"");
+            console.log(base64s);
+            myAjax({url:"/pic/multiple/base64/upload",type:"post",data:{"base64s":base64s},async:false}, function (data) {
+                console.log(data);
+                if(data.status==200){
+                    var picture=data.data;
+                    //拿到 图片上传的地址
+                    var userId=localStorage.getItem("this_userid");
+                    var token=localStorage.getItem("token");
+                    //转换成功 图片的base64地址 很重要
+
+                    // var base64s=images.join("。").replace(/"/g,"");
+                    //var images=images;
+                    //获取用户输入的全部内容之后 包括图片的地址  发送给后台 在进行页面的跳转
+                    var body=$("textarea").val() ;
+                    if(body!=="" || picture!=="" ){
+                        obj.token=token;
+                        obj.userId=userId;
+                        obj.picture = picture;
+                        obj.body=body;
+                        console.log(obj);
+                        $.ajax({
+                            //处理session每次不唯一问题
+                            xhrFields: {
+                                withCredentials: true
+                            },
+                            //请求方式
+                            type:'post',
+                            url:baseUrl+'/dynamic/add/dynamic',
+                            dataType:'json',
+                            data:obj,
+                            beforeSend:function(){
+                                $("#loading").show();
+                            },
+                            success:function(data){
+                                console.log(data);
+                                if(data.status==200){
+                                    //$("#loading").hide();
+                                    //alert("发表成功");
+                                    sweetAlert(
+                                            '恭喜！',
+                                            '您发表成功了！',
+                                            'success'
+                                    ).then(function(){
+                                                //清除location 本地存储
+                                                location.href='../find/find_dynamic.html'
+                                            })
+
+                                }
+                            },
+                            error:function(data){
+                                console.log(data);
+                            }
+                        })
+                    }
+                    else{
+                        sweetAlert(
+                                'sorry',
+                                '记得填写内容哦！',
+                                'error'
+                        )
+                    }
+                }else{
+
+                }
+            })
+
+        })*/
+
+
+    })
+</script>
+</html>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
+    <link rel="shortcut icon " type="images/x-icon" href="../../ico.ico">
+
     <meta charset="UTF-8">
     <title>登录页</title>
     <link rel="stylesheet" href="../../css/base.css"/>
@@ -49,7 +51,7 @@
                 <i class="eye"></i>
             </div>
             <button class="sign login_Button">登 录</button>
-            <p class="third_login">
+          <!--  <p class="third_login">
                 <span >
                     <em class="iconfont icon-weixin-copy"></em>
                     <i class="wechat">微信登录</i>
@@ -63,7 +65,7 @@
                     <i class="sina">微博登录</i>
                 </span>
 
-            </p>
+            </p>-->
             <h4>
                 <span class="forget_password" >忘记密码</span>
                 <span onclick="location.href='register.html'">注册</span>
@@ -188,6 +190,7 @@
                         var loPass = localStorage.setItem('pwd',pwd);
                         //console.log(data.data);
                         localStorage.setItem("token",data.data);
+
                         window.location.href = "../index/index.html";
                 }else{
                     sweetAlert(

@@ -30,7 +30,9 @@ if (window.history && window.history.pushState) {
 //禁止 回退结束*/
 //var baseUrl="http://192.168.1.125:8080/";
 //var baseUrl="http://39.104.127.252:8080/dongdong/";
-var baseUrl='http://192.168.1.181:8087';
+//var baseUrl='http://192.168.1.181:8087';
+var baseUrl='http://39.104.127.252:8087';
+
 function back(){
     history.go(-1);
 }
@@ -46,7 +48,7 @@ function isUser(){
             "您还没有登录，请您先登录",
             "error"
         ).then(function () {
-                window.location.href="../login.html";
+                window.location.href="../common/login.html";
             })
 
     }
@@ -177,7 +179,7 @@ function myAjax(parm,callback){
                 "网络发生错误,请您重新登录",
                 'error'
             ).then(function () {
-                location.href="../login.html"
+                location.href="../common/login.html"
             })
         }
     })

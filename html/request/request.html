@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+    <link rel="shortcut icon " type="images/x-icon" href="../../ico.ico">
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,38 +23,18 @@
             <div class="qu_left">
                 <div class="all_question clearfix">
                     <ul class="clearfix">
-                        <li class="active">全部</li>
-                        <li>未解决</li>
-                        <li>已解决</li>
+                        <li class="active" data-id="0">热门</li>
+                        <li  data-id="1">最新</li>
+                        <li  data-id="2">等待回答</li>
                     </ul>
-                    <a href="JavaScript:;">我要提问</a>
+                    <a href="./question.html">我要提问</a>
                 </div>
                 <div class="all_quest_info">
                     <div class="all_question_lists">
-                        <div class="all_question_list">
-                            <div class="qust_top">
-                                <img src="../../img/focus-img1.png" alt=""/>张大大
-                                <span>来源：如果两条直线和第三条直线来源：如果两条直线和第三条直线来源：如果两条直线和第三条直线平行，这两条直线也平行</span>
-                            </div>
-                            <div class="qust_middle">
-                                我是问答标题最多64字我是问答标题最多64字我是问答标题最多64字我是问答标题最多64字我是问答标 题最多64字我是问答标题最
-                            </div>
-                            <div class="qust_content">
-                                <img src="../../img/focus-img1.png" alt=""/>
-                                <div class="qust_con_mi">
-                                    我是第一个回答详情内容我是第一个回答详情内容我是第一个回答详情内容我是第一个回答详情  我是第一个回答详情内容我是第一个回答详情内容我是第一个回答详情内容我是第一个回答详情内容我是第一个回 答详情内容我是第一个回答
-                                </div>
-                            </div>
-                            <div class="qust_footer">
-                                <ul class="clearfix">
-                                    <li>2198次浏览</li>
-                                    <li class="iconfont icon-xiaoxi1"> 2198个回答</li>
-                                    <li class="iconfont icon-zhuyi" onclick="location.href='./report.html'"> 举报</li>
-                                </ul>
-                            </div>
-                        </div>
+
                     </div>
-                    <nav aria-label="Page navigation" class="Page">
+                    <!--分页放在这里 判断长度是不是等于6 等于6就显示-->
+                    <nav aria-label="Page navigation" class="Page" style="display: none">
                         <ul class="pagination">
                             <li>
                                 <a href="#" aria-label="Previous">
@@ -71,57 +53,56 @@
                             </li>
                         </ul>
                     </nav>
-
                 </div>
 
             </div>
             <div class="qu_right">
-                <a href="javascript:;" class="iconfont icon-fasong "> 动态</a>
-               <div class="Crunchies">
-                   <img src="../../img/index_show.png" alt=""/>
-                   <div class="lists">
-                       <div class="yop">
-                           <span>问答风云榜</span>
-                           <i class="active">周榜</i>
-                           <i>月榜</i>
-                       </div>
-                       <div class="list_content">
-                           <div class="list clearfix">
-                               <div class="f_left">
-                                   <em>1</em>
-                                   <img src="../../img/focus-img1.png" alt=""/>
-                               赵前
-                               </div>
-                               <div class="f_right">
-                                   20问答
-                               </div>
+                <a href="./dynamic.html" class="iconfont icon-fasong "> 动态</a>
+                <div class="Crunchies">
+                    <img src="../../img/index_show.png" alt=""/>
+                    <!-- <div class="lists">
+                         <div class="yop">
+                             <span>问答风云榜</span>
+                             <i class="active">周榜</i>
+                             <i>月榜</i>
+                         </div>
+                         <div class="list_content">
+                             <div class="list clearfix">
+                                 <div class="f_left">
+                                     <em>1</em>
+                                     <img src="../../img/focus-img1.png" alt=""/>
+                                 赵前
+                                 </div>
+                                 <div class="f_right">
+                                     20问答
+                                 </div>
 
-                           </div>
-                           <div class="list clearfix">
-                               <div class="f_left">
-                                   <em>2</em>
-                                   <img src="../../img/focus-img1.png" alt=""/>
-                               赵前
-                               </div>
-                               <div class="f_right">
-                                   20问答
-                               </div>
+                             </div>
+                             <div class="list clearfix">
+                                 <div class="f_left">
+                                     <em>2</em>
+                                     <img src="../../img/focus-img1.png" alt=""/>
+                                 赵前
+                                 </div>
+                                 <div class="f_right">
+                                     20问答
+                                 </div>
 
-                           </div>
-                           <div class="list clearfix">
-                               <div class="f_left">
-                                   <em>3</em>
-                                   <img src="../../img/focus-img1.png" alt=""/>
-                               赵前
-                               </div>
-                               <div class="f_right">
-                                   20问答
-                               </div>
+                             </div>
+                             <div class="list clearfix">
+                                 <div class="f_left">
+                                     <em>3</em>
+                                     <img src="../../img/focus-img1.png" alt=""/>
+                                 赵前
+                                 </div>
+                                 <div class="f_right">
+                                     20问答
+                                 </div>
 
-                           </div>
-                       </div>
-                   </div>
-               </div>
+                             </div>
+                         </div>
+                     </div>-->
+                </div>
             </div>
 
         </div>
@@ -142,18 +123,482 @@
 <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
 <script src="../../js/bootstrap/bootstrap.min.js"></script>
 <script src="../../js/base.js"></script>
+<script src="../../js/template.js"></script>
 <script>
+    template.helper("str", function (str) {
+        return str.split(",")
+    })
+</script>
+<script type="text/html" id="hot">
+    {{if data ==null ||data.length==0}}
+    <div class="no_in">对不起，暂时没有合适的问答推荐</div>
+    {{else}}
+    <div class="all_question_lists">
+        <!--问答详情-->
+        {{each data as value i}}
+        <div class="all_question_list" onclick="location.href='./request_detail.html?id={{value.questions.id}}'">
+            <div class="qust_top">
+                <img src="{{value.questionuser.portrait==null?'../../img/logo%20(2).png':value.questionuser.portrait}}" alt=""/>{{value.questionuser.nickname==null?value.questionuser.realName==null?"猴姆教学":value.questionuser.realName:value.questionuser.nickname}}
+                <i class="iconfont icon-huangguan"> {{value.questions.reward}}积分</i>
+                <!-- <span>来源：如果两条直线和第三条直线来源：如果两条直线和第三条直线来源：如果两条直线和第三条直线平行，这两条直线也平行</span>-->
+            </div>
+            <div class="qust_middle">
+                {{value.questions.title}}
+            </div>
+            <!--判断有没有图片 类名不同-->
+            {{if value.questions.picture==null||value.questions.picture==""}}
+            <div class="qust_content">
+                <div class="qust_con_mi">
+                    {{value.questions.body}}
+                </div>
+            </div>
+            {{else}}
+            <div class="qust_content has_pic">
+                <img src="{{str(value.questions.picture)[0]}}" alt=""/>
+                <div class="qust_con_mi">
+                    {{value.questions.body}}
+                </div>
+            </div>
+            {{/if}}
+            <div class="qust_footer">
+                <ul class="clearfix">
+                    <li>2198次浏览</li>
+                    <li class="iconfont icon-xiaoxi1"> {{value.answerNum}}个回答</li>
+                    <li class="iconfont icon-zhuyi" onclick="location.href='./report.html?userid={{value.questionuser.userid}}'"> 举报</li>
+                </ul>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
+</script>
+<script type="text/html" id="wait">
+    {{if data ==null ||data.length==0}}
+    <div class="no_in">对不起，暂时没有合适的问答推荐</div>
+    {{else}}
+    <div class="all_question_lists">
+        <!--问答详情-->
+        {{each data as value i}}
+        <div class="all_question_list" onclick="location.href='./request_detail.html?id={{value.questions.id}}'">
+            <div class="qust_top">
+                <img src="{{value.questionuser.portrait==null?'../../img/logo%20(2).png':value.questionuser.portrait}}" alt=""/>{{value.questionuser.nickname==null?value.questionuser.realName==null?"猴姆教学":value.questionuser.realName:value.questionuser.nickname}}
+                <i class="iconfont icon-huangguan"> {{value.questions.reward}}积分</i>
+                <!-- <span>来源：如果两条直线和第三条直线来源：如果两条直线和第三条直线来源：如果两条直线和第三条直线平行，这两条直线也平行</span>-->
+            </div>
+            <div class="qust_middle">
+                {{value.questions.title}}
+            </div>
+            <!--判断有没有图片 类名不同-->
+            {{if value.questions.picture==null||value.questions.picture==""}}
+            <div class="qust_content">
+                <div class="qust_con_mi">
+                    {{value.questions.body}}
+                </div>
+            </div>
+            {{else}}
+            <div class="qust_content has_pic">
+
+                <img src="{{str(value.questions.picture)[0]}}" alt=""/>
+                <div class="qust_con_mi">
+                    {{value.questions.body}}
+                </div>
+            </div>
+            {{/if}}
+            <div class="qust_footer">
+                <ul class="clearfix">
+                    <li>2198次浏览</li>
+                    <li class="iconfont icon-xiaoxi1"> {{value.answerNum}}个回答</li>
+                    <li class="iconfont icon-zhuyi" onclick="location.href='./report.html?userid={{value.questionuser.userid}}'"> 举报</li>
+                </ul>
+            </div>
+        </div>
+        {{/each}}
+        {{if !data ||data.length==6}}
+        <nav aria-label="Page navigation" class="Page">
+            <ul class="pagination">
+                <li>
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        {{/if}}
+    </div>
+    {{/if}}
+</script>
+<script>
+    template.helper("str", function (str) {
+        return str.split(",")
+    })
     $(function () {
-        $(".header").load("../common/header_logo.html");
-        $(".footer").load("../common/footer.html");
+        setTimeout(function () {
+            $(".header").load("../common/header_logo.html");
+            $(".footer").load("../common/footer.html");
+        },100)
         setTimeout(function () {
             $("header>nav>ul>li:nth-of-type(5)").addClass("active").siblings().removeClass("active");
-        },100)
-/*选择问题源头*/
+        },300);
+        /*选择问题源头*/
+        var id=0;
         $(".all_question >ul>li").click(function () {
             $(this).addClass("active").siblings().removeClass("active");
-            console.log($(this).text());
+
+            id=$(this).data("id");
+            if(id==0){
+                //最热
+                $(".Page").hide();
+                hot()
+                //console.log("最热");
+            }else if(id==1){
+                //最新
+                $(".Page").hide();
+                newRe()
+                //console.log("1");
+            }else{
+                waiting(1)
+                //console.log("2");
+            }
+        })
+        // 热门问答列表
+        hot()
+        function hot(){
+            myAjax({url:"/Question/and/Answer/get/Hot/Question",data:"",type:"post"}, function (data) {
+                console.log(data);
+                if(data.status==200){
+                    /*template.helper("str", function (str) {
+                     return str.split(",")
+                     })*/
+                    var data=data.data;
+                    console.log(data);
+                    if(data==null||data.length==0||data==""){
+                        $(".all_question_lists").html(` <div class="no_in">对不起，暂时没有合适的问答推荐</div>`)}else{
+                        var html=``;
+                        for (var i=0;i<data.length;i++){
+
+                            if(data[i].questions.picture!==null){
+                                var img =data[i].questions.picture.split(",");
+                            }else{
+                                var img="";
+                            }
+                            if(data[i].questionuser.portrait==null){
+                                var head='../../img/logo%20(2).png';
+
+                            }else{
+                                var head=data[i].questionuser.portrait;
+                            }
+                            if(data[i].questionuser.nickname==null){
+                                if(data[i].questionuser.realName==null){
+                                    var name="猴姆教学"
+                                }else{
+                                    var name=data[i].questionuser.realName;
+                                }
+                            }else{
+                                var name=data[i].questionuser.nickname
+                            }
+                            if(data[i].questions.body==null){
+                                var body=""
+                            }else{
+                                var body=data[i].questions.body;
+                            }
+                            if(img==""){
+                                html+= `<div class="all_question_list" onclick="location.href='./request_detail.html?id=${data[i].questions.id}'">
+                                        <div class="qust_top">
+                                        <img src="${head}" alt=""/>${name}
+                                        <i class="iconfont icon-huangguan">${data[i].questions.reward} 积分</i>
+                                        </div>
+                                        <div class="qust_middle">
+                                            ${data[i].questions.title}
+                                        </div>
+                                        <div class="qust_content">
+                                        <div class="qust_con_mi">
+                                            ${body}
+                                        </div>
+                                        </div>
+                                        <div class="qust_footer">
+                                        <ul class="clearfix">
+                                        <li>2198次浏览</li>
+                                <li class="iconfont icon-xiaoxi1"> ${data[i].answerNum}个回答</li>
+                                        <li class="iconfont icon-zhuyi" onclick="location.href='./report.html?userid=${data[i].questionuser.userid}'"> 举报</li>
+                                        </ul>
+                                        </div>
+                                        </div>`
+                            }
+                            else{
+                                html+=`<div class="all_question_list" onclick="location.href='./request_detail.html?id=${data[i].questions.id}'">
+                                        <div class="qust_top">
+                                        <img src="${head}" alt=""/>${name}
+                                        <i class="iconfont icon-huangguan">${data[i].questions.reward} 积分</i>
+                                        </div>
+                                        <div class="qust_middle">
+                                            ${data[i].questions.title}
+                                        </div>
+                                        <div class="qust_content has_pic">
+                                        <img src="${img}" alt=""/>
+                                        <div class="qust_con_mi">
+                                            ${body}
+                                        </div>
+                                        </div>
+                                        <div class="qust_footer">
+                                        <ul class="clearfix">
+                                        <li>2198次浏览</li>
+                                <li class="iconfont icon-xiaoxi1"> ${data[i].answerNum}个回答</li>
+                                        <li class="iconfont icon-zhuyi" onclick="location.href='./report.html?userid=${data[i].questionuser.userid}'"> 举报</li>
+                                        </ul>
+                                        </div>
+                                        </div>`
+                            }
+
+                        }
+                        $(".all_question_lists").html(html);
+                    }
+                }
+            })
+        }
+        function newRe(){
+            //最新问答
+            myAjax({url:"/Question/and/Answer/get/New/Question",data:"",type:"post"}, function (data) {
+                console.log(data);
+                if(data.status==200){
+                        /*template.helper("str", function (str) {
+                         return str.split(",")
+                         })*/
+                        var data=data.data;
+                        console.log(data);
+                        if(data==null||data.length==0||data==""){
+                            $(".all_question_lists").html(` <div class="no_in">对不起，暂时没有合适的问答推荐</div>`)}
+                        else{
+                            var html=``;
+                            for (var i=0;i<data.length;i++){
+
+                                if(data[i].questions.picture!==null){
+                                    var img =data[i].questions.picture.split(",");
+                                }else{
+                                    var img="";
+                                }
+                                if(data[i].questionuser.portrait==null){
+                                    var head='../../img/logo%20(2).png';
+
+                                }else{
+                                    var head=data[i].questionuser.portrait;
+                                }
+                                if(data[i].questionuser.nickname==null){
+                                    if(data[i].questionuser.realName==null){
+                                        var name="猴姆教学"
+                                    }else{
+                                        var name=data[i].questionuser.realName;
+                                    }
+                                }else{
+                                    var name=data[i].questionuser.nickname
+                                }
+                                if(data[i].questions.body==null){
+                                    var body=""
+                                }else{
+                                    var body=data[i].questions.body;
+                                }
+                                if(img==""){
+                                    html+= `<div class="all_question_list" onclick="location.href='./request_detail.html?id=${data[i].questions.id}'">
+                                            <div class="qust_top">
+                                            <img src="${head}" alt=""/>${name}
+                                            <i class="iconfont icon-huangguan">${data[i].questions.reward} 积分</i>
+                                            </div>
+                                            <div class="qust_middle">
+                                                ${data[i].questions.title}
+                                            </div>
+                                            <div class="qust_content">
+                                            <div class="qust_con_mi">
+                                                ${body}
+                                            </div>
+                                            </div>
+                                            <div class="qust_footer">
+                                            <ul class="clearfix">
+                                            <li>2198次浏览</li>
+                                    <li class="iconfont icon-xiaoxi1"> ${data[i].answerNum}个回答</li>
+                                            <li class="iconfont icon-zhuyi" onclick="location.href='./report.html?userid=${data[i].questionuser.userid}'"> 举报</li>
+                                            </ul>
+                                            </div>
+                                            </div>`
+                                }
+                                else{
+                                    html+=`<div class="all_question_list" onclick="location.href='./request_detail.html?id=${data[i].questions.id}'">
+                                            <div class="qust_top">
+                                            <img src="${head}" alt=""/>${name}
+                                            <i class="iconfont icon-huangguan">${data[i].questions.reward} 积分</i>
+                                            </div>
+                                            <div class="qust_middle">
+                                                ${data[i].questions.title}
+                                            </div>
+                                            <div class="qust_content has_pic">
+                                            <img src="${img}" alt=""/>
+                                            <div class="qust_con_mi">
+                                                ${body}
+                                            </div>
+                                            </div>
+                                            <div class="qust_footer">
+                                            <ul class="clearfix">
+                                            <li>2198次浏览</li>
+                                    <li class="iconfont icon-xiaoxi1"> ${data[i].answerNum}个回答</li>
+                                            <li class="iconfont icon-zhuyi" onclick="location.href='./report.html?userid=${data[i].questionuser.userid}'"> 举报</li>
+                                            </ul>
+                                            </div>
+                                            </div>`
+                                }
+
+                            }
+                            $(".all_question_lists").html(html);
+                        }
+
+                }
+            })
+        }
+        function waiting(page){
+            //等待回答
+            myAjax({url:"/Question/and/Answer/get/NotAnswer/Question",data:{page:page,size:6},type:"post"}, function (data) {
+                console.log(data);
+                if(data.status==200){
+                    // $(".all_quest_info").html(template("hot",data));
+                    var data=data.data;
+                    console.log(data);
+                    if(data==null||data.length==0||data==""){
+                        $(".all_question_lists").html(` <div class="no_in">对不起，暂时没有等待回答的问答推荐</div>`)}else{
+                        console.log(data);
+                        var html=``;
+                        for (var i=0;i<data.length;i++){
+
+                            if(data[i].questions.picture!==null){
+                                var img =data[i].questions.picture.split(",");
+                            }else{
+                                var img="";
+                            }
+                            if(data[i].questionuser.portrait==null){
+                                var head='../../img/logo%20(2).png';
+
+                            }else{
+                                var head=data[i].questionuser.portrait;
+                            }
+                            if(data[i].questionuser.nickname==null){
+                                if(data[i].questionuser.realName==null){
+                                    var name="猴姆教学"
+                                }else{
+                                    var name=data[i].questionuser.realName;
+                                }
+                            }else{
+                                var name=data[i].questionuser.nickname
+                            }
+                            if(data[i].questions.body==null){
+                                var body=""
+                            }else{
+                                var body=data[i].questions.body;
+                            }
+                            if(img==""){
+                                html+= `<div class="all_question_list" onclick="location.href='./request_detail.html?id=${data[i].questions.id}'">
+                                        <div class="qust_top">
+                                        <img src="${head}" alt=""/>${name}
+                                        <i class="iconfont icon-huangguan">${data[i].questions.reward} 积分</i>
+                                        </div>
+                                        <div class="qust_middle">
+                                            ${data[i].questions.title}
+                                        </div>
+                                        <div class="qust_content">
+                                        <div class="qust_con_mi">
+                                            ${body}
+                                        </div>
+                                        </div>
+                                        <div class="qust_footer">
+                                        <ul class="clearfix">
+                                        <li>2198次浏览</li>
+                                <li class="iconfont icon-xiaoxi1"> ${data[i].answerNum}个回答</li>
+                                        <li class="iconfont icon-zhuyi" onclick="location.href='./report.html?userid=${data[i].questionuser.userid}'"> 举报</li>
+                                        </ul>
+                                        </div>
+                                        </div>`
+                            }
+                            else{
+                                html+=`<div class="all_question_list" onclick="location.href='./request_detail.html?id=${data[i].questions.id}'">
+                                        <div class="qust_top">
+                                        <img src="${head}" alt=""/>${name}
+                                        <i class="iconfont icon-huangguan">${data[i].questions.reward} 积分</i>
+                                        </div>
+                                        <div class="qust_middle">
+                                            ${data[i].questions.title}
+                                        </div>
+                                        <div class="qust_content has_pic">
+                                        <img src="${img}" alt=""/>
+                                        <div class="qust_con_mi">
+                                            ${body}
+                                        </div>
+                                        </div>
+                                        <div class="qust_footer">
+                                        <ul class="clearfix">
+                                        <li>2198次浏览</li>
+                                <li class="iconfont icon-xiaoxi1"> ${data[i].answerNum}个回答</li>
+                                        <li class="iconfont icon-zhuyi" onclick="location.href='./report.html?userid=${data[i].questionuser.userid}'"> 举报</li>
+                                        </ul>
+                                        </div>
+                                        </div>`
+                            }
+
+                        }
+                        $(".all_question_lists").html(html);
+                        if(data.length==6){
+                            //console.log("显示");
+                            $(".Page").show();
+                        }
+                    }
+
+                }
+            })
+        }
+        //分页的使用
+        // 分页的调用
+        var page=1;
+        var pro=1;
+        $(".main").on("click",".Page>ul>li", function () {
+            //console.log($(this));
+            page=$(this)[0].innerText;
+            // 判断page 的类型
+            //console.log(page);//5
+            if(typeof(parseInt(page)) =="number"&& !isNaN(parseInt(page))){
+                /*是数字*/
+                pro=page;
+            }else{
+                /*是分页*/
+                if(page=="»"){
+                    /*分页+*/
+                    pro=parseInt(pro-0+1);
+                    page=pro;
+
+                }else {
+                    /*分页-*/
+                    pro=parseInt(pro-1);
+                    page=pro;
+                }
+            }
+            if(parseInt(page)<=0){
+                page=1;
+                pro=1;
+            }
+            console.log(page);
+            if(id==2){
+                //最热
+                waiting(page);
+                //console.log("等待回答");
+
+            }
+
+
         })
     })
+
 </script>
 </html>

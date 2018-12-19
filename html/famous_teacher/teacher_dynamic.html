@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>教师动态主页</title>
+    <!-- Bootstrap -->
+    <link href="../../css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/mui.min.css" rel="stylesheet">
+    <link href="../../css/mui_img.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link href="../../css/sweetalert2.css" rel="stylesheet">
+    <link href="../../css/iconfont.css" rel="stylesheet">
+    <link href="../../css/index/teacher_dynamic.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="layer">
+    <div class="header"></div>
+    <div class="main">
+        <div class="content p_center clearfix">
+            <h5>当前位置：首页>名师>动态</h5>
+        </div>
+        <div class="dynamic p_center">
+            <div class="content_lists">
+
+               <!-- <div class="content_list">
+                    <div class="list_top clearfix" onclick="location.href='./dynamic_detail.html'">
+                        <img src="../../img/focus-img1.png" alt=""/>
+                        <span>小鸟</span>
+                        <em>1天前 </em>
+                    </div>
+                    <div class="list_content" onclick="location.href='./dynamic_detail.html'">
+                        今天学习了初二数学上期的内容，感觉有点难，但我会努力加油学习的！今天学习了初二数学上期的内容，感觉有点难，但努力加油学习的！今
+                    </div>
+                    <div class="img_cover">
+                        <div class="img_box">
+                            <img src="../../img/focus-img1.png" alt=""/>
+                        </div>
+                        <div class="img_box">
+                            <img data-preview-src="" data-preview-group="1" src="../../img/focus-img1.png" alt=""/>
+                        </div><div class="img_box">
+                        <img data-preview-src="" data-preview-group="1" src="../../img/focus-img1.png" alt=""/>
+                    </div><div class="img_box">
+                        <img data-preview-src="" data-preview-group="1" src="../../img/focus-img1.png" alt=""/>
+                    </div>
+                    </div>
+                    <div class="list_footer">
+                        <ul class="clearfix">
+                            <li ><em class="hand iconfont icon-like "> 1516</em></li>
+                            <li><em class="comment iconfont icon-xiaoxi1"> 1516</em></li>
+                            &lt;!&ndash; <li><em class="comment iconfont icon-zhuyi"> 举报</em></li>&ndash;&gt;
+                        </ul>
+                    </div>
+                </div>-->
+            </div>
+            <nav aria-label="Page navigation" class="Page">
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        </div>
+    <div class="footer"></div>
+</div>
+</body>
+<!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+<!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+<!--[if lt IE 9]>
+<script src="../../js/bootstrap/html5shiv.main.js"></script>
+<script src="../../js/bootstrap/respond.min.js"></script>
+<![endif]-->
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="../../js/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="../../js/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/base.js"></script>
+<script src="../../js/mui.min.js"></script>
+<script src="../../js/mui.zoom.js"></script>
+<script src="../../js/mui.preview.js"></script>
+<script src="../../js/sweetalert2.js"></script>
+<script src="../../js/template-web.js"></script>
+<script src="../../js/template.js"></script>
+<script type="text/html" id="dynamic">
+    {{if data==null||data.length==0}}
+    <div class="no_in">对不起，暂时没有动态</div>
+    {{else}}
+    {{each data as value i}}
+    <div class="content_list">
+        <!-- <div class="list_top clearfix" onclick="location.href='../request/dynamic_detail.html?dynamicid={{value.dynamic.id}}'">-->
+        <div class="list_top clearfix">
+            <img src="{{value.user.portrait==null?'../../img/logo%20(2).png':value.user.portrait}}" alt=""/>
+            <span>{{value.user.nickname==null?value.user.realName==null?"猴姆教学":value.user.realName:value.user.nickname}}</span>
+            <em>1天前 </em>
+        </div>
+        <div class="list_content" onclick="location.href='../request/dynamic_detail.html'">
+            {{value.dynamic.body}}
+        </div>
+        {{if value.dynamic.picture==null||value.dynamic.picture==""}}
+        {{else}}
+        <div class="img_cover">
+            {{each spl(value.dynamic.picture) as img k}}
+            <div class="img_box">
+                <img src="{{img}}" alt="" data-preview-src="" data-preview-group="{{i}}"/>
+            </div>
+            {{/each}}
+        </div>
+        {{/if}}
+
+        <div class="list_footer">
+            <ul class="clearfix">
+                <!--判断是否点赞-->
+                {{if value.love.是否点赞 =="否"}}
+                <li class="hand" data-id='{{value.dynamic.id}}'><em class="iconfont icon-like"> {{value.love.点赞总数}}</em></li>
+                {{else}}
+                <li  class="hand" data-id='{{value.dynamic.id}}'><em class="iconfont icon-like is_hand"> {{value.love.点赞总数}}</em></li>
+                {{/if}}
+                <li><em class="comment iconfont icon-xiaoxi1"> {{value.commentNum}}</em></li>
+                <li><em class="comment ">浏览{{value.dynamic.previewNum}}次</em></li>
+            </ul>
+        </div>
+    </div>
+    {{/each}}
+    {{if data!==null||data.length==5}}
+    <div class="see_more">查看更多>>></div>
+    {{/if}}
+    {{/if}}
+</script>
+<script>
+    $(function () {
+        mui.previewImage();
+        mui('body').on('tap','a',function(){document.location.href=this.href;});
+        setTimeout(function () {
+            $(".header").load("../common/header_logo.html");
+            $(".footer").load("../common/footer.html");
+        },100);
+        var str=function(str){
+            return str.split(",");
+        }
+        var time=function(time){
+            var timestamp=new Date().getTime();//当前时间戳
+            var kk=timestamp-time;//发表时的时间戳
+            var timea="";
+            var sec=parseInt(kk/1000);//秒
+            var min=parseInt(sec/60);//分
+            var hour=parseInt(min/60);//时
+            var day=parseInt(hour/24);//天
+            if(sec<60){
+                timea=sec+"秒前";
+            }else if(min<60){
+                timea=min+"分钟前";
+            }else if(hour<24){
+                timea=hour+"小时前";
+            }else if(day<7){
+                timea=day+"天前";
+            }else{
+                timea=new Date(time).toLocaleString().replace(/:\d{1,2}$/,' ').replace(/\//g,"-");
+            }
+            return timea;
+        };
+        /*点赞*/
+        //点赞
+        var userid=localStorage.getItem("this_userid");
+        var teacherid=location.href.split("=")[1];
+        $(".main").on("click",'.hand', function () {
+            var id=$(this).data("id");
+            console.log(id);
+            loveDynamic(id,this);
+        })
+        function loveDynamic(id,e){
+            myAjax({url:"/dynamic/update/Love/Dynamic",data:{"userid":userid,"dynamicid":id},type:"post",async:false}, function (data) {
+                console.log(data);
+                if(data.status==200){
+                    if(data.data.love.是否点赞=="否"){
+                        /*去掉类名*/
+                        $(e).children("em").removeClass("is_hand");
+                        $(e).children("em").text(" "+data.data.love.点赞总数);
+                    }else{
+                        $(e).children("em").addClass("is_hand");
+                        $(e).children("em").text(" "+data.data.love.点赞总数);
+                    }
+                    //重绘页面不行了
+                    /* dynamic(1,3,localStorage.getItem("this_userid"));*/
+                }
+            })
+        }
+        dynamic(1)
+        function dynamic(page){
+            myAjax({url:"/teacher/related/get/Dynamic/List",
+                data:{teacherid:teacherid,
+                    userId:userid,
+                    page:page,
+                    size:5},type:"post"}, function (data) {
+                console.log(data);
+                if(data.status==200){
+                    if(data.data==null||data.data.length==0||data.data==''){
+                        $(".content_lists").html(`<div class='no_in'>对不起没有更多动态了</div>`)
+                    }else{
+                        var data=data.data;
+                        var html=``;
+                        for(var i=0;i<data.length;i++){
+                            //判断图片
+                            var img=``;
+                            if(data[i].dynamic.picture==null||data[i].dynamic.picture==''){
+                                //没有图片
+                                img=``
+                            }else{
+                                var pic=str(data[i].dynamic.picture);
+                                for(var j=0;j<pic.length;j++){
+                                  img+=`<div class="img_box">
+                                            <img src="${pic[j]}" alt="" data-preview-src="" data-preview-group="${i}"/>
+                                            </div>`
+                                }
+                            }
+                            //判断是否点赞
+                            if(data[i].love.是否点赞=="是"){
+                                var hand=` <li  class="hand"  data-id='${data[i].dynamic.id}'><em class="iconfont icon-like is_hand"> ${data[i].love.点赞总数}</em></li>`;
+                            }else{
+                                var hand=`<li class="hand" data-id='${data[i].dynamic.id}'><em class="iconfont icon-like"> ${data[i].love.点赞总数}</em></li>`;
+                            }
+                            // 判断有没有头像
+                            if(data[i].user.portrait==null){
+                                var head_pic='../../img/logo.png'
+                            }else{
+                                var head_pic=data[i].user.portrait
+                            }
+                            //昵称
+                            /*
+                            * {{value.user.nickname==null?value.user.realName==null?"猴姆教学":value.user.realName:value.user.nickname}}*/
+                            if(data[i].user.nickname==null){
+                                if(data[i].user.realName==null){
+                                    var name="猴姆教学"
+                                }else{
+                                    var name= data[i].user.realName
+                                }
+                            }else{
+                                var name= data[i].user.nickname
+                            }
+                            // 时间
+                            var timea=time(data[i].dynamic.updateTime)
+
+                            html+=`<div class="content_list">
+                                    <div class="list_top clearfix" onclick="location.href='./dynamic_detail.html'">
+                                    <img src="${head_pic}" alt=""/>
+                                    <span>${name}</span>
+                                    <em>${timea} </em>
+                            </div>
+                            <div class="list_content" onclick="location.href='./dynamic_detail.html'">${data[i].dynamic.body}
+                            </div>
+                                    <div class="img_cover">
+                                            ${img}
+                                    </div>
+                                    <div class="list_footer">
+                                    <ul class="clearfix">
+                                   ${hand}
+                                    <li><em class="comment iconfont icon-xiaoxi1"> ${data[i].commentNum}</em></li>
+                        <li><em class="comment ">浏览${data[i].dynamic.previewNum}次</em></li>
+
+                        </ul>
+                            </div>
+                            </div>`
+
+                        }
+                        $(".content_lists").html(html);
+                    }
+                }
+            })
+        }
+
+        //分页的调用
+        // 分页的调用
+        var page=1;
+        var pro=1;
+        $(".Page>ul>li").click(function () {
+            //console.log($(this));
+            page=$(this)[0].innerText;
+            // 判断page 的类型
+            //console.log(page);//5
+            if(typeof(parseInt(page)) =="number"&& !isNaN(parseInt(page))){
+                /*是数字*/
+                pro=page;
+            }else{
+                /*是分页*/
+                if(page=="»"){
+                    /*分页+*/
+                    pro=parseInt(pro-0+1);
+                    page=pro;
+
+                }else {
+                    /*分页-*/
+                    pro=parseInt(pro-1);
+                    page=pro;
+                }
+            }
+            if(parseInt(page)<=0){
+                page=1;
+                pro=1;
+            }
+            console.log(page);
+            dynamic(page)
+
+        })
+    })
+</script>
+</html>

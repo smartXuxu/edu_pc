@@ -46,7 +46,6 @@
   color: #fff;
   height: 30px;
   font-size: 14px;
-  line-height: 30px;
   width: 100px;
   margin-top: 10px;
   -webkit-border-radius: 2px;
@@ -100,8 +99,8 @@
   line-height: 60px;
 }
 .main .content .mine_left > .left_bottom > img {
-  width: 60%;
-  margin-left: 20%;
+  width: 36%;
+  margin-left: 32%;
 }
 .main .content .mine_left > .left_bottom > h3 {
   height: 60px;
@@ -147,6 +146,7 @@
 }
 .main .content .mine_right > .mine_info .in_right > p {
   width: 30%;
+  text-align: center;
   display: inline-block;
 }
 .main .content .mine_right > .mine_info .in_right > p > span {
@@ -323,7 +323,7 @@
 }
 .main .content .mine_right > .all_teacher.course_content > ul > li > a > .center > .c_b em {
   font-size: 16px;
-  color: #f01414;
+  color: #999;
 }
 .main .content .mine_right > .all_teacher.course_content > ul > li > a > .cr_right {
   position: absolute;

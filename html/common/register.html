@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
+    <link rel="shortcut icon " type="images/x-icon" href="../../ico.ico">
     <meta charset="UTF-8">
     <title>注册界面</title>
     <link rel="stylesheet" href="../../css/base.css"/>
@@ -263,6 +264,9 @@
                 }
             })
         }
+    $(".register").click(function () {
+        register();
+    })
         //验证手机号
         function checkTelNum(telNum){
             if(!/^1[0-9]{10}$/.test(telNum)){

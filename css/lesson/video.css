@@ -1,0 +1,360 @@
+.icon-fanhui{
+	display: inline-block;
+    font-size: 25px;
+	vertical-align: middle;
+}
+.crumbs{
+	padding-top: 19px;
+	display: inline-block;
+}
+.c-f{
+	color: #FFFFFF;
+}
+
+.video-herder{
+		width: 100%;
+		height: 60px;
+	line-height: 60px;
+		background-color: #000000;
+		color: #FFFFFF;
+	cursor: pointer;
+}
+.d-n{
+	display: none;
+}
+.video{
+	padding: 53px 0 68px 0;
+	background-color: #333333;
+}
+
+.video-centre{
+	padding: 16px 0 36px 0;
+	background: #EFEFF4;
+}
+
+.video-list{
+
+	height: 81px;
+	line-height: 81px;
+	border-bottom: solid 1px #eeeeee;
+}
+
+.video-list > li{
+	 width: 120px;
+	height: 80px;
+	line-height: 80px;
+	font-size: 18px;
+}
+
+.video-detail{
+	width: 75%;
+	min-height:648px;
+	/*height: 648px;*/
+	padding: 0 53px 0 83px;
+	background: #FFFFFF;
+}
+.portrait{
+	margin-right: 24px;
+}
+.portrait img{
+	    width: 60px;
+    height: 60px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 2%;
+}
+
+.teacherMessage{
+	height: 118px;
+	padding: 42px 0 32px 0;
+	border-bottom: solid 1px #e5e5e5;
+}
+
+.details-name{
+	margin-right: 36px;
+	font-size: 18px;
+}
+
+.details-region{
+	margin-top: 17px;
+}
+
+.details-title{
+	font-size: 16px;
+	padding: 30px 0 35px 0;
+}
+
+.details-message{
+	font-size: 14px;
+	color:#999;
+	line-height: 22px;
+}
+
+
+
+.intro{
+	width: 24%;
+    background: #ffffff;
+}
+
+.intro-title{
+	padding: 26px 14px;
+}
+
+.intro-content{
+	padding: 0 14px 26px 14px;
+	line-height: 20px;
+	border-bottom: solid 1px #eeeeee;
+}
+.recommend-img{
+	margin-right: 8px;
+}
+.recommend-img img{
+	width: 106px;
+	height: 68px;
+}
+
+.recommend-list{
+	padding: 0 16px;
+}
+
+.grade{
+	padding: 12px 0 22px 0;
+}
+
+.recommend-sublist{
+	padding: 17px 0;
+	border-bottom: solid 1px #eeeeee;
+}
+
+
+
+/*评论*/
+.comment-seek{
+	padding-top: 26px;
+}
+
+.comment-seek input{
+	width: 85%;
+    height: 96px;
+    border-radius: 6px 0 0px 6px;
+    border: solid 1px #f01414;
+}
+
+.comment-seek > div{
+	width: 15%;
+	height: 96px;
+	padding-top: 20px;
+	border-radius: 0px 6px 6px 0px;
+	background-color: #f01414;
+}
+
+.comment-seek .iconfont{
+	font-size: 38px;
+}
+.commentPen{
+	font-size: 50px;
+    color: #ffffff;
+}
+.comment-portrait{
+	margin-right: 14px;
+}
+
+.comment-portrait > img{
+	width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+.commentcontent{
+	margin-top: 28px;
+}
+
+.comment-time{
+	margin-top: 10px;
+}
+
+.comment-text{
+	padding: 32px 0 24px 0;
+	font-size:16px;
+	border-bottom: solid 1px #eeeeee;
+}
+
+/*问答*/
+
+.answers-title{
+	margin-top: 28px;
+}
+
+.answers-message{
+	margin-top: 27px;
+	color: #666666;
+	font-size: 14px;
+}
+
+.answers-message-span{
+	margin-left: 32px;
+}
+
+
+.answers-message-button{
+	width: 87px;
+	height: 24px;
+	margin-left: 63px;
+	border-radius: 6px;
+	background: #FFFFFF;
+	border: solid 1px #c5c5c5;
+	color: #666666;
+}
+.answers-list{
+	border-bottom: solid 1px #eeeeee;
+}
+
+.answers-list-input{
+	width: 390px;
+	height: 42px;
+	border-radius: 6px 0 0px 6px;
+	border: solid 1px #f01414;
+}
+
+.answers-list-button{
+	width: 93px;
+	height: 42px;
+	background-color: #f01414;
+	border-radius: 0px 6px 6px 0px;
+}
+
+
+.answers-list-search{
+	padding: 24px 0;
+}
+
+
+
+
+/*目录*/
+.catalog-title{
+	font-size: 16px;
+	padding-top: 22px;
+}
+
+.catalog{
+	padding: 22px 0 97px 0;
+}
+
+.playIcon{
+	font-size: 18px;
+	color: #d6d6d6;
+}
+	
+.catalog-list{
+	height: 50px;
+	line-height: 50px;
+}
+
+.c-1414{
+	color: #f01414;
+}
+
+
+/*视频*/
+.video-img{
+	width: 76%;
+	height: 629px;
+}
+
+.video-message{
+	width: 24%;
+	padding-top: 13%;
+	height: 629px;
+	padding-left: 24px;
+	background-color: #1f1f1f;
+}
+.teacherMessage>.teacher_star .iconfont{
+	color:#f01414;
+}
+
+.recommend-img>.grade{
+	padding: 45px 24px 32px 0px;
+	line-height: 25px;
+	color: #ffffff;
+}
+.grade > span{
+	padding:0 5px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #ff0000;
+	border-radius: 2px;
+	font-size: 12px;
+}
+
+.grade > i{
+	font-size: 14px;
+}
+
+.lecturer{
+	font-size: 16px;
+	color: #ffffff;
+}
+
+.course{
+	padding: 14px 0;
+	font-size: 12px;
+	color: #ffffff;
+}
+
+.video-content{
+	margin-top: 140px;
+	line-height: 20px;
+	font-size: 14px;
+}
+
+.video-content p{
+	width: 23px;
+    height: 25px
+}
+.video-message>.grade{
+	color:#fff;
+}
+
+.video-button{
+	width: 228px;
+	height: 34px;
+	margin-top: 30px;
+	background-color: #f01414;
+	border-radius: 17px;
+	color:#FFFFFF
+}
+
+.tc{
+	text-align: center;
+}
+
+
+
+.m-l-14{
+	margin-left: 14px;
+}
+
+#comment>.more{
+	height: 60px;
+	line-height: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

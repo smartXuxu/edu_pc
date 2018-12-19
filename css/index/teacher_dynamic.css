@@ -1,0 +1,109 @@
+.dynamic {
+  /*���˶�̬*/
+  background-color: #fff;
+}
+.dynamic > .content_lists {
+  margin-top: 20px;
+  padding-bottom: 30px;
+}
+.dynamic > .content_lists > .content_list {
+  padding: 30px 30px 0px 30px;
+  background-color: #fff;
+}
+.dynamic > .content_lists > .content_list > .list_top > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.dynamic > .content_lists > .content_list > .list_top > span {
+  font-size: 16px;
+  padding: 0 20px;
+}
+.dynamic > .content_lists > .content_list > .list_top > em {
+  color: #999;
+}
+.dynamic > .content_lists > .content_list > .list_top > i {
+  margin-right: 30px;
+  width: 10%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #f01414;
+  color: #fff;
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
+}
+.dynamic > .content_lists > .content_list > .list_content {
+  font-size: 14px;
+  margin: 10px 0;
+}
+.dynamic > .content_lists > .content_list > .img_cover {
+  width: 100%;
+}
+.dynamic > .content_lists > .content_list > .img_cover > .img_box {
+  position: relative;
+  height: 120px;
+  display: inline-block;
+  margin-right: 1% ;
+  width: 23%;
+  overflow: hidden;
+  background: #333333;
+}
+.dynamic > .content_lists > .content_list > .img_cover > .img_box > img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+.dynamic > .content_lists > .content_list > .list_footer {
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #eeeeee;
+}
+.dynamic > .content_lists > .content_list > .list_footer > ul {
+  width: 100%;
+}
+.dynamic > .content_lists > .content_list > .list_footer > ul > li {
+  margin-left: 3%;
+  float: left;
+  width: 20%;
+  text-align: left;
+  font-size: 14px;
+}
+.dynamic > .content_lists > .content_list > .comment_detail {
+  padding-left: 50px;
+}
+.dynamic > .content_lists > .content_list > .comment_detail > .comment_input > img {
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.dynamic > .content_lists > .content_list > .comment_detail > .comment_input > input {
+  background-color: #fff;
+  width: 80%;
+}
+.dynamic > .content_lists > .content_list > .comment_detail > .comment_input > input:-ms-input-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.dynamic > .content_lists > .content_list > .comment_detail > .comment_input > input::-webkit-input-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.dynamic > .Page {
+  padding-right: 30px;
+}
+.main {
+  background: url(../../img/mine_bag.jpg) no-repeat center;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+.main > .content > h5 {
+  height: 60px;
+  line-height: 60px;
+}

@@ -1,0 +1,28 @@
+.commentcontent{
+    margin-top: 28px;
+}
+
+.comment-time{
+    margin-top: 10px;
+}
+
+.comment-text{
+    padding: 32px 0 24px 0;
+    font-size:16px;
+    border-bottom: solid 1px #eeeeee;
+}
+
+
+.comment-portrait{
+    margin-right: 14px;
+}
+
+.comment-portrait > img{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+#comment{
+    padding: 30px;
+    background-color: #fff;
+}

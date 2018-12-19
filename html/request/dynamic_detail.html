@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <link rel="shortcut icon " type="images/x-icon" href="../../ico.ico">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>动态—详情</title>
+    <!-- Bootstrap -->
+    <link href="../../css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <!--less名字有误-->
+    <link href="../../css/request/dynamic_detail.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/publish/publish_activity.css"/>
+</head>
+<body>
+<div class="layer">
+    <div class="header"></div>
+    <div class="main">
+        <div class="p_center">
+            <h3>当前位置：动态>详情</h3>
+            <div class="title clearfix">
+                <span></span><s>动态</s>
+                <nav >
+                    <em class="active">全部</em>
+                    <em>关注</em>
+                </nav>
+                <del class="f_right" onclick="location.href='./dynamic.html'">发动态</del>
+            </div>
+           <!-- <div class="inputs">
+                <input type="text" placeholder="想说点啥，就说吧..."/>
+                <div class="imageBox">
+                    &lt;!&ndash;<a href="javascript:;" class="image">
+                          <img src="../img/publish_common.png" alt="" class="userImg"/>
+                          <span class="add_pic">点击添加图片</span>
+                      </a>&ndash;&gt;
+                    &lt;!&ndash;<a href="javascript:;">
+                      <img src="../img/publish_common.png" alt="" class="userImg"/>
+                      <span class="add_pic">点击添加图片</span>
+                  </a>
+                      <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput" multiple>&ndash;&gt;
+                    <div class="z_photo">
+                        <div class="z_file">
+                            &lt;!&ndash;   <img src="../img/publish_common.png" alt="" class="userImg"/>&ndash;&gt;
+                            &lt;!&ndash;<span class="add_pic">点击添加图片</span>&ndash;&gt;
+                            <input type="file" capture="camera" name="file" id="file" value=""  accept="image/*" multiple onchange="imgChange('z_photo','z_file');" />
+                        </div>
+                    </div>
+
+                    <div class="z_mask">
+
+                        <div class="z_alert">
+                            <p>确定要删除这张图片吗？</p>
+                            <p>
+                                <span class="z_cancel">取消</span>
+                                <span class="z_sure">确定</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="publish">发表</div>
+            </div>-->
+            <div class="content_lists dynamic_detail">
+                <div class="content_list">
+                    <div class="list_top">
+                        <img src="../../img/focus-img1.png" alt=""/>
+                        <span>小鸟</span>
+                        <em>1天前 </em>
+                    </div>
+                    <div class="list_content">
+                        今天学习了初二数学上期的内容，感觉有点难，但我会努力加油学习的！今天学习了初二数学上期的内容，感觉有点难，但努力加油学习的！今
+                    </div>
+                    <div class="list_footer">
+                        <ul class="clearfix">
+                            <li><em class="hand iconfont icon-like "> 1516</em></li>
+                            <li><em class="comment iconfont icon-xiaoxi1"> 1516</em></li>
+                          <!--  <li><em class="comment iconfont icon-zhuyi"> 举报</em></li>
+                        -->
+                        </ul>
+                    </div>
+                    <div class="comment_detail">
+                        <div class="comment_input">
+                            <img src="../../img/focus-img1.png" alt=""/>
+                            <input type="text" placeholder="说说您想说的吧"/>
+                            <button>发表评论</button>
+                        </div>
+                        <div class="comment_detail_list">
+                                <div class="comment_detail_list_top">
+                                   <!-- <img src="../../img/focus-img1.png" alt=""/>-->
+                                    <span>小花:</span>
+                                    <em>一天前</em>
+                                </div>
+                            <div class="comment_detail_list_content">
+                                今天学习了初二数学上期的内容，感觉有点难，但我会努力加油学习的！今天学习了初二数学上期的内容，感觉有点难，但努力加油学习的！
+                            </div>
+                            <div class="reply">回复</div>
+                            <div class="reply_input">
+                                <span>昵称：</span>
+                                <input type="text" placeholder="说说您想说的吧，最多150字"/>
+                                <em>回复</em>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--不分页-->
+    <div class="footer"></div>
+</div>
+</body>
+<!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+<!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+<!--[if lt IE 9]>
+<script src="../../js/bootstrap/html5shiv.main.js"></script>
+<script src="../../js/bootstrap/respond.min.js"></script>
+<![endif]-->
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="../../js/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="../../js/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/base.js"></script>
+<script>
+    $(function () {
+        $(".header").load("../common/header_logo.html");
+        $(".footer").load("../common/footer.html");
+        setTimeout(function () {
+            $("header>nav>ul>li:nth-of-type(5)").addClass("active").siblings().removeClass("active");
+        },100)
+        /*利用js 控制 评论框框的隐藏与否*/
+
+    })
+</script>
+</html>

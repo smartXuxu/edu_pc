@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我要提问</title>
+		<link rel="stylesheet" href="../../css/base.css" />
+		<link rel="stylesheet" href="../../css/request/question.css" />
+		<link rel="stylesheet" href="../../css/iconfont.css" />
+	</head>
+
+	<body>
+		<div>
+			<!--头部-->
+			<div class="header"></div>
+			<div class="main">
+			</div>
+			<!--中间-->
+			<div class="encircle ">
+				<div class="p_center question">
+					<div class="ask">
+						我要提问
+					</div>
+					<div class="question-p">
+						<!--提问的标题-->
+						<div>
+							<input type="text" placeholder="请输入问题" class="askTitle" />
+						</div>
+						<!--提问的内容-->
+						<div>
+							<textarea name="" rows="" cols="" placeholder="请输入问题内容描述" class="askcontent"></textarea>
+							<div>
+								<img src="../../img/location_bg.png" alt="" class="upload-pictures" id="upload-pictures"/>
+								<input type="file" onchange="selectImg(this,'upload-pictures')" class="upload-file"/>
+							</div>
+						</div>
+						<!--悬赏积分-->
+						<div class="integral">
+							<div>
+								<div>
+									<input type="text" placeholder="请选择问题来源(非必填)" class="source" />
+
+									<a type="button" class="source-button">点击选择</a>
+								</div>
+								<div>
+									<input type="text" placeholder="请输入悬赏积分" class="integral-input" />
+								</div>
+
+							</div>
+							<div class="integral-title">
+								悬赏积分：
+							</div>
+							<nav>
+								<ul class="integral-list">
+									<li>
+										1、您发布的提问可以采纳多个回答;
+									</li>
+									<li>
+										2、如果您进行了积分悬赏,那么您所悬赏的积分就是每个回答的赏金(即您需为每个采纳的回答支付一笔您悬赏的积分额度作为报酬),并且在您发布问题后会直接扣除一笔您所悬赏的积分作为之后您采纳的第一- 个回答的赏金;
+
+									</li>
+									<li>
+										3、如果您填写的悬赏积分为0或者未填, 则默认不进行积分悬赏,悬赏积分有助于您快速获得问题的解答;
+
+									</li>
+								</ul>
+							</nav>
+							<div class="tc">
+								<button class="integral-button">
+						 			发布
+						 		</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<nav class="source-option d-n">
+				<ul>
+					<li>徐徐</li>
+					<li>海鸽</li>
+					<li>登峰</li>
+					<li>小黄</li>
+				</ul>
+			</nav>
+			<!--底部-->
+			<div class="footer"></div>
+		</div>
+		<script src="../../js/jquery.min.js"></script>
+		<script>
+			var source; //来源
+			var base64;  //图片
+			
+			
+			
+			//点击source-option下的li
+			$(".source-option").on("click", "li", function() {
+				//让source-option隐藏
+				$(".source-option").addClass("d-n");
+				//把li的值复制给source
+				source = $(this).text();
+				$(".source").val(source);
+				console.log(source);
+			})
+
+			$(".source-button").click(function() {
+				$(".source-option").removeClass("d-n");
+			});
+
+			//添加图片
+
+			function selectImg(file, id) {
+				if(!file.files || !file.files[0]) {
+					return;
+				}
+				console.log(file.files[0]);
+				var reader = new FileReader();
+				reader.onload = function(evt) {
+					var replaceSrc = evt.target.result;
+					//更换cropper的图片
+					// $('#tailoringImg').cropper('replace', replaceSrc,false);//默认false，适应高度，不失真
+					$("#" + id).prop("src", replaceSrc); //显示为图片的形式
+
+						base64 = replaceSrc;
+					 
+				}
+				reader.readAsDataURL(file.files[0]);
+				 
+
+			}
+
+
+			//首页,尾页
+			$(function() {
+
+				setTimeout(function() {
+					$(".header").load("../common/header_logo.html");
+					$(".footer").load("../common/footer.html");
+				}, 100)
+
+				/*点击选择学校*/
+				$(".nav li").click(function() {
+					$(this).addClass("active").siblings().removeClass("active");
+					//获取自定义的年级属性
+					console.log($(this).data("grade"));
+				})
+			})
+		</script>
+	</body>
+
+</html>

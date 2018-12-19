@@ -355,7 +355,7 @@ function svae_City() {
     localStorage.setItem("pc_city",Cityname);
     $(dataCityinput).val(Cityname);
 //跳转到 首页
-    location.href='../../html/index/index.html';
+  window.history.go(-1);
 
    // Close();
 }

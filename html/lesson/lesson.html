@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+    <link rel="shortcut icon " type="images/x-icon" href="../../ico.ico">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,6 +12,7 @@
     <link href="../../css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="../../css/base.css" rel="stylesheet">
     <link href="../../css/lesson/lesson.css" rel="stylesheet">
+    <link href="../../css/sweetalert2.css" rel="stylesheet">
 
 </head>
 <body>
@@ -19,62 +21,64 @@
     <div class="main">
         <div class="modal-content">
             <div class="choose ">
-                <div class="city p_center ">
-                    <span>城市：</span>
-                    <em class="active" data-city="0">不限</em>
-                    <em data-city="1">北京</em>
-                    <em data-city="2">衡水</em>
-                    <em data-city="3">济南</em>
-                    <em data-city="4">赣州</em>
-                    <em data-city="5">哈尔滨</em>
-                    <em data-city="6">成都</em>
-                    <em data-city="7">菏泽</em>
-                    <em data-city="8">咸阳</em>
-                    <em data-city="9">郑州</em>
-                    <em data-city="10">石家庄</em>
-                    <em data-city="11">更多>></em>
+                <div class="subject p_center ">
+                    <span>学科：</span>
+                    <em class="active" data-subject="数学">数学</em>
+                    <em data-subject="英语">英语</em>
+                    <em data-subject="语文">语文</em>
+                    <em data-subject="物理">物理</em>
+                    <em data-subject="化学">化学</em>
+                    <em data-subject="生物">生物</em>
+                    <em data-subject="政治">政治</em>
+                    <em data-subject="历史">历史</em>
+                    <em data-subject="地理">地理</em>
+                    <em data-subject="科学">科学</em>
+                    <em data-subject="品德">品德</em>
+                    <em data-subject="美术">美术</em>
+                    <em data-subject="音乐">音乐</em>
+                    <em data-subject="体育">体育</em>
                 </div>
                 <div class="grade p_center">
                     <span>年级：</span>
-                    <em class="active" data-grade="0">全部</em>
-                    <em data-grade="1">一年级</em>
-                    <em data-grade="2">二年级</em>
-                    <em data-grade="3">三年级</em>
-                    <em data-grade="4">四年级</em>
-                    <em data-grade="5">五年级</em>
-                    <em data-grade="6">六年级</em>
-                    <em data-grade="7">初一</em>
-                    <em data-grade="8">初二</em>
-                    <em data-grade="9">初三</em>
-                    <em >高一</em>
-                    <em >高二</em>
-                    <em >高三</em>
+                    <em class="active" data-grade="学前班">学前班</em>
+                    <em  data-grade="一年级">一年级</em>
+                    <em data-grade="二年级">二年级</em>
+                    <em data-grade="三年级">三年级</em>
+                    <em data-grade="四年级">四年级</em>
+                    <em data-grade="五年级">五年级</em>
+                    <em data-grade="六年级">六年级</em>
+                    <em data-grade="初一">初一</em>
+                    <em data-grade="初二">初二</em>
+                    <em data-grade="初三">初三</em>
+                    <em data-grade="高一">高一</em>
+                    <em data-grade="高二">高二</em>
+                    <em data-grade="高三">高三</em>
                 </div>
                 <div class="term p_center">
                     <span>学期：</span>
-                    <em class="active">全部</em>
-                    <em data-term="0">上学期</em>
-                    <em data-term="1">下学期</em>
+                    <em class="active" data-term="上学期">上学期</em>
+                    <em data-term="下学期">下学期</em>
                 </div>
                 <div class="academic_year p_center">
                     <span>学年：</span>
-                    <em class="active">2018</em>
+                    <em class="active" data-year="2018">2019</em>
+                    <em data-year="2018">2018</em>
                     <em data-year="2017">2017</em>
                     <em data-year="2016">2016</em>
                     <em data-year="2015">2015</em>
                     <em data-year="2014">2014</em>
-                    <input type="text" placeholder="输入学年"/>
+                   <!-- <input class='input_year' type="text" placeholder="输入学年"/>-->
                     <button class="sure_year">确定</button>
                 </div>
             </div>
             <div class="recommend p_center">
                 <h3 class="clearfix">推荐好课
-                    <a href="" class="f_right">上传好课</a>
+                   <!-- <a href="" class="f_right">上传好课</a>-->
                 </h3>
                 <div class="lists">
                     <ul class="clearfix">
-                        <li>
-                            <a href="javascript:;">
+                    <!--    <li>
+                            <a href="./video.html">
                                 <div class="img_box">
                                     <img src="../../img/index_edu.png" alt="">
                                 </div>
@@ -95,7 +99,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:;">
+                            <a href="./video.html">
                                 <div class="img_box">
                                     <img src="../../img/index_edu.png" alt="">
                                 </div>
@@ -116,7 +120,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="javascript:;">
+                            <a href="./video.html">
                                 <div class="img_box">
                                     <img src="../../img/index_edu.png" alt="">
                                 </div>
@@ -135,113 +139,7 @@
                                     </div>
                                 </div>
                             </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="img_box">
-                                    <img src="../../img/index_edu.png" alt="">
-                                </div>
-                                <div class="bottom">
-                                    <p>2018年初二数学上期课堂</p>
-                                    <h5>主讲老师：张燕</h5>
-                                    <div class="new">更新：全等三角形</div>
-                                    <div class="b_footer">
-                                        <ul class="clearfix">
-                                            <li class="iconfont icon-star"></li>
-                                            <li class="iconfont icon-star"></li>
-                                            <li class="iconfont icon-star"></li>
-                                            <li class="iconfont icon-star"></li>
-                                            <li class="iconfont icon-star"></li>
-                                        </ul>
-                                        <span>| &nbsp;&nbsp;&nbsp;&nbsp;1.6w人学习</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="img_box">
-                                    <img src="../../img/index_edu.png" alt="">
-                                </div>
-                                <div class="bottom">
-                                    <p>2018年初二数学上期课堂</p>
-                                    <h5>主讲老师：张燕</h5>
-                                    <div class="new">更新：全等三角形</div>
-                                    <div class="b_footer">
-                                        <ul class="clearfix">
-                                            <li class="iconfont icon-star"></li>
-                                            <li class="iconfont icon-star"></li>
-                                            <li class="iconfont icon-star"></li>
-                                            <li class="iconfont icon-star"></li>
-                                        </ul>
-                                        <span>| &nbsp;&nbsp;&nbsp;&nbsp;1.6w人学习</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="img_box">
-                                    <img src="../../img/index_edu.png" alt="">
-                                </div>
-                                <div class="bottom">
-                                    <p>2018年初二数学上期课堂</p>
-                                    <h5>主讲老师：张燕</h5>
-                                    <div class="new">更新：全等三角形</div>
-                                    <div class="b_footer">
-                                        <ul class="clearfix">
-                                            <li class="iconfont icon-star"></li>
-                                            <li class="iconfont icon-star"></li>
-                                            <li class="iconfont icon-star"></li>
-                                            <li class="iconfont icon-star"></li>
-                                        </ul>
-                                        <span>| &nbsp;&nbsp;&nbsp;&nbsp;1.6w人学习</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="img_box">
-                                    <img src="../../img/index_edu.png" alt="">
-                                </div>
-                                <div class="bottom">
-                                    <p>2018年初二数学上期课堂</p>
-                                    <h5>主讲老师：张燕</h5>
-                                    <div class="new">更新：全等三角形</div>
-                                    <div class="b_footer">
-                                        <ul class="clearfix">
-                                            <li class="iconfont icon-star"></li>
-                                            <li class="iconfont icon-star"></li>
-                                            <li class="iconfont icon-star"></li>
-                                            <li class="iconfont icon-star"></li>
-                                        </ul>
-                                        <span>| &nbsp;&nbsp;&nbsp;&nbsp;1.6w人学习</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="img_box">
-                                    <img src="../../img/index_edu.png" alt="">
-                                </div>
-                                <div class="bottom">
-                                    <p>2018年初二数学上期课堂</p>
-                                    <h5>主讲老师：张燕</h5>
-                                    <div class="new">更新：全等三角形</div>
-                                    <div class="b_footer">
-                                        <ul class="clearfix">
-                                            <li class="iconfont icon-star"></li>
-                                            <li class="iconfont icon-star"></li>
-                                            <li class="iconfont icon-star"></li>
-                                            <li class="iconfont icon-star"></li>
-                                        </ul>
-                                        <span>| &nbsp;&nbsp;&nbsp;&nbsp;1.6w人学习</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
+                        </li>-->
                     </ul>
                     <nav aria-label="Page navigation" class="Page">
                         <ul class="pagination">
@@ -282,24 +180,137 @@
 <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
 <script src="../../js/bootstrap/bootstrap.min.js"></script>
 <script src="../../js/base.js"></script>
+<script src="../../js/template-web.js"></script>
+<script src="../../js/sweetalert2.js"></script>
+<script type="text/html" id="lesson">
+    {{if data==null||data.length==0}}
+    <div class="no_in">对不起，暂时没有课堂信息推荐</div>
+    {{else}}
+{{each data as value i}}
+<li>
+    <a href="./video.html?id={{value.course.id}}">
+        <div class="img_box">
+            <img onerror="this.src='../../img/index_edu.png'" src="{{value.course.coursePicture==null?'../../img/index_edu.png':value.course.coursePicture}}" alt="">
+        </div>
+        <div class="bottom">
+            <p>{{value.course.academicYear}}{{value.course.grade}}{{value.course.semester}}{{value.course.subject}}{{value.course.name}}</p>
+            <h5>主讲老师：{{value.speaker}}</h5>
+            <div class="new">{{value.course.name}} 更新至:第{{value.updateNum}}课时</div>
+            <div class="b_footer">
+                <ul class="clearfix">
+                    <li>
+                        <em class="iconfont icon-wode1">{{value.StudyCourseNum}}</em>
+                    </li>
+                    <li>
+                        <em class="iconfont icon-wujiaoxingkong">{{value.CourseCollectNum}}</em>
+                    </li>
+                    <li>
+                        <em class="iconfont icon-xin1">{{value.CourseLoveNum}}</em>
+                    </li>
+                </ul>
+                <span>| &nbsp;&nbsp;&nbsp;&nbsp;{{value.StudyCourseNum}}人学习中</span>
+            </div>
+        </div>
+    </a>
+</li>
+    {{/each}}
+    {{/if}}
+</script>
 <script>
     $(function () {
-        $(".header").load("../common/header_logo.html");
-        $(".footer").load("../common/footer.html");
+
+        setTimeout(function () {
+            $(".header").load("../common/header_logo.html");
+            $(".footer").load("../common/footer.html");
+            },100)
         setTimeout(function () {
             $("header>nav>ul>li:nth-of-type(2)").addClass("active").siblings().removeClass("active");
-        })
+        },300)
 
         $(".choose>div>em").click(function () {
-            console.log($(this).data());
+            //console.log($(this).data());
             $(this).addClass("active").siblings("em").removeClass("active");
             //获取全部的active 的值
         })
-        var str=[];
+
+       /* var str=[];
         $(".choose>div>.active").each(function(){
             str.push($(this).text());
         })
-        console.log(str);
+        console.log(str);*/
+        var flag=false;
+        render(1);
+        function render(page){
+           myAjax({url:"/pc/other/get/Courses",data:{limit:8,page:page},type:"post"}, function (data) {
+               console.log(data);
+               if(data.status==200){
+                    $(".lists>ul").html(template("lesson",data));
+               }
+           })
+        }
+        //不分页的情况下搜索条件
+        no_page(1)
+        function no_page(page){
+            $(".sure_year").click(function () {
+                //选择了条件
+                flag=true;
+                var obj={};
+                /*
+                 * limit  每页多少，最大每页记录数为 100；page  第几页；academic_year  学
+                 年，如果检索全部参数不传；grade   年级，如果检索全部参数不传；  学科，如果检
+                 索全部参数不传；semester  学期，如果检索全部参数不传；*/
+                obj.page=page;
+                obj.semester=$(".term>.active").data("term");
+                obj.academic_year=$(".academic_year>.active").data("year");
+                obj.limit=8;
+                obj.academic_grade=$(".grade>.active").data("grader")
+                obj.subject=$(".subject>.active").data("subject");
+                myAjax({url:"/pc/other/get/Courses",type:"post",data:obj}, function (data) {
+                    console.log(data);
+                    if(data.status==200){
+                        $(".lists>ul").html(template("lesson",data));
+                    }
+                })
+            })
+        }
+
+        // 分页
+        // 分页的调用
+        var page=1;
+        var pro=1;
+        $(".Page>ul>li").click(function () {
+            //console.log($(this));
+            page=$(this)[0].innerText;
+            // 判断page 的类型
+            //console.log(page);//5
+            if(typeof(parseInt(page)) =="number"&& !isNaN(parseInt(page))){
+                /*是数字*/
+                pro=page;
+            }else{
+                /*是分页*/
+                if(page=="»"){
+                    /*分页+*/
+                    pro=parseInt(pro-0+1);
+                    page=pro;
+
+                }else {
+                    /*分页-*/
+                    pro=parseInt(pro-1);
+                    page=pro;
+                }
+            }
+            if(parseInt(page)<=0){
+                page=1;
+                pro=1;
+            }
+            console.log(page);
+            if(!flag){
+                render(page);
+            }else {
+                no_page(page)
+            }
+
+        })
     })
 </script>
 </html>

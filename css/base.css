@@ -24,6 +24,9 @@ html,body,ul,li,img,a,p,div,form,input{
     /*去除移动端特有的点击高亮效果*/
     -webkit-tap-highlight-color: transparent;
 }
+ul>li{
+    cursor: pointer;
+}
 body{
     font-family: "微软雅黑",Microsoft Yahei ,sans-serif;
     font-size: 12px;
@@ -76,6 +79,7 @@ span{
     display: inline-block;
 }
 textarea{
+    font-family: "微软雅黑",Microsoft Yahei ,sans-serif;
     outline: none;
     /*2.去除边框*/
     border: none;
@@ -129,7 +133,39 @@ a:hover,a:active,a:link,a:visited{
     overflow: hidden;
 }
 .no_in{
+    display: inline-block;
     font-size: 22px;
     color:#999;
-    padding: 30px;
+    padding: 50px;
+}
+/*小黄*/
+.clearfix::before,
+.clearfix::after,
+.video-list::after,
+.teacherMessage::after,
+.p_center::after,
+.recommend-sublist::after,
+.video::after{
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0px;
+    clear: both;
+    visibility: hidden;
+}
+.Page{
+    text-align: right;
+}
+/*查看更多*/
+.see_more{
+    margin-top: 8px;
+    text-align: right;
+    padding-right: 30px;
+}
+.is_hand{
+    color:#f01414;
+}
+/*mui图片查看*/
+.mui-slider .mui-slider-group .mui-slider-item img{
+    width: 40%;
 }

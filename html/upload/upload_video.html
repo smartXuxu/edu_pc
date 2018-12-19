@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
+    <link rel="shortcut icon " type="images/x-icon" href="../../ico.ico">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,11 +50,34 @@
 <script src="../../js/base.js"></script>
 <script>
     $(function () {
-        $(".header").load("../common/header_logo.html");
-        $(".footer").load("../common/footer.html");
+       setTimeout(function () {
+           $(".header").load("../common/header_logo.html");
+           $(".footer").load("../common/footer.html");
+       },50)
         setTimeout(function () {
             $("header>nav>ul>li:nth-of-type(6)").addClass("active").siblings().removeClass("active");
         },100)
+        /*在这个页面要判断 教师的状态 显示不同的界面
+        * 1、如果是认证通过的教师直接显示 上传视频界面
+        * 认证中 显示那几个认证的状态
+        *2、还是在个人中心中 统一设置*/
+
+        //判断状态 显示 视频上传即可
+        var token=localStorage.getItem("token");
+        var userid =localStorage.getItem("this_userid");
+        /*如果没有token 则是没有登录*/
+        if(token){
+            myAjax({url:"/user/my/get/Base/Info",data:{userid:userid},type:"post"}, function (data) {
+                console.log(data);
+                if(data.status==200){
+                    localStorage.setItem("identityAuthentication",data.data.user.identityAuthentication);
+                    console.log(data.data.user.identityAuthentication);
+                    if(data.data.user.identityAuthentication==4){
+                        location.href='./edu_manage.html'
+                    }
+                }
+            })
+        }
     })
 </script>
 </html>
