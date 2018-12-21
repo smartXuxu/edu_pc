@@ -2,19 +2,19 @@
 <html>
 <head lang="en">
     <link rel="shortcut icon " type="images/x-icon" href="../../ico.ico">
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>用户个人主页</title>
+    <title>学习中心 </title>
     <!-- Bootstrap -->
     <link href="../../css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="../../css/base.css" rel="stylesheet">
-    <link href="../../css/sweetalert2.css" rel="stylesheet">
     <link href="../../css/iconfont.css" rel="stylesheet">
+    <link href="../../css/upload/upload.css" rel="stylesheet">
     <link href="../../css/upload/auth.css" rel="stylesheet">
-    <link href="../../css/upload/mine_index.css" rel="stylesheet">
+    <link href="../../css/upload/mine_study.css" rel="stylesheet">
+    <link href="../../css/sweetalert2.css" rel="stylesheet">
 </head>
 <body>
 <div class="layer">
@@ -26,17 +26,18 @@
                     <div class="box_img">
                     </div>
                     <div class="left_top_center">
-                        <img src="../../img/focus-img1.png" alt=""/>
-                        <h3>魏雨</h3>
-                        <a href="javascript:;">个人中心</a>
+                        <img src="../../img/logo%20(2).png" alt=""/>
+                        <h3>猴姆教学</h3>
+                        <a href="../upload/mine_index.html">个人中心</a>
                     </div>
                 </div>
                 <div class="left_middle">
-                    <a href="./mine_study.html" > 学习中心</a>
-                    <a href="./edu_manage.html"> 教务管理</a>
-                    <a href="./message_manage.html"> 消息管理</a>
-                    <a href="./mine_authentication.html"> 认证管理</a>
-                    <a href="./account_manage.html"> 账号管理</a>
+                    <a href="../upload/mine_study.html" > 学习中心</a>
+                   <!-- <a href="../upload/edu_manage.html"> 教务管理</a>-->
+                    <a href="../upload/message_manage.html"> 消息管理</a>
+                    <a href="../upload/mine_authentication.html"> 认证管理</a>
+                    <a href="../upload/account_manage.html"> 账号管理</a>
+
                 </div>
                 <div class="left_bottom">
                     <h3>意见反馈</h3>
@@ -44,362 +45,468 @@
                     <button>提交</button>
                 </div>
             </div>
-            <div class="mine_right f_right">
-                <div class="mine_right_top">
-                    <img src="../../img/focus-img1.png" alt=""/>
-                    <div class="right_top_center">
-                        <p>Masy</p>
-                        <div class="right_top_middle">洛浦中学  初二上  学生</div>
-                        <h5>未读信息（<s>11</s>） <a href="./message_manage.html">进入消息管理中心</a></h5>
+            <div class="study_right f_left">
+                <!--<div class="integra iconfont icon-huangguan "> 积分：123</div>-->
+                <!--最近学习-->
+                <div class="near_study">
+                    <ul class="clearfix">
+                        <li>
+                            <p>今天听课</p>
+                            <em><i class="today">30</i>分钟</em>
+                            <!--  <span></span>-->
+                        </li>
+                        <li>
+                            <p>获得积分</p>
+                            <em><i claSS="integral">0</i>分</em>
+                            <!-- <span></span>-->
+                        </li>
+                        <li>
+                            <p>本月听课</p>
+                            <em><i class="month">16</i>天</em>
+                            <!--  <span></span>-->
+                        </li>
+                        <li>
+                            <p>累计听课</p>
+                            <em class="cumulative"><i>65</i>小时</em>
+                        </li>
+                    </ul>
+                    <p>今日学习满40分钟才可获得积分哦 <em class="iconfont icon-9 rule"></em></p>
+                </div>
+                <div class="content_time clearfix">
+                    <div class="content_left f_left">
+                        <div class="learn">
+                            <h3>累计听课时长 <i>3900 </i> 分钟</h3>
+                        </div>
+                        <div class="progress clearfix">
+                            <div class="loader-container"></div>
+                        </div>
+                        <div class="text_progress">
+                            <em class="f_left">10小时</em>
+                            <i class="f_right">60小时</i>
+                        </div>
+                        <!--!&#45;&#45; 为ECharts准备一个具备大小（宽高）的DOM容器&ndash;&gt;-->
+                        <div id='charts' style='width:100%;height:240px; margin-top: 20px;'></div>
+                        <button class="btn btn-danger btn-lg" onclick="location.href='study_card.html'">生成学习记录卡</button>
                     </div>
-                    <div class="right_top">
-                        <ul>
-                            <li class="dynamic active">
-                                <span>12</span>
-                                <em>动态</em>
+                    <div class="content_right f_right">
+                        <h3>最近学习</h3>
+                        <ul class="latter">
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="../../img/index_edu.png" alt=""/>
+                                    <div class="center">
+                                        <h5 class="clearfix">主讲：付娟
+                                            <em class="f_right">学习中</em>
+                                        </h5>
+                                        <p>2018-07-15  更新第10课时</p>
+                                        <p>华南师范大学附属中学 拷贝</p>
+                                    </div>
+                                </a>
                             </li>
-                            <li class="request">
-                                <span>12</span>
-                                <em>问答</em>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="../../img/index_edu.png" alt=""/>
+                                    <div class="center">
+                                        <h5 class="clearfix">主讲：付娟
+                                            <em class="f_right">学习中</em>
+                                        </h5>
+                                        <p>2018-07-15  更新第10课时</p>
+                                        <p>华南师范大学附属中学 拷贝</p>
+                                    </div>
+                                </a>
                             </li>
-                            <li class="message">
-                                <span>12</span>
-                                <em>收藏</em>
-                            </li>
-                            <li class="attention">
-                                <span>12</span>
-                                <em>关注</em>
-                            </li>
-                            <li class="fans">
-                                <span>12</span>
-                                <em>粉丝</em>
-                            </li>
-                            <li class="code">
-                                <span>12</span>
-                                <em>积分</em>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="../../img/index_edu.png" alt=""/>
+                                    <div class="center">
+                                        <h5 class="clearfix">主讲：付娟
+                                            <em class="f_right">学习中</em>
+                                        </h5>
+                                        <p>2018-07-15  更新第10课时</p>
+                                        <p>华南师范大学附属中学 拷贝</p>
+                                    </div>
+                                </a>
                             </li>
                         </ul>
                     </div>
-
                 </div>
-                <div class="middle_center">
-                    <div class="dynamic">
-                        <h3>动态</h3>
-                        <div class="dy_lists">
-                            <div class="dy_list">
-                                <div class="dy_top">
-                                    <img src="../../img/focus-img1.png" alt=""/>
-                                    <span>小鸟</span>
-                                    <em>一天前</em>
-                                </div>
-                                <div class="dy_center">
-                                    今天学习了初二数学上期的内容，感觉有点难，但我会努力加油学习的！今天学习了初二数学上期的内容，感觉有点难，但努力加力容，感觉有点难，但我会努力加油学习的！今天学习了初二数学上期的内容觉有点难，但我会努力加油学习的！
-                                </div>
-                                <div class="dy_footer">
-                                    <em class="hand iconfont icon-like"> 122</em>
-                                    <em class="comment iconfont icon-xiaoxi1"> 122评论</em>
-                                    <em class="del">删除</em>
-                                </div>
-                            </div>
-                            <div class="dy_list">
-                                <div class="dy_top">
-                                    <img src="../../img/focus-img1.png" alt=""/>
-                                    <span>小鸟</span>
-                                    <em>一天前</em>
-                                </div>
-                                <div class="dy_center">
-                                    今天学习了初二数学上期的内容，感觉有点难，但我会努力加油学习的！今天学习了初二数学上期的内容，感觉有点难，但努力加力容，感觉有点难，但我会努力加油学习的！今天学习了初二数学上期的内容觉有点难，但我会努力加油学习的！
-                                </div>
-                                <div class="dy_footer">
-                                    <em class="hand iconfont icon-like"> 122</em>
-                                    <em class="comment iconfont icon-xiaoxi1"> 122</em>
-                                    <em class="del">删除</em>
-                                </div>
-                            </div>
-                            <div class="dy_list">
-                                <div class="dy_top">
-                                    <img src="../../img/focus-img1.png" alt=""/>
-                                    <span>小鸟</span>
-                                    <em>一天前</em>
-                                </div>
-                                <div class="dy_center">
-                                    今天学习了初二数学上期的内容，感觉有点难，但我会努力加油学习的！今天学习了初二数学上期的内容，感觉有点难，但努力加力容，感觉有点难，但我会努力加油学习的！今天学习了初二数学上期的内容觉有点难，但我会努力加油学习的！
-                                </div>
-                                <div class="dy_footer">
-                                    <em class="hand iconfont icon-like"> 122</em>
-                                    <em class="comment iconfont icon-xiaoxi1"> 122</em>
-                                    <em class="del">删除</em>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="request">
-                        <h3>问答</h3>
-                        <div class="request_lists">
-                            <div class="request_list ">
-                                <div class="re_top clearfix">
-                                    <img src="../../img/focus-img1.png" alt=""/>
-                                    <span>小鸟</span>
-                                    <em>一天前</em>
-                                    <i class="f_right">已解决</i>
-                                </div>
-                                <div class="re_center">
-                                    <div class="re_ce_tit">
-                                        我是问答标题最多64字我是问答标题最多64字我是问答标题最多64字我是问答标题最多64字我是问答标 题最多64字我是问答标题最
+                <div class="apply">
+                    <nav>
+                        <a href="javascript:;">收藏的课程</a>
+                        <a href="javascript:;">关注的名师</a>
+                        <a href="javascript:;">关注的名校</a>
+                    </nav>
+                    <!--课程-->
+                    <div class="lists  recommend clearfix">
+                        <ul class="clearfix">
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="img_box">
+                                        <img src="../../img/index_edu.png" alt="">
                                     </div>
-                                    <div class="re_ce_content">
-                                        <!--判断有没有图片 类名-->
-                                        <img src="../../img/focus-img1.png" alt=""/>
-                                        <div class="re_ce_mi">
-                                            我是第一个回答详情内容我是第一个回答详情内容我是第一个回答详情内容我是第一个回答详情内容我是第一个回 答详情内容我是第一个回答我是第一个回答详情内容我是第一个回答详情内容我是第一个回答详情内容我是第一个回答详情内容我是第一个回 答详情内容我是第一个回答
+                                    <div class="bottom">
+                                        <p>2018年初二数学上期课堂</p>
+                                        <h5>主讲老师：张燕</h5>
+                                        <div class="new">更新：全等三角形</div>
+                                        <div class="b_footer">
+                                            <ul class="clearfix">
+                                                <li class="iconfont icon-star"></li>
+                                                <li class="iconfont icon-star"></li>
+                                                <li class="iconfont icon-star"></li>
+                                                <li class="iconfont icon-star"></li>
+                                            </ul>
+                                            <span>| &nbsp;&nbsp;&nbsp;&nbsp;1.6w人学习</span>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="re_footer">
-                                    <ul>
-                                        <li>21789浏览</li>
-                                        <li class="iconfont icon-xiaoxi1" > 2157回答</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="request_list">
-                                <div class="re_top clearfix">
-                                    <img src="../../img/focus-img1.png" alt=""/>
-                                    <span>小鸟</span>
-                                    <em>一天前</em>
-                                    <i class="f_right">未解决</i>
-                                </div>
-                                <div class="re_center">
-                                    <div class="re_ce_tit">
-                                        我是问答标题最多64字我是问答标题最多64字我是问答标题最多64字我是问答标题最多64字我是问答标 题最多64字我是问答标题最
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="img_box">
+                                        <img src="../../img/index_edu.png" alt="">
                                     </div>
-                                    <div class="re_ce_content no_pic">
-                                        <div class="re_ce_mi">
-                                            我是第一个回答详情内容我是第一个回答详情内容我是第一个回答详情内容我是第一个回答详情内容我是第一个回 答详情内容我是第一个回答我是第一个回答详情内容我是第一个回答详情内容我是第一个回答详情内容我是第一个回答详情内容我是第一个回 答详情内容我是第一个回答
+                                    <div class="bottom">
+                                        <p>2018年初二数学上期课堂</p>
+                                        <h5>主讲老师：张燕</h5>
+                                        <div class="new">更新：全等三角形</div>
+                                        <div class="b_footer">
+                                            <ul class="clearfix">
+                                                <li class="iconfont icon-star"></li>
+                                                <li class="iconfont icon-star"></li>
+                                                <li class="iconfont icon-star"></li>
+                                                <li class="iconfont icon-star"></li>
+                                            </ul>
+                                            <span>| &nbsp;&nbsp;&nbsp;&nbsp;1.6w人学习</span>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="re_footer">
-                                    <ul>
-                                        <li>21789浏览</li>
-                                        <li class="iconfont icon-xiaoxi1" > 2157回答</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="my_save">
-                        <h3>我收藏的课程</h3>
-                        <div class="my_save_lists">
-                            <div class="my_save_list">
-                                <img src="../../img/focus-img1.png" alt=""/>
-                                <div class="my_save_center">
-                                    <h4><span>人教版</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>2018年数学上期</em></h4>
-                                    <p>主讲：魏雨</p>
-                                    <p><em>已学16%</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;更新至第12课时</p>
-                                    <p>
-                                        <em>★</em>
-                                        <em>★</em>
-                                        <em>★</em>
-                                        <em>★</em>
-                                        <em>★</em>
-                                        <i>9.3分</i>
-                                        <s>1600人学习</s>
-                                    </p>
-                                </div>
-                                <div class="my_save_right">
-                                    立即学习
-                                </div>
-                            </div>
-                            <div class="my_save_list">
-                                <img src="../../img/focus-img1.png" alt=""/>
-                                <div class="my_save_center">
-                                    <h4><span>人教版</span> <em>2018年数学上期</em></h4>
-                                    <p>主讲：魏雨</p>
-                                    <p><em>已学16%</em>&nbsp;&nbsp;&nbsp;&nbsp;更新至第12课时</p>
-                                    <p>
-                                        <em>★</em>
-                                        <em>★</em>
-                                        <em>★</em>
-                                        <em>★</em>
-                                        <em>★</em>
-                                        <i>9.3分</i>
-                                        <s>1600人学习</s>
-                                    </p>
-                                </div>
-                                <div class="my_save_right">
-                                    立即学习
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mine_attention">
-                        <nav class="att_nav">
-                            <span class="active">我关注的个人</span>
-                            <span>我关注的学校</span>
-                        </nav>
-                        <div class="att_person ">
-                            <ul class="clearfix">
-                                <li>
-                                    <a href="javascript:;">
-                                        <img src="../../img/focus-img1.png" alt="">
-                                        <p>富丽 </p>
-                                        <div class="tec">广州师范大学附属中学</div>
-                                        <div class="more iconfont icon-more "></div>
-
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <img src="../../img/focus-img1.png" alt="">
-                                        <p>富丽 </p>
-                                        <div class="tec">广州师范大学附属中学</div>
-                                        <div class="more iconfont icon-more "></div>
-
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <img src="../../img/focus-img1.png" alt="">
-                                        <p>富丽 </p>
-                                        <div class="tec">广州师范大学附属中学</div>
-                                        <div class="more iconfont icon-more "></div>
-
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <img src="../../img/focus-img1.png" alt="">
-                                        <p>富丽 </p>
-                                        <div class="tec">广州师范大学附属中学</div>
-                                        <div class="more iconfont icon-more "></div>
-
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-                        <div class="att_school">
-                            <ul class="clearfix">
-                                <li>
-                                    <a href="javascript:;">
-                                        <img src="../../img/index_school.png" alt="">
-                                        <div class="text">
-                                            <h3>华南师范大学附属中学华南师范大学附属中学华南师范大学附属中学</h3>
-                                            <div class="grade">
-                                                <span>高中</span>
-                                                <span>初中</span>
-                                            </div>
-                                            <p>. 广州市天河区中山大道西1号</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="img_box">
+                                        <img src="../../img/index_edu.png" alt="">
+                                    </div>
+                                    <div class="bottom">
+                                        <p>2018年初二数学上期课堂</p>
+                                        <h5>主讲老师：张燕</h5>
+                                        <div class="new">更新：全等三角形</div>
+                                        <div class="b_footer">
+                                            <ul class="clearfix">
+                                                <li class="iconfont icon-star"></li>
+                                                <li class="iconfont icon-star"></li>
+                                                <li class="iconfont icon-star"></li>
+                                                <li class="iconfont icon-star"></li>
+                                            </ul>
+                                            <span>| &nbsp;&nbsp;&nbsp;&nbsp;1.6w人学习</span>
                                         </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <img src="../../img/index_school.png" alt="">
-                                        <div class="text">
-                                            <h3>华南师范大学附属中学华南师范大学附属中学华南师范大学附属中学</h3>
-                                            <div class="grade">
-                                                <span>高中</span>
-                                                <span>初中</span>
-                                            </div>
-                                            <p>. 广州市天河区中山大道西1号</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="img_box">
+                                        <img src="../../img/index_edu.png" alt="">
+                                    </div>
+                                    <div class="bottom">
+                                        <p>2018年初二数学上期课堂</p>
+                                        <h5>主讲老师：张燕</h5>
+                                        <div class="new">更新：全等三角形</div>
+                                        <div class="b_footer">
+                                            <ul class="clearfix">
+                                                <li class="iconfont icon-star"></li>
+                                                <li class="iconfont icon-star"></li>
+                                                <li class="iconfont icon-star"></li>
+                                                <li class="iconfont icon-star"></li>
+                                                <li class="iconfont icon-star"></li>
+                                            </ul>
+                                            <span>| &nbsp;&nbsp;&nbsp;&nbsp;1.6w人学习</span>
                                         </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <img src="../../img/index_school.png" alt="">
-                                        <div class="text">
-                                            <h3>华南师范大学附属中学华南师范大学附属中学华南师范大学附属中学</h3>
-                                            <div class="grade">
-                                                <span>高中</span>
-                                                <span>初中</span>
-                                            </div>
-                                            <p>. 广州市天河区中山大道西1号</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="img_box">
+                                        <img src="../../img/index_edu.png" alt="">
+                                    </div>
+                                    <div class="bottom">
+                                        <p>2018年初二数学上期课堂</p>
+                                        <h5>主讲老师：张燕</h5>
+                                        <div class="new">更新：全等三角形</div>
+                                        <div class="b_footer">
+                                            <ul class="clearfix">
+                                                <li class="iconfont icon-star"></li>
+                                                <li class="iconfont icon-star"></li>
+                                                <li class="iconfont icon-star"></li>
+                                                <li class="iconfont icon-star"></li>
+                                            </ul>
+                                            <span>| &nbsp;&nbsp;&nbsp;&nbsp;1.6w人学习</span>
                                         </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <img src="../../img/index_school.png" alt="">
-                                        <div class="text">
-                                            <h3>华南师范大学附属中学华南师范大学附属中学华南师范大学附属中学</h3>
-                                            <div class="grade">
-                                                <span>高中</span>
-                                                <span>初中</span>
-                                            </div>
-                                            <p>. 广州市天河区中山大道西1号</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <div class="img_box">
+                                        <img src="../../img/index_edu.png" alt="">
+                                    </div>
+                                    <div class="bottom">
+                                        <p>2018年初二数学上期课堂</p>
+                                        <h5>主讲老师：张燕</h5>
+                                        <div class="new">更新：全等三角形</div>
+                                        <div class="b_footer">
+                                            <ul class="clearfix">
+                                                <li class="iconfont icon-star"></li>
+                                                <li class="iconfont icon-star"></li>
+                                                <li class="iconfont icon-star"></li>
+                                                <li class="iconfont icon-star"></li>
+                                            </ul>
+                                            <span>| &nbsp;&nbsp;&nbsp;&nbsp;1.6w人学习</span>
                                         </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="fans">
-                        <h3>我的粉丝</h3>
-                        <div class="my_fans">
-                            <ul class="clearfix">
-                                <li>
-                                    <a href="javascript:;">
-                                        <img src="../../img/focus-img1.png" alt="">
-                                        <p>富丽 </p>
-                                        <div class="identify">身份</div>
-                                        <div class="tec">广州师范大学附属中学</div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <img src="../../img/focus-img1.png" alt="">
-                                        <p>富丽 </p>
-                                        <div class="identify">身份</div>
-                                        <div class="tec">广州师范大学附属中学</div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="code">
-                        <h3 class="clearfix">积分明细 <span class="f_right rules" >积分规则</span></h3>
-                        <ul class="codes">
-                            <!-- <li class="clearfix">
-                                 <span>卡哇伊 <em>+20</em></span>
-                                 <i class="f_right">2018-08-05 15:30</i>
-                             </li>
-                             <li class="clearfix">
-                                 <span>长得好看 <em>+10</em></span>
-                                 <i class="f_right">2018-08-05 15:30</i>
-                             </li>-->
+                                    </div>
+                                </a>
+                            </li>
                         </ul>
-                        <div class="code_rule">
-                            <h3>什么是积分？</h3>
-                            <p>所有猴姆登录用户在猴姆活动(回答问题、认证、分享内容等)过程中均有机会获得积分，积分是一种荣誉的体现。积分可以用来兑换各种奖励(虚拟道具、实物礼品等)或发起活动进行消费(提问悬赏、打赏捐赠等)，猴姆将会在未来逐步实现和推出各类积分的兑换内容，请随时关注关于猴姆积分的消息。</p>
-                            <h3>获取积分？</h3>
-                            <p>
-                                1、 今日听课当日总时长，按每40分钟兑换10积分的计算规则，系统在24时进行统一发放;<br>
-                                2、回答悬赏积分的问题时，如果您的回答被采纳了，即会获得问题悬赏的积分;<br>
-                                3、课程评分和老师评价每次可获得1积分;4、发布的动态如有99个赞以上可获得1积分;5、首次绑定邮箱可获得1积分;<br>
-                                5、 进行实名等认证，可获得其认证奖励的积分;
-                            </p>
-                            <h3>积分惩罚</h3>
-                            <p>
-                                如果您在猴姆捣乱，如发表无意提问，回答或自问自答(含马甲)，发布广告、政治、恶意等内，您不仅将会失去已从该途径获得的积分， 还将额外受到积分扣除惩罚。<br>
-                                如果用，户利用系统漏洞作弊等违规方式获得积分，经查证后，猴姆有权自由裁定，追缴相关积分，甚至查封账号， 并保留追究相应法律责任的权利。
-                            </p>
-                            <h3>最终解释权</h3>
-                            <p>
-                                猴姆保留对相关细则中条款的最终解释权，并有权根据需要取消细则或增删、修订细则的权利(包括但不限于用户资格、积分计算及兑换标准)。
-                            </p>
-                        </div>
                     </div>
+                    <!--名师-->
+                    <div class="lists recommend_teacher">
+                        <ul class="clearfix">
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="../../img/focus-img1.png" alt="">
+                                    <p>富丽 <em class="iconfont icon-v"></em></p>
+                                    <div class="tec">广州师范大学附属中学</div>
+                                    <div class="lesson">
+                                        <i>初一</i>
+                                        <i>初二</i>
+                                        <i>数学</i>
+                                    </div>
+                                    <div class="line">
+                                        <em>主讲课程</em>
+                                    </div>
+                                    <div class="bottom">
+                                        <img src="../../img/focus-img1.png" alt="">
+                                        <div class="b_r">
+                                            <p>2018年初二数学下期课堂</p>
+                                            <div class="info">
+                                                <i class="iconfont icon-shipin">11</i>
+                                                <i class="iconfont icon-wode2">11</i>
+                                            </div>
+                                        </div>
 
+                                    </div>
+                                    <div class="more iconfont icon-more "></div>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="../../img/focus-img1.png" alt="">
+                                    <p>富丽 <em class="iconfont icon-v"></em></p>
+                                    <div class="tec">广州师范大学附属中学</div>
+                                    <div class="lesson">
+                                        <i>初一</i>
+                                        <i>初二</i>
+                                        <i>数学</i>
+                                    </div>
+                                    <div class="line">
+                                        <em>主讲课程</em>
+                                    </div>
+                                    <div class="bottom">
+                                        <img src="../../img/focus-img1.png" alt="">
+                                        <div class="b_r">
+                                            <p>2018年初二数学下期课堂</p>
+                                            <div class="info">
+                                                <i class="iconfont icon-shipin">11</i>
+                                                <i class="iconfont icon-wode2">11</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="more iconfont icon-more "></div>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="../../img/focus-img1.png" alt="">
+                                    <p>富丽 <em class="iconfont icon-v"></em></p>
+                                    <div class="tec">广州师范大学附属中学</div>
+                                    <div class="lesson">
+                                        <i>初一</i>
+                                        <i>初二</i>
+                                        <i>数学</i>
+                                    </div>
+                                    <div class="line">
+                                        <em>主讲课程</em>
+                                    </div>
+                                    <div class="bottom">
+                                        <img src="../../img/focus-img1.png" alt="">
+                                        <div class="b_r">
+                                            <p>2018年初二数学下期课堂</p>
+                                            <div class="info">
+                                                <i class="iconfont icon-shipin">11</i>
+                                                <i class="iconfont icon-wode2">11</i>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="more iconfont icon-more "></div>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="../../img/focus-img1.png" alt="">
+                                    <p>富丽 <em class="iconfont icon-v"></em></p>
+                                    <div class="tec">广州师范大学附属中学</div>
+                                    <div class="lesson">
+                                        <i>初一</i>
+                                        <i>初二</i>
+                                        <i>数学</i>
+                                    </div>
+                                    <div class="line">
+                                        <em>主讲课程</em>
+                                    </div>
+                                    <div class="bottom">
+                                        <img src="../../img/focus-img1.png" alt="">
+                                        <div class="b_r">
+                                            <p>2018年初二数学下期课堂</p>
+                                            <div class="info">
+                                                <i class="iconfont icon-shipin">11</i>
+                                                <i class="iconfont icon-wode2">11</i>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="more iconfont icon-more "></div>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="../../img/focus-img1.png" alt="">
+                                    <p>富丽 <em class="iconfont icon-v"></em></p>
+                                    <div class="tec">广州师范大学附属中学</div>
+                                    <div class="lesson">
+                                        <i>初一</i>
+                                        <i>初二</i>
+                                        <i>数学</i>
+                                    </div>
+                                    <div class="line">
+                                        <em>主讲课程</em>
+                                    </div>
+                                    <div class="bottom">
+                                        <img src="../../img/focus-img1.png" alt="">
+                                        <div class="b_r">
+                                            <p>2018年初二数学下期课堂</p>
+                                            <div class="info">
+                                                <i class="iconfont icon-shipin">11</i>
+                                                <i class="iconfont icon-wode2">11</i>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="more iconfont icon-more "></div>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="../../img/focus-img1.png" alt="">
+                                    <p>富丽 <em class="iconfont icon-v"></em></p>
+                                    <div class="tec">广州师范大学附属中学</div>
+                                    <div class="lesson">
+                                        <i>初一</i>
+                                        <i>初二</i>
+                                        <i>数学</i>
+                                    </div>
+                                    <div class="line">
+                                        <em>主讲课程</em>
+                                    </div>
+                                    <div class="bottom">
+                                        <img src="../../img/focus-img1.png" alt="">
+                                        <div class="b_r">
+                                            <p>2018年初二数学下期课堂</p>
+                                            <div class="info">
+                                                <i class="iconfont icon-shipin">11</i>
+                                                <i class="iconfont icon-wode2">11</i>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="more iconfont icon-more "></div>
+
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--名校-->
+                    <div class="lists recommend_school">
+                        <ul class="clearfix">
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="../../img/index_school.png" alt="">
+                                    <div class="text">
+                                        <h3>华南师范大学附属中学华南师范大学附属中学华南师范大学附属中学</h3>
+                                        <div class="grade">
+                                            <span>高中</span>
+                                            <span>初中</span>
+                                        </div>
+                                        <p>. 广州市天河区中山大道西1号</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="../../img/index_school.png" alt="">
+                                    <div class="text">
+                                        <h3>华南师范大学附属中学华南师范大学附属中学华南师范大学附属中学</h3>
+                                        <div class="grade">
+                                            <span>高中</span>
+                                            <span>初中</span>
+                                        </div>
+                                        <p>. 广州市天河区中山大道西1号</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="../../img/index_school.png" alt="">
+                                    <div class="text">
+                                        <h3>华南师范大学附属中学华南师范大学附属中学华南师范大学附属中学</h3>
+                                        <div class="grade">
+                                            <span>高中</span>
+                                            <span>初中</span>
+                                        </div>
+                                        <p>. 广州市天河区中山大道西1号</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <img src="../../img/index_school.png" alt="">
+                                    <div class="text">
+                                        <h3>华南师范大学附属中学华南师范大学附属中学华南师范大学附属中学</h3>
+                                        <div class="grade">
+                                            <span>高中</span>
+                                            <span>初中</span>
+                                        </div>
+                                        <p>. 广州市天河区中山大道西1号</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
+
     <div class="footer"></div>
 </div>
+
+
 </body>
 <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
 <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
@@ -412,135 +519,249 @@
 <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
 <script src="../../js/bootstrap/bootstrap.min.js"></script>
 <script src="../../js/base.js"></script>
-<script src="../../js/template.js"></script>
-<script>
-    template.helper("str",function(str){
-
-        return str.split(",");
-    })
-    template.helper("time",function(time){
-        var timestamp=new Date().getTime();//当前时间戳
-        var kk=timestamp-time;//发表时的时间戳
-        var timea="";
-        var sec=parseInt(kk/1000);//秒
-        var min=parseInt(sec/60);//分
-        var hour=parseInt(min/60);//时
-        var day=parseInt(hour/24);//天
-        if(sec<60){
-            timea=sec+"秒前";
-        }else if(min<60){
-            timea=min+"分钟前";
-        }else if(hour<24){
-            timea=hour+"小时前";
-        }else if(day<7){
-            timea=day+"天前";
-        }else{
-            timea=new Date(time).toLocaleString().replace(/:\d{1,2}$/,' ').replace(/\//g,"-");
-        }
-        return timea;
-
-    });
-</script>
 <script src="../../js/sweetalert2.js"></script>
-<script type="text/html" id="rule">
-    {{if data ==null||data==''||!data}}
-    <div class="no_in">对不起，暂时没有积分信息</div>
-    {{else}}
-    {{each data as vlaue i}}
-    <li class="clearfix">
-        <span>{{value.source}} <em>{{value.subtract==null?'+'+value.increase:'-'+value.subtract}}</em></span>
-        <i class="f_right">{{time(value.updateTime)}}</i>
-    </li>
-    {{/each}}
-    {{/if}}
-</script>
+<script src="../../js/echarts.simple.min.js"></script>
+
 <script>
     $(function () {
+        var userid=localStorage.getItem("this_userid");
+        var token=localStorage.getItem('token');
+
+
         $(".header").load("../common/header_logo.html");
+
         $(".footer").load("../common/footer.html");
-        $(".sub>span").click(function () {
-            $(this).addClass("active").siblings().removeClass("active");
-            console.log($(this).text());
-        })
-        var userid = localStorage.getItem("this_userid");
-        /*tab 切换*/
-        $(".right_top>ul>li").click(function () {
-            //jQuery index的属性
-            var index = $(this).index();
+        setTimeout(function () {
+            $(".left_middle>a:nth-of-type(1)").addClass("active");
+        },100)
+        //头像显示
+        if(localStorage.getItem("this_pic")){
+            $(".mine_left .left_top_center>img").attr("src",localStorage.getItem("this_pic"))
+        }else{
+            // logo%20(2).png
+            $(".mine_left .left_top_center>img").attr("src",'logo%20(2).png')
+        }
+        var nickName=localStorage.getItem("this_nickName")
+        if(nickName==""){
+            nickName="猴姆教学"
+        }
+        $(".left_top_center>h3").text(`${ nickName}`)
+
+        /*进度条 与echers*/
+        //总共是100 个小时 然后用户看了50个小时，x_width是显示的进度条的宽度
+        var pai=100/50;
+        var x_width=100/pai;
+        $(".loader-container").width(x_width+"%");
+        /*canvas 绘制饼状图*/
+        //基于准备好的DOM，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('charts'));
+        // 变量 存储
+        var chinese=30;
+        var option = {
+            series : [
+                {
+                    name: '来源',
+                    type: 'pie',
+                    radius : '55%',
+                    center: ['50%', '60%'],
+                    data:[
+                        {value:chinese, name:'语文', itemStyle: { color: '#f01414' }},
+                        {value:5, name:'数学', itemStyle: { color: '#fa9426' }},
+                        {value:4, name:'英语', itemStyle: { color: '#d8b0e1' }},
+                        {value:5, name:'物理', itemStyle: { color: '#eca918' }},
+                        {value:48, name:'化学', itemStyle: { color: '#fe96855' }},
+                        {value:60, name:'其他', itemStyle: { color: '#84c0e5' }}
+                    ],
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.3)'
+                        },
+                        normal:{
+                            label:{
+                                show: true,
+                                formatter: '{b} :  ({d}%)'
+                            },
+                            labelLine :{show:true}
+                        }
+
+                        /* normal: {//饼状图上的文本显示
+                         label: {
+                         show: false,
+                         position: 'inner',
+                         formatter: "{c}({d}%)",//数值和百分比
+                         textStyle: {
+                         fontSize: 12,
+                         fontWeight: 'bolder'
+                         }
+                         },
+                         labelLine: {
+                         show: false //显示饼状图上的文本时，指示线不显示，在第一个data时显示指示线
+                         }
+
+                         }*/
+                    }
+                }
+            ]
+        };
+
+        //使用刚指定的配置项和数据显示图表
+        myChart.setOption(option);
+        /*在这个界面调三个接口，只是用js 控制tab栏的切换 */
+        $(".apply>nav>a").click(function (){
+//jQuery index的属性
+            var index=$(this).index();
             console.log(index);
             $(this).addClass("active").siblings().removeClass("active");
-            $('.middle_center>div').eq(index).show().siblings().hide();
+            $('.lists').eq(index).show().siblings(".lists").hide();
 
         })
-        /*我关注的tab 切换*/
-        $(".mine_attention>.att_nav>span").click(function () {
-            //jQuery index的属性
-            var att_index = $(this).index();
-            console.log(att_index);
-            $(this).addClass("active").siblings("span").removeClass("active");
-            $('.mine_attention>div').eq(att_index).show().siblings("div").hide();
-        })
-        /*点击查看积分规则*/
-        var falg = true;
-        $(".rules").click(function () {
-            if (falg) {
-                $(".code_rule").show();
-                $(".codes").hide();
-                falg = false;
-            } else {
-                $(".code_rule").hide();
-                $(".codes").show();
-                falg = true;
-            }
-
-        })
-        //我的积分
-        myAjax({url: "/user/my/get/Integral/Log", type: "post", data: {userid: userid}}, function (data) {
+        //ajaxs(url,type,asyncs,data,suFn,erFn)
+        //106 、进入学习中心
+        ajaxs("/core/select/learning/center",'post',true,{userid:userid},function(data){
             console.log(data);
-            if (data.status == 200) {
-                function timea(time){
-                    var timestamp=new Date().getTime();//当前时间戳
-                    var kk=timestamp-time;//发表时的时间戳
-                    var timea="";
-                    var sec=parseInt(kk/1000);//秒
-                    var min=parseInt(sec/60);//分
-                    var hour=parseInt(min/60);//时
-                    var day=parseInt(hour/24);//天
-                    if(sec<60){
-                        timea=sec+"秒前";
-                    }else if(min<60){
-                        timea=min+"分钟前";
-                    }else if(hour<24){
-                        timea=hour+"小时前";
-                    }else if(day<7){
-                        timea=day+"天前";
-                    }else{
-                        timea=new Date(time).toLocaleString().replace(/:\d{1,2}$/,' ').replace(/\//g,"-");
-                    }
-                    return timea;
-                }
-                //$(".codes").html(template("rule",data));
-                var data = data.data;
-                if (data == null || data.length == 0 || !data) {
-                    $(".codes").html(`<div class= "no_in" > 对不起，暂时没有积分信息</div>`);
-                } else {
-                    var html =``;
-                    for (var i = 0; i < data.length; i++) {
-                        var time = timea(data[i].updateTime);
-                        if (data[i].subtract == null) {
-                            var str="+"+data[i].increase;
-                        }else{
-                            var str="-"+data[i].subtract;
-                        }
-                        html +=`<li class= "clearfix">
-                                <span>${data[i].source} <em > ${str}</em></span><i class= "f_right">${time} </i> </li>`;
-                }
-                    $(".codes").html(html);
+            var data=data.data,times="";
+            var points=parseInt(data.todayStudyTime/1000/60);//今天听课分
+            var day=parseInt(data.todayStudyTime/1000/60/60/24);//本月听课天
 
+            var aa=parseInt(data.user.sumLearnTime/1000);//累计听课秒
+            var bb=parseInt(data.user.sumLearnTime/1000/60);//累计听课分
+            var cc=parseInt(data.user.sumLearnTime/1000/60/60);//累计听课时
+            var dd=parseInt(data.user.sumLearnTime/1000/60/60/24);//累计听课天
+            if(aa<=60){
+                $(".cumulative").html(`<i>0</i>分`);
+            }else if(bb<=60){
+                $(".cumulative").html(`<i>${bb}</i>分钟`);
+            }else if(cc<=24){
+                $(".cumulative").html(`<i>${cc}</i>小时`);
+            }else{
+                $(".cumulative").html(`<i>${dd}</i>天`);
             }
+            $(".today").html(points);//今天听课
+            $(".integral").html(data.user.usableIntegral);//获得积分
+            $(".month").html(day);//本月听课
+        },function(err){
+            console.log(err);
+        })
+        //105 、最近学习的课程列表
+        var parameter={
+            token:token,
+            page:1,
+            size:22,
+            userid:userid
         }
-    })
+        ajaxs("/core/find/LatelyStudy/Courses",'post',true,parameter,function(data){
+            console.log(data);
+            var data=data.data.slice(0,3),ks="",kt="";
+            for(i in data){
+                function getDate(tm){
+                    var tt = new Date(tm).toLocaleString().replace(/\//g, "-");
+                    tt = tt.split(" ");
+                    return tt[0];
+                }
+                var times=getDate(data[i].updateTime);
+//				data.CourseTotalTime;//课程总时长
+//				data.StudyCourseTime;//学习时长
+                if(data[i].StudyCourseTime<data[i].CourseTotalTime){
+                    kt="学习中"
+                }else{
+                    kt="已学完"
+                }
+                var imgs="";
+                if(data[i].course.coursePicture==null){
+                    imgs="../../img/index_famous.png";
+                }else{
+                    imgs=data[i].course.coursePicture;
+                }
+                ks+=`<li>
+                <a href="javascript:;">
+                        <img src=${imgs} alt=""/>
+                        <div class="center">
+                        <h5 class="clearfix">主讲：${data[i].speaker}
+            <em class="f_right">${kt}</em>
+                        </h5>
+                        <p>${times}  更新第${data[i].updateNum}课时</p>
+                <p>${data[i].course.schoolName}</p>
+                </div>
+                </a>
+                </li>`;
+            }
+            $(".latter").html(ks);
+        },function(err){
+            console.log(err);
+        })
+        //104、我收藏的课程列表
+        ajaxs("/core/find/Collect/Courses",'post',true,{userid:userid},function(data){
+            console.log(data);
+            var data=data.data,ks="";
+            for(i in data){
+                ks+=`<li>
+                <a href="javascript:;">
+                        <div class="img_box">
+                        <img src=${data[i].course.coursePicture} alt="">
+                        </div>
+                        <div class="bottom">
+                        <p>${data[i].course.name}</p>
+                        <h5>主讲老师：${data[i].speaker}</h5>
+                <div class="new">更新：第${data[i].updateNum}课时</div>
+                </div>
+                </a>
+                </li>`;
+            }
+            $(".recommend>ul").html(ks);
+        },function(err){
+            console.log(err);
+        })
+        //84、关注的名师
+        ajaxs("/user/my/get/Attention/UserList",'post',true,{userid:userid},function(data){
+            console.log(data);
+            var data=data.data,ks="";
+            for(i in data){
+                ks+=`<li>
+                <a href="javascript:;">
+                        <img src=${data[i].portrait} alt="">
+                        <p>${data[i].nickname} <em class="iconfont icon-v"></em></p>
+                <div class="tec">${data[i].address}</div>
+                        <div class="lesson">
+                        <i>${data[i].teachingSubjects}</i>
+                        </div>
+                        <div class="more iconfont icon-more "></div>
 
+                        </a>
+                        </li>`;
+            }
+            $(".recommend_teacher>ul").html(ks)
+        },function(err){
+            console.log(err);
+        })
+        //85、关注的名校
+        ajaxs("/user/my/get/Attention/SchoolList",'post',true,{userid:userid},function(data){
+            console.log(data);
+            var data=data.data,ks="",kt="";
+            for(i in data){
+                if(data[i].portrait==null){
+                    kt="../../img/index_famous.png";
+                }else{
+                    kt=data[i].portrait;
+                }
+                ks+=`<li>
+                <a href="javascript:;">
+                        <img src=${kt} alt="">
+                        <div class="text">
+                        <h3>${data[i].name}</h3>
+                        <div class="grade">
+                        <span>${data[i].containClasses}</span>
+                        </div>
+                        <p>${data[i].address}</p>
+                        </div>
+                        </a>
+                        </li>`;
+            }
+            $(".recommend_school>ul").html(ks)
+        },function(err){
+            console.log(err);
+        })
     })
 </script>
 </html>

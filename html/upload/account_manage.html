@@ -2,7 +2,6 @@
 <html>
 <head lang="en">
     <link rel="shortcut icon " type="images/x-icon" href="../../ico.ico">
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,53 +35,55 @@
 <body>
 <div class="layer">
     <div class="header"></div>
+
     <div class="left"></div>
     <div class="content">
         <div class="account_right">
             <div class="account_top">
                 <nav>
                     <a href="javascript:;" class="active menu">基本信息</a>
-                    <a href="javascript:;" class="menu">身份信息</a>
+                    <!--<a href="javascript:;" class="menu">身份信息</a>-->
                     <a href="javascript:;" class="menu">账号设置</a>
                 </nav>
             </div>
             <div class="content_middle base_info">
-            <div class="head">
-                <!--更换头像-->
-                <h5>头像</h5>
-                <img src="../../img/focus-img1.png" alt=""/>
-                <span>支持jpg、JPEG、png、或bmp格式的图片，大小不超过2M</span>
-            </div>
-            <div class="nick_name">
-                <em>昵称：</em>
-                <input type="text" placeholder="请输入昵称"/>
-                    <i class="iconfont icon-zhuyi"> 昵称不能为空</i>
+                <div class="head">
+                    <!--更换头像-->
+                    <h5>头像</h5>
+                    <img src="../../img/logo%20(2).png" alt=""/>
+                    <span>想更换头像吗，赶快去下载猴姆教学APP吧！</span>
+                </div>
+                <div class="nick_name">
+                    <em>昵称：</em>
+                    <input type="text" placeholder="请输入昵称"/>
+                    <!--<i class="iconfont icon-zhuyi"> 昵称不能为空</i>-->
 
-            </div>
-            <div class="sex">
-                <em>性别：</em>
-                <from>
-                    <input type="radio" name="sex" value="男" checked/> 男
-                    <input type="radio" name="sex" value="女"/> 女
-                </from>
-            </div>
-            <div class="birthday">
-                <em>生日： </em>
-                <input type="datetime-local" placeholder="请选择您的生日"/>
-            </div>
+                </div>
+                <div class="sex">
+                    <em>性别：</em>
+                    <from>
+                        <input type="radio" name="sex" value="男" checked/> 男
+                        <input type="radio" name="sex" value="女"/> 女
+                    </from>
+                </div>
+                <div class="birthday">
+                    <em>生日： </em>
+                    <input type="date" placeholder="请选择您的生日"/>
+                    <!--<input type="datetime-local" placeholder="请选择您的生日"/>-->
+                </div>
                 <div class="city">
-                <em>所在地区：</em>
+                    <em>所在地区：</em>
                     <span class="info">
                             <select id="s_province" name="s_province"></select>  
                             <select id="s_city" name="s_city" ></select>  
                             <select id="s_county" name="s_county"></select>
                         </span>
 
-                        <div id="show"></div>
+                    <div id="show"></div>
+                </div>
+                <button class="save basic "id="basic"> 保存</button>
             </div>
-        <button class="save"> 保存</button>
-        </div>
-            <div class="content_middle id_menu">
+            <!--<div class="content_middle id_menu">
                 <div class="min_identity">
                     <span>我的身份</span>
                     <em>学生</em>
@@ -110,7 +111,7 @@
                 </div>
 
                 <button class="save">保存</button>
-            </div>
+            </div>-->
 
             <div class="content_middle account_info">
                 <div id="mask"></div>
@@ -118,11 +119,11 @@
                     <p>绑定邮箱</p>
                     <div class="email_account">
                         <span>邮箱账号：</span>
-                        <input type="email" placeholder="请输入邮箱账号"/>
+                        <input type="email" class="emails" placeholder="请输入邮箱账号"/>
                     </div>
                     <div class="email_account">
                         <span class="email_code">获取邮箱验证码</span>
-                        <input type="email" placeholder="请填写验证码"/>
+                        <input type="email" class="codes" placeholder="请填写验证码"/>
                     </div>
                     <!-- Indicates a dangerous or potentially negative action -->
                     <button type="button" class="btn btn-danger  btn-lg confirm">确定</button>
@@ -140,7 +141,7 @@
                     <input type="password" placeholder="请输入原始密码"/>
                     <input type="password" placeholder="请输入新密码"/>
                 </div>
-                <button class="save">保存</button>
+                <button class="save ch_pas">保存</button>
                 <button class="quit_login">退出登录</button>
             </div>
         </div>
@@ -166,73 +167,290 @@
 <script src="../../js/origin_city/area.js"></script>
 
 <script>
+    var flag=true;
+    var userid=localStorage.getItem("this_userid");
     $(function () {
-       setTimeout(function () {
-           $(".header").load("../common/header_logo.html");
-           $(".left").load("../common/mine_index.html");
-           $(".footer").load("../common/footer.html");
-       },100)
+        $(".header").load("../common/header_logo.html");
+        $(".left").load("../common/mine_index.html");
+        $(".footer").load("../common/footer.html");
         setTimeout(function () {
-          $(".left_middle>a:nth-of-type(5)").addClass("active");
-        },300)
+            $(".left_middle>a:nth-of-type(4)").addClass("active");
+        },100)
+    })
+    //头像显示
+    if(localStorage.getItem("this_pic")){
+        $(".content_middle.base_info>.head>img").attr("src",localStorage.getItem("this_pic"))
+    }else{
+        // logo%20(2).png
+        $(".content_middle.base_info>.head>img").attr("src",'logo%20(2).png')
+    }
+    //点击退出登录
+    $(".quit_login").click(function () {
+        console.log(123);
+        var token=localStorage.getItem("token");
+        render(token);
+    })
 
-        //点击退出登录
-        $(".quit_login").click(function () {
-            console.log(123);
-            var token=localStorage.getItem("token");
-            render(token);
+    function render(token){
+        $.ajax({
+            //处理session每次不唯一问题
+            xhrFields: {
+                withCredentials: true
+            },
+            type: "post",
+            url: baseUrl+"/user/logout",
+            data:{token:token},
+            dataType: 'json',
+            success:function(data) {
+                console.log(data);
+                if(data.status==200){
+                    localStorage.removeItem("pwd");
+                    location.href='../common/login.html';
+                }
+            }
+
         })
+    }
+    //table 栏的切换
+    $(".menu").click(function () {
+        //jQuery index的属性
+        var index=$(this).index();
+        console.log(index);
+        $(this).addClass("active").siblings().removeClass("active");
+        $('.content_middle').eq(index).show().siblings(".content_middle").hide();
+    })
+    //基本信息
+    var obj={};
+    obj.userid=localStorage.getItem("this_userid");
+    obj.token=localStorage.getItem("token");
+    obj.identityAuthentication=localStorage.getItem("identityAuthentication");
+    $(".base_info #basic").click(function(){
+        var this_pic=localStorage.getItem('this_pic');
+        console.log(this_pic);
+        //头像
+        obj.portrait=this_pic;
+        //昵称
+        var nickname=$(".nick_name>input").val().trim();
+        if(nickname.length==0){
+            sweetAlert(
+                    "sorry",
+                    "昵称不能为空哦",
+                    "error"
+            )
+            return false;
+        }else{
+            obj.nickname=nickname;
+        }
+        //性别
+        obj.sex=$(".sex input[name='sex']:checked").val();
+        //生日
+        var birthday=$(".birthday>input").val()
+        if(birthday==""){
+            sweetAlert(
+                    "对不起",
+                    "请您选择生日",
+                    "error"
+            )
+        }else{
+            obj.date=birthday.replace(/-/g,"");
+        }
+        //地址
+        var province=$("#s_province").find("option:selected").text();//省
+        var city=$("#s_city").find("option:selected").text();//市
+        var county=$("#s_county").find("option:selected").text();//区
+        if(province=="省份"||city=="地级市"){
+            sweetAlert(
+                    "sorry",
+                    "地址不能为空哦",
+                    "error"
+            )
+            return false;
+        }else{
+            obj.address=province+city+county;
+        }
+        myAjax({url:"/user/modify/personal",data:obj,type:"post"}, function (data) {
+            console.log(data);
+            if(data.status==200){
+                sweetAlert(
+                        "恭喜您",
+                        "个人资料修改成功了",
+                        "success"
+                )
+            }else{
+                sweetAlert(
+                        "sorry",
+                        data.msg,
+                        "error"
+                )
+            }
+        })
+    })
+    myAjax({url:"/sundry/get/EmailBind/Status",type:"post",data:{userid:userid}}, function (data) {
+        console.log(data);
+        if(data.status==200){
+            if(data.data.status==false){
+                $(".email").html(`<em>绑定邮箱</em>
+                <span class="no_link bindingk">未绑定</span>`)
+            }else{
+                $(".email").html(`<em>绑定邮箱</em>
+                <span class="no_link">已绑定</span>`);
+            }
+        }
+    })
+    /*绑定邮箱 */
+    $(".email").on("click",".bindingk",function (e) {
+        $("#mask").show();
+        $("#link_share").show();
+        console.log(e);
 
-        function render(token){
+        $(".email_code").click(function(){//验证码
+            var ind=$(this);
+            if(flag){
+                var str=$(".emails").val().trim();
+                getCode(str,ind);
+            }
+        })
+        $(".confirm").click(function () {
+            var code=$(".codes").val().trim();
+            if(code.length==0){
+                sweetAlert(
+                        "sorry",
+                        "请您填写邮箱验证码",
+                        "error"
+                )
+            }else{
+                myAjax({url:"/sundry/update/Email/Binding",data:{userid:userid,code:code,email:$(".emails").val().trim()},type:"post"}, function (data) {
+                    console.log(data);
+                    if(data.status==200){
+                        $(".finish").text("已绑定")
+                    }else{
+                        sweetAlert(
+                                "sorry",
+                                data.msg,
+                                "error"
+                        )
+                    }
+                    $("#link_share").hide();
+                })
+            }
+        })
+    })
+
+
+    function getCode(str,ind){
+        // 先验证 用户输入的邮箱 不正确 阻断 返回
+        var re = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
+        if(!re.test(str)){
+            sweetAlert(
+                    "sorry",
+                    "对不起，请您输入正确的邮箱",
+                    "error"
+            ).then(function () {
+                        $("input").val("");
+                    })
+            return false;
+        }else{
+            myAjax({url:"/sundry/add/Email/authcode",data:{userid:userid,email:str},type:"post"}, function (data) {
+                console.log(data);
+                if(data.code==200){
+                    sweetAlert(
+                            "验证码已发送，请您查收输入",
+                            "success"
+                    )
+                }
+            })
+        }
+        flag=false;
+        //倒计时效果
+        var time=300;
+        ind.text(time+ "S");
+        var timer= setInterval(function(){
+            time--;
+            $(".getCode").text(time+ "S");
+            if(time<0){
+                clearInterval(timer);
+                $(".getCode").text("重新发送");
+                $(".email>input").val("");
+                time=300;
+                flag=true;
+            }
+        },1000)
+    }
+    $("#mask").click(function (e) {
+        if(e.target!=$("#link_share")){
+            $("#mask").hide();
+            $("#link_share").hide();
+        }
+    })
+    //密码修改
+    $(".ch_pas").click(function(){
+
+        var pass1=$(".change_password>input:eq(0)").val();
+        var pass2=$(".change_password>input:eq(1)").val();
+        console.log(pass1);
+        console.log(pass2);
+    })
+
+    $(".ch_pas").click(function(){
+        var regu = "^[0-9a-zA-Z]{6,12}$";
+        var re = new RegExp(regu);
+        var parm={};
+
+
+        //发送ajax
+        var Npassword=$(".change_password>input:eq(1)").val();//新密码
+        parm.newPassword =Npassword;
+        parm.mobile=localStorage.getItem("uName");
+        var Opassword=$(".change_password>input:eq(0)").val();//旧密码
+        parm.oldPassword=Opassword;
+        if (re.test(Npassword)&&re.test(Opassword)) {
             $.ajax({
-                //处理session每次不唯一问题
                 xhrFields: {
                     withCredentials: true
                 },
-                type: "post",
-                url: baseUrl+"/user/logout",
-                data:{token:token},
+                type:"post",
                 dataType: 'json',
-                success:function(data) {
+                url:baseUrl+"/user/update/password",
+                data: parm,
+                success: function (data) {
                     console.log(data);
                     if(data.status==200){
-                        localStorage.removeItem("pwd");
-                        location.href='../common/login.html';
-                    }
-                }
+                        sweetAlert(
+                                "恭喜您",
+                                "密码修改成功啦",
+                                "success"
+                        ).then(function () {
+                                    window.location.href="../common/login.html";
+                                })
 
+                    }else{
+                        sweetAlert(
+                                "sorry",
+                                data.msg,
+                                "error"
+                        )
+                    }
+                },
+                error: function () {
+                    sweetAlert(
+                            "sorry",
+                            data.msg,
+                            "error"
+                    )
+                }
             })
         }
-        //table 栏的切换
-        $(".menu").click(function () {
-            //jQuery index的属性
-            var index=$(this).index();
-            console.log(index);
-            $(this).addClass("active").siblings().removeClass("active");
-            $('.content_middle').eq(index).show().siblings(".content_middle").hide();
-        })
-        /*绑定邮箱 */
-        $(".no_link").click(function (e) {
-            $("#mask").show();
-            $("#link_share").show();
-            console.log(e);
-            $(".confirm").click(function () {
-                $("#mask").hide();
-                $("#link_share").hide();
-//            /*同时发送请求*/
-
-            })
-        })
-        $("#mask").click(function (e) {
-            if(e.target!=$("#link_share")){
-                $("#mask").hide();
-                $("#link_share").hide();
-            }
-        })
-
-
-    })
-
+        else{
+            sweetAlert(
+                    "sorry",
+                    "密码格式不正确喔",
+                    "error"
+            ).then(function () {
+                        $("input").val("");
+                    })
+            return false;
+        }
+    });
     //三级联动的城市调用
     _init_area();
     var Gid  = document.getElementById ;
@@ -246,9 +464,7 @@
                 Gid('s_county').value + "</h3>"
 
     }
-
     Gid('s_county').setAttribute('onchange','showArea()');
-
 
     /* jQuery获取Select选择的Text和Value:
 
@@ -260,9 +476,8 @@
      4. var checkIndex=$("#select_id ").get(0).selectedIndex;  //获取Select选择的索引值
      5. var maxIndex=$("#select_id option:last").attr("index");  //获取Select最大的索引值*/
 
-        var checkText=$("#select_id").find("option:selected").text();
-        console.log(checkText);
-
+    var checkText=$("#select_id").find("option:selected").text();
+    console.log(checkText);
 
 </script>
 </html>

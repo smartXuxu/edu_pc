@@ -280,8 +280,20 @@
         console.log(data);
         if(data.status==200){
             localStorage.setItem("this_userid",data.data.userid);
-            localStorage.setItem("this_pic",data.data.portrait);
+
             localStorage.setItem("identityAuthentication",data.data.identityAuthentication);
+            if(data.data.portrait==null){
+                data.data.portrait='../../img/logo%20(2).png';
+            }
+            localStorage.setItem("this_pic",data.data.portrait);
+            if(data.data.nickname==null){
+                if(data.data.realName==null){
+                    data.data.nickname=data.data.realName
+                }else{
+                    data.data.nickname="猴姆教学"
+                }
+            }
+            localStorage.setItem("this_nickName",data.data.nickname);
             $(".header_top>.top>.f_right").html(
             `<img src=${data.data.portrait} alt=""/><span>${data.data.nickname}</span>`
             )

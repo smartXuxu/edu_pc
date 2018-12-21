@@ -15,35 +15,76 @@
     <link href="../../css/sweetalert2.css" rel="stylesheet">-->
 </head>
 <body>
-    <div class="main">
-        <div class="p_center clearfix">
-            <div class="mine_left f_left">
-                <div class="left_top">
-                    <div class="box_img">
-                    </div>
-                    <div class="left_top_center">
-                        <img src="../../img/focus-img1.png" alt=""/>
-                        <h3>魏雨</h3>
-                        <a href="../upload/mine_index.html">个人中心</a>
-                    </div>
+<div class="main">
+    <div class="p_center clearfix">
+        <div class="mine_left f_left">
+            <div class="left_top">
+                <div class="box_img">
                 </div>
-                <div class="left_middle">
-                    <a href="../upload/mine_study.html" > 学习中心</a>
-                    <a href="../upload/edu_manage.html"> 教务管理</a>
-                    <a href="../upload/message_manage.html"> 消息管理</a>
-                    <a href="../upload/mine_authentication.html"> 认证管理</a>
-                    <a href="../upload/account_manage.html"> 账号管理</a>
+                <div class="left_top_center">
+                    <img src="../../img/logo%20(2).png" alt=""/>
+                    <h3>猴姆教学</h3>
+                    <a href="javascript:;">个人中心</a>
+                </div>
+            </div>
+            <div class="left_middle">
+                <a href="../upload/mine_study.html" > 学习中心</a>
+               <!-- <a href="../upload/edu_manage.html"> 教务管理</a>-->
+                <a href="../upload/message_manage.html"> 消息管理</a>
+                <a href="../upload/mine_authentication.html"> 认证管理</a>
+                <a href="../upload/account_manage.html"> 账号管理</a>
 
-                </div>
-                <div class="left_bottom">
-                    <h3>意见反馈</h3>
-                    <textarea placeholder="有话您说，我们在倾听..."></textarea>
-                    <button>提交</button>
-                </div>
+            </div>
+            <div class="left_bottom">
+                <h3>意见反馈</h3>
+                <textarea placeholder="有话您说，我们在倾听..."></textarea>
+                <button class="btn">提交</button>
             </div>
         </div>
     </div>
+</div>
 
+<script src="../../js/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="../../js/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/base.js"></script>
+<script src="../../js/sweetalert2.js"></script>
+<script src="../../js/origin_city/area.js"></script>
+<script type="text/javascript">
+    $(function(){
+//		$(".left_bottom>button").click(function(){
+        //意见反馈
+        //头像显示
+        if(localStorage.getItem("this_pic")){
+            $(".mine_left .left_top_center>img").attr("src",localStorage.getItem("this_pic"))
+        }else{
+            // logo%20(2).png
+            $(".mine_left .left_top_center>img").attr("src",'logo%20(2).png')
+        }
+        var nickName=localStorage.getItem("this_nickName")
+        if(nickName==""){
+            nickName="猴姆教学"
+        }
+        $(".left_top_center>h3").text(`${ nickName}`)
+        var obj={};
+        obj.classify=4;
+        obj.userid=localStorage.getItem("this_userid");
+        $(".btn").click(function(){
+            obj.content=$("textarea").val().trim();
+            myAjax({url:"/sundry/add/Feedback",data:obj,type:"post"}, function (data) {
+                console.log(data);
+                if(data.status==200){
+                    $(".submit").text("已提交");
+                    sweetAlert(
+                            "恭喜您",
+                            "您的意见反馈已经收到，给您带来不便，我们深感歉意！我们会根据您提出的问题不断完善，再次感谢您的大力支持，么么哒～如果您还有更多好建议，可以及时关注我们的官方微信公众号【跟着猴姆上名校】在公众号后台给我们留言，只为服务更优秀的你！！",
+                            "success"
+                    )
+                }
+            })
+        })
+    })
+</script>
 </body>
 <!--
 &lt;!&ndash; HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 &ndash;&gt;

@@ -208,3 +208,29 @@ setTimeout(function () {
     })
 },100)
 
+function ajaxs(url,type,asyncs,data,suFn,erFn){
+    $.ajax({
+        type:type,
+        dataType:"JSON",
+        data:data,
+        url:baseUrl+url,
+        xhrFields: {
+            withCredentials: true
+        },
+        async:asyncs,
+        success: function (data){
+            suFn(data);
+        },
+        error: function (msg){
+            erFn(error);
+            sweetAlert(
+                "sorry",
+                "网络发生错误,请您重新登录",
+                'error'
+            ).then(function () {
+                    location.href="../common/login.html"
+                })
+        }
+    })
+}
+

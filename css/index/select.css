@@ -1,15 +1,38 @@
+/*����span�Ļ�����ʽ*/
+.span {
+  padding: 3px;
+  font-size: 12px;
+  border: 1px solid #eee;
+  color: #999;
+  margin: 10px 10px 10px 0;
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+/**/
+.h3 {
+  font-size: 16px;
+  color: #666;
+  height: 40px;
+  line-height: 40px;
+  font-weight: 400;
+}
+.main {
+  margin-bottom: 30px;
+}
 .main > .input {
   position: relative;
-  width: 100%;
 }
 .main > .input > input {
-  margin: 20px auto;
   height: 40px;
+  margin: 30px 0;
   display: block;
   width: 60%;
+  margin-left: 15%;
   text-indent: 2em;
   font-size: 14px;
-  border: 1px solid #eee;
+  border: 1px solid #c1ccd2;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -25,9 +48,318 @@
 .main > .input > button {
   position: absolute;
   top: 0%;
-  left: 85%;
+  left: 83%;
   height: 40px;
   line-height: 40px;
   background-color: #f01414;
   color: #fff;
+}
+.main > .searchResult {
+  box-sizing: border-box;
+  left: 12%;
+  position: relative;
+  /*��������*/
+  /*��������*/
+  /*�������*/
+}
+.main > .searchResult > .hot_search > .hot_tit {
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+}
+.main > .searchResult > .hot_search > .hot_tit > span {
+  color: #999;
+  font-size: 16px;
+}
+.main > .searchResult > .hot_search > .hot_tit > i {
+  position: absolute;
+  right: 30%;
+  color: #999;
+  font-size: 14px;
+  top: 5%;
+}
+.main > .searchResult > .hot_search > .search-history-list {
+  margin: 10px 0;
+}
+.main > .searchResult > .hot_search > .search-history-list > span {
+  padding: 3px;
+  font-size: 12px;
+  border: 1px solid #eee;
+  color: #999;
+  margin: 10px 10px 10px 0;
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.main > .searchResult > .search_lately > h2 {
+  height: 30px;
+  font-size: 16px;
+  color: #666;
+  font-weight: 400;
+}
+.main > .searchResult > .search_lately > .search_lately_content > span {
+  padding: 3px;
+  font-size: 12px;
+  border: 1px solid #eee;
+  color: #999;
+  margin: 10px 10px 10px 0;
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.main > .searchResult #consequence {
+  /*ѧУ*/
+}
+.main > .searchResult #consequence > .school > h3 {
+  font-size: 16px;
+  color: #666;
+  height: 40px;
+  line-height: 40px;
+  font-weight: 400;
+}
+.main > .searchResult #consequence > .school > ul {
+  width: 100%;
+}
+.main > .searchResult #consequence > .school > ul > li {
+  float: left;
+  width: 24%;
+  height: auto;
+  margin-right: 1% ;
+}
+.main > .searchResult #consequence > .school > ul > li:last-of-type {
+  margin-right: 0;
+}
+.main > .searchResult #consequence > .school > ul > li > a {
+  height: 100%;
+  width: 100%;
+  display: block;
+  color: #333;
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.1);
+}
+.main > .searchResult #consequence > .school > ul > li > a > img {
+  width: 100%;
+  height: 130px;
+  overflow: hidden;
+}
+.main > .searchResult #consequence > .school > ul > li > a .text {
+  padding: 10px;
+}
+.main > .searchResult #consequence > .school > ul > li > a .text > h3,
+.main > .searchResult #consequence > .school > ul > li > a .text > p,
+.main > .searchResult #consequence > .school > ul > li > a .text > .grade {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+.main > .searchResult #consequence > .school > ul > li > a .text > h3 {
+  font-size: 14px;
+}
+.main > .searchResult #consequence > .school > ul > li > a .text > .grade {
+  margin-top: 10px;
+}
+.main > .searchResult #consequence > .school > ul > li > a .text > .grade span {
+  padding: 2px;
+  background: #eeeeee;
+  color: #f01414;
+  margin-right: 5px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.main > .searchResult #consequence > .school > ul > li > a .text > p {
+  font-size: 12px ;
+  color: #666;
+  margin-top: 10px;
+}
+.main > .searchResult #consequence > .lesson > h3 {
+  font-size: 16px;
+  color: #666;
+  height: 40px;
+  line-height: 40px;
+  font-weight: 400;
+}
+.main > .searchResult #consequence > .lesson > ul {
+  width: 100%;
+}
+.main > .searchResult #consequence > .lesson > ul > li {
+  float: left;
+  width: 24%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #fff;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.1);
+}
+.main > .searchResult #consequence > .lesson > ul > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #333;
+}
+.main > .searchResult #consequence > .lesson > ul > li > a > .img_box {
+  position: relative;
+  width: 100%;
+  height: 145px;
+  overflow: hidden;
+}
+.main > .searchResult #consequence > .lesson > ul > li > a > .img_box > img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+.main > .searchResult #consequence > .lesson > ul > li > a > .bottom {
+  padding: 0 10px;
+}
+.main > .searchResult #consequence > .lesson > ul > li > a > .bottom > p {
+  font-weight: 600;
+  font-size: 16px;
+  height: 60px;
+  line-height: 60px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+.main > .searchResult #consequence > .lesson > ul > li > a > .bottom > h5 {
+  height: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+.main > .searchResult #consequence > .lesson > ul > li > a > .bottom > .new {
+  font-size: 12px;
+  color: #666;
+  height: 25px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+.main > .searchResult #consequence > .lesson > ul > li > a > .bottom > .b_footer {
+  height: 30px;
+  line-height: 30px;
+  position: relative;
+}
+.main > .searchResult #consequence > .lesson > ul > li > a > .bottom > .b_footer > ul {
+  width: 45%;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  display: inline-block;
+}
+.main > .searchResult #consequence > .lesson > ul > li > a > .bottom > .b_footer > ul > li {
+  float: left;
+  color: #f01414;
+  margin-right: 5%;
+}
+.main > .searchResult #consequence > .lesson > ul > li > a > .bottom > .b_footer > ul > li:first-of-type em {
+  font-size: 17px;
+}
+.main > .searchResult #consequence > .lesson > ul > li > a > .bottom > .b_footer > span {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  width: 40%;
+  position: absolute;
+  left: 45%;
+  top: 0%;
+  color: #666666;
+}
+.main > .searchResult #consequence > .teacher > h3 {
+  font-size: 16px;
+  color: #666;
+  height: 40px;
+  line-height: 40px;
+  font-weight: 400;
+}
+.main > .searchResult #consequence > .teacher > ul {
+  position: relative;
+  width: 100%;
+}
+.main > .searchResult #consequence > .teacher > ul > li {
+  float: left;
+  width: 24%;
+  height: 100%;
+  margin-right: 10px ;
+}
+.main > .searchResult #consequence > .teacher > ul > li:last-of-type {
+  margin-right: 0;
+}
+.main > .searchResult #consequence > .teacher > ul > li > a {
+  height: 100%;
+  width: 100%;
+  display: block;
+  color: #333;
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.1);
+}
+.main > .searchResult #consequence > .teacher > ul > li > a > img {
+  width: 100%;
+  height: 130px;
+  overflow: hidden;
+}
+.main > .searchResult #consequence > .teacher > ul > li > a .text {
+  padding: 10px;
+}
+.main > .searchResult #consequence > .teacher > ul > li > a .text > h3,
+.main > .searchResult #consequence > .teacher > ul > li > a .text > p,
+.main > .searchResult #consequence > .teacher > ul > li > a .text > .grade {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+.main > .searchResult #consequence > .teacher > ul > li > a .text > h3 {
+  font-size: 14px;
+}
+.main > .searchResult #consequence > .teacher > ul > li > a .text > .grade {
+  margin-top: 10px;
+}
+.main > .searchResult #consequence > .teacher > ul > li > a .text > .grade span {
+  padding: 2px;
+  background: #eeeeee;
+  color: #f01414;
+  margin-right: 5px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.main > .searchResult #consequence > .teacher > ul > li > a .text > p {
+  font-size: 12px ;
+  color: #666;
+  margin-top: 10px;
+}
+.main .no_info {
+  font-size: 14px;
+  color: #999;
+  height: 30px;
+  padding-left: 30px;
+  line-height: 30px;
 }

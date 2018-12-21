@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
+    <link rel="shortcut icon " type="images/x-icon" href="../../ico.ico">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -242,7 +243,7 @@
         .footer>#save,.footer>#card{
             position: absolute;
             top: 1%;
-            width: 25%;
+            width: 30%;
             height: 100%;
             line-height: 80px;
             background-color: rgba(0,0,0,.3);
@@ -257,7 +258,7 @@
             padding-right: 10px;
         }
         .footer>#save{
-            left: 15%;
+            left: 35%;
         }
         .footer>#card{
             right: 15%;
@@ -268,7 +269,7 @@
 <body>
 <div class="layer">
     <div class="total_info">
-        <h3>昵称</h3>
+        <!--<h3>昵称</h3>
         <p>我在猴姆</p>
         <ul class="lesson clearfix">
             <li>
@@ -283,7 +284,7 @@
                 <span>累计听课</span>
                 <em><i>65</i>小时</em>
             </li>
-        </ul>
+        </ul>-->
     </div>
     <div class="proverb">
         <p>“即使现在，  对手也不停地翻动书页”</p>
@@ -292,7 +293,7 @@
     <div class="lately_study">
         <h3>我最近的学习</h3>
         <div class="study">
-            <span>
+           <!-- <span>
                 <em>物理</em>
                 <del>主讲：赵权权赵权权</del>
             </span>
@@ -300,9 +301,8 @@
                 <i>2018年高三上期物理三上期物理</i>
                 <span>华南师范大学附属中学师范大学附属中学</span>
             </div>
-            <div class="right">学习中学习中</div>
+            <div class="right">学习中学习中</div>-->
         </div>
-
     </div>
     <div class="more">
         <p>更多名师名校教学课堂</p>
@@ -317,8 +317,8 @@
     </div>
     <div class="footer">
         <span id="save"><em class="iconfont icon-xiazai1"></em>保存图片</span>
-        <span id="card"><em class="iconfont icon-zhuanfa1"></em>打卡得积分</span>
-    </div>
+      <!--  <span id="card"><em class="iconfont icon-zhuanfa1"></em>打卡得积分</span>
+    --></div>
 
 
 </div>
@@ -327,7 +327,80 @@
 <script src="../../js/jquery.min.js"></script>
 <script src="../../js/template-web.js"></script>
 <script src="../../js/template.js"></script>
+<script>
+    template.helper("day", function (mss) {
+        return parseInt(mss / 1000 / 60 / 60 / 24);
+    });
+    template.helper("hour", function (mss) {
+        return parseInt((mss / 1000 / 60 / 60));
+    });
+    template.helper("minute", function (mss) {
+        return parseInt((mss / 1000 / 60));
+    });
+    template.helper("str",function(str){
+        return str.split(",");
+    });
+    template.helper("mul", function (a,b) {
+        return parseFloat(a/b).toFixed(2);
+    });
+    template.helper("time",function(time){
+        var timestamp=new Date().getTime();//当前时间戳
+        var kk=timestamp-time;//发表时的时间戳
+        var timea="";
+        var sec=parseInt(kk/1000);//秒
+        var min=parseInt(sec/60);//分
+        var hour=parseInt(min/60);//时
+        var day=parseInt(hour/24);//天
+        if(sec<60){
+            timea=sec+"秒前";
+        }else if(min<60){
+            timea=min+"分钟前";
+        }else if(hour<24){
+            timea=hour+"小时前";
+        }else if(day<7){
+            timea=day+"天前";
+        }else{
+            timea=new Date(time).toLocaleString().replace(/:\d{1,2}$/,' ').substr(5,12).replace(/\//g,"-");
+        }
+        return timea;
+    });
+</script>
 <script src="../../js/html2_canvas.js"></script>
+<script src="../../js/base.js"></script>
+<script type="text/html" id="study">
+    <h3>{{data.user.nickname==null?data.user.realName==null?"猴姆教学":data.user.realName:data.user.nickname}}</h3>
+    <p>我在猴姆</p>
+    <ul class="lesson clearfix">
+        <li>
+            <span>今日听课</span>
+            <em><i>{{minute(data.todayStudyTime)}}</i>分钟</em>
+        </li>
+        <li>
+            <span>本月听课</span>
+            <em><i>{{day(data.monthStudyTime)}}</i>天</em>
+        </li>
+        <li>
+            <span>累计听课</span>
+            <em><i>{{hour(data.user.sumLearnTime)}}</i>小时</em>
+        </li>
+    </ul>
+
+</script>
+<script type="text/html" id="near">
+    {{if data==null||data.length==0}}
+    <div class="no_in">对不起，您最近没有学习喔</div>
+    {{else}}
+    <span>
+                <em>{{data[0].course.subject}}</em>
+                <del>主讲：{{data[0].speaker}}</del>
+            </span>
+    <div class="center">
+        <i>{{data[0].course.name}}</i>
+        <span>{{data[0].course.schoolName}}</span>
+    </div>
+    <div class="right">学习中</div>
+    {{/if}}
+</script>
 <script>
     save.onclick = function(){
         html2canvas(document.querySelector(".layer"),{
@@ -342,5 +415,46 @@
         a.dispatchEvent(event)
     });
     }
+    $(function () {
+        var userid = localStorage.getItem("this_userid");
+        var token = localStorage.getItem("token");
+        /*进入学习中心*/
+        myAjax({
+            url: "/core/select/learning/center",
+            data: {userid: userid}, type: "post", async: false
+        }, function (data) {
+            console.log(data);
+            if (data.status == 200) {
+                /* template.helper("day", function (mss) {
+                    return parseInt(mss / 1000 / 60 / 60 / 24);
+                });
+                template.helper("hour", function (mss) {
+                    return parseInt((mss / 1000 / 60 / 60));
+                });
+                template.helper("minute", function (mss) {
+                    return parseInt((mss / 1000 / 60));
+                });*/
+
+                $(".total_info").html(template("study", data));
+            }
+        })
+        //
+        //最近的学习
+        myAjax({url: "/core/find/LatelyStudy/Courses",
+            data:{
+                userid: userid,
+                page:1,
+                size:1,
+                token:token
+            },
+                    type: "post"},
+                function (data) {
+            console.log(data);
+            if(data.status==200){
+
+                $(".study").html(template("near",data));
+            }
+    })
+   })
 </script>
 </html>
